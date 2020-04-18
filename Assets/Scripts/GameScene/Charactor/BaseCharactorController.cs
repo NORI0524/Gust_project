@@ -74,6 +74,9 @@ public class BaseCharactorController : BaseCompornent
     // Update is called once per frame
     void Update()
     {
+        //入浴フラグ折る
+        state.FoldBit(State.Intrusion);
+
         //表情
         if (satisfy.GetSatisfyValue() >= 50) face = CharaFaceState.Normal;
         if (satisfy.GetSatisfyValue() >= 75) face = CharaFaceState.Smile;
@@ -169,7 +172,6 @@ public class BaseCharactorController : BaseCompornent
 
     public void RelayOnTriggerStay2D(Collider2D collision)
     {
-        state.FoldBit(State.Intrusion);
         if (collision.CompareTag("Bathtub"))
             state.AddBit(State.Intrusion);
     }
