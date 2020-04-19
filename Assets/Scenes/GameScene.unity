@@ -482,10 +482,10 @@ GameObject:
   m_Component:
   - component: {fileID: 547012302}
   - component: {fileID: 547012301}
-  - component: {fileID: 547012300}
   - component: {fileID: 547012303}
+  - component: {fileID: 547012300}
   m_Layer: 0
-  m_Name: KoromoFactory
+  m_Name: KoromoManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -498,13 +498,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547012299}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef748e14e1399604983181ef3d9f015f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2585cb9ccb82a544e982f138ca325c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Koromo_Prefab: {fileID: 7254540496948804669, guid: 7e2cf4feed26f2b4482899a5dd409128,
-    type: 3}
 --- !u!212 &547012301
 SpriteRenderer:
   m_ObjectHideFlags: 0

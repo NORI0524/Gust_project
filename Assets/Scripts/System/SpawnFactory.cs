@@ -31,6 +31,8 @@ public class SpawnFactory : BaseCompornent
     public float randY_Max;
     public float dispZ;
 
+    private bool isActive;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +40,13 @@ public class SpawnFactory : BaseCompornent
         spanTimer.Start();
         spanTimer.EnabledLoop();
         currentNum = 0;
+        isActive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!isActive) return;
         spanTimer.Update();
         if (!spanTimer.IsFinish()) return;
         if (currentNum >= ObjDispMax) return;
@@ -80,4 +84,7 @@ public class SpawnFactory : BaseCompornent
     {
         onceSpawnNum = Mathf.Max(value, 1);
     }
+
+    public void OnActive() { isActive = true; }
+    public void OffActive() { isActive = false; }
 }

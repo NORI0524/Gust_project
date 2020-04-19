@@ -17,11 +17,11 @@ public class TitleDirector : MonoBehaviour
         
     }
 
-    //public void OnGUI()
-    //{
-    //    if(GUI.Button(new Rect(400,250,200,100),"- Start -"))
-    //    {
-    //        SceneManager.LoadScene("GameScene");
-    //    }
-    //}
+    public void OnGUI()
+    {
+        if (GUI.Button(new Rect(400, 250, 200, 100), "- Start -"))
+        {
+            SceneManager.LoadScene("GameScene");
+        }
+    }
 }

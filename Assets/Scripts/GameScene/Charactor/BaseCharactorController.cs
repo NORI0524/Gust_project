@@ -48,6 +48,9 @@ public class BaseCharactorController : BaseCompornent
     //満足度
     SatisfactionLevel satisfy = new SatisfactionLevel();
 
+    //フライド化の目安満足度
+    private const int FriedSatisfy = 70;
+
     Vector3 oldWorldPos;
 
     // Start is called before the first frame update
@@ -95,6 +98,13 @@ public class BaseCharactorController : BaseCompornent
             {
                 satisfy.SubSatisfy();
             }
+
+            if (state.CheckBitOR(State.Bathing) && satisfy.GetSatisfyValue() > FriedSatisfy)
+            {
+                state.FoldBit(State.Bathing);
+                state.AddBit(State.FriedBathing);
+                spriteRenderer.sprite = FriedBathingSprite;
+            }
         }
         if (state.CheckBit(State.Drag)) return;
         if (state.CheckBitOR(State.Normal))
@@ -135,9 +145,17 @@ public class BaseCharactorController : BaseCompornent
 
         oldWorldPos = worldPos;
 
-        if (state.CheckBitOR(State.Bathing | State.FriedBathing))
+        if (state.CheckBit(State.Bathing))
         {
-            state.FoldBit(State.Bathing | State.FriedBathing);
+            state.FoldBit(State.Bathing);
+            state.AddBit(State.Normal);
+            spriteRenderer.sprite = NormalSprite;
+
+            GameDirector.bathingCustomerNum--;
+        }
+        else if(state.CheckBit(State.FriedBathing))
+        {
+            state.FoldBit(State.FriedBathing);
             state.AddBit(State.Fried);
             spriteRenderer.sprite = FriedSprite;
 

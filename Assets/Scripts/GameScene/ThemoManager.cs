@@ -78,6 +78,7 @@ public class ThemoManager : BaseCompornent
 
     public void OnGUI()
     {
+        if (!GameDirector.DEBUG) return;
         GUI.TextArea(new Rect(0, 250, 100, 50), "range : " + bestFirePowerMin.ToString("f2") + " ～ " + bestFirePowerMax.ToString("f2"));
 
     }

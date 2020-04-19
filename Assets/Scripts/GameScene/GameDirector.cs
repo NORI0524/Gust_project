@@ -6,6 +6,8 @@ using SoundMan = Singleton<SoundManager>;
 
 public class GameDirector : BaseCompornent
 {
+    public const bool DEBUG = false;
+
     //TODO:リザルトにでランクを付ける際に指標になる変数
 
     //満足度の合計
@@ -47,6 +49,7 @@ public class GameDirector : BaseCompornent
 
     public void OnGUI()
     {
+        if (!DEBUG) return;
         GUI.TextArea(new Rect(0, 100, 100, 50), "BathingNum : " + bathingCustomerNum);
         GUI.TextArea(new Rect(0, 200, 100, 50), "totalSatisfy : " + totalSatisfyValue);
     }

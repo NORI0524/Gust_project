@@ -46,6 +46,7 @@ public class LimitTime : BaseCompornent
 
     private void OnGUI()
     {
+        if (!GameDirector.DEBUG) return;
         GUI.TextArea(new Rect(0, 50, 100, 50), "time : " + time.GetMinute() + " : " + time.GetSeconds());
 
         if (GUI.Button(new Rect(200, 0, 50, 50), "Stop"))

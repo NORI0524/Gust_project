@@ -19,7 +19,7 @@ public class KoromoController : BaseCompornent
     // Start is called before the first frame update
     void Start()
     {
-        var obj = GameObject.Find("KoromoFactory");
+        var obj = GameObject.Find("KoromoManager");
         koromoFac = obj.GetComponent<SpawnFactory>();
     }
 
@@ -49,7 +49,7 @@ public class KoromoController : BaseCompornent
         {
             AddPosition(MoveX, MoveY, 0);
         }
-        if (PosY > 500)
+        if (PosY > 10)
         {
             koromoFac.Decrease();
             Destroy(gameObject);
@@ -59,7 +59,6 @@ public class KoromoController : BaseCompornent
     public void OnClick()
     {
         isTouch = true;
-        Debug.Log("クリック");
     }
 }
 
