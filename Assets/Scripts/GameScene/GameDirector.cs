@@ -33,7 +33,7 @@ public class GameDirector : BaseCompornent
         limitTime = GameObject.Find("LimitTimer");
         limitTimeCtrl = limitTime.GetComponent<LimitTime>();
 
-        //SoundMan.Instance.PlayBGM("bgm", 3.0f);
+        SoundMan.Instance.PlayBGM("bgm", 3.0f);
     }
 
     // Update is called once per frame
