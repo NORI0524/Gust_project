@@ -76,9 +76,9 @@ public class ThemoManager : BaseCompornent
     public float GetBestFirePowerMin() { return bestFirePowerMin; }
     public float GetBestFirePowerMax() { return bestFirePowerMax; }
 
-    //public void OnGUI()
-    //{
-    //    GUI.TextArea(new Rect(500, 200, 100, 50), "range : " + bestFirePowerMin.ToString("f2") + " ～ " + bestFirePowerMax.ToString("f2"));
-    //    
-    //}
+    public void OnGUI()
+    {
+        GUI.TextArea(new Rect(0, 250, 100, 50), "range : " + bestFirePowerMin.ToString("f2") + " ～ " + bestFirePowerMax.ToString("f2"));
+
+    }
 }

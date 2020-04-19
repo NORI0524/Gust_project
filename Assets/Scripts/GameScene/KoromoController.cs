@@ -62,3 +62,15 @@ public class KoromoController : BaseCompornent
         Debug.Log("クリック");
     }
 }
+
+//スポーン座標関係　メモ
+
+//float px = Random.Range(-2.7f, 3.1f);
+//float py = Random.Range(-1.3f, 0.3f);
+//var collider = Physics2D.OverlapCircle(new Vector2(px, py), 0.35f);
+
+//        if (collider.CompareTag("Bathtub"))
+//        {
+//            GameObject obj = Instantiate(Koromo_Prefab) as GameObject;
+
+//obj.transform.position = new Vector3(px, py, -1);

@@ -52,15 +52,32 @@ public class SpawnFactory : BaseCompornent
         if (random > spawnFrequency) return;
 
         //スポーン処理
-        int select = Random.Range(0, objTypeNum);
-        GameObject obj = Instantiate(obj_Prefab[select]) as GameObject;
-        currentNum++;
+        for(int cnt=0; cnt < onceSpawnNum; cnt++)
+        {
+            int select = Random.Range(0, objTypeNum);
+            GameObject obj = Instantiate(obj_Prefab[select]) as GameObject;
+            currentNum++;
 
-        float px = Random.Range(randX_Min, randX_Max);
-        float py = Random.Range(randY_Min, randY_Max);
-        obj.transform.position = new Vector3(px, py, dispZ);
+            float px = Random.Range(randX_Min, randX_Max);
+            float py = Random.Range(randY_Min, randY_Max);
+            obj.transform.position = new Vector3(px, py, dispZ);
+        }
     }
 
     public int GetCurrentNum() { return currentNum; }
     public void Decrease() { currentNum--; }
+
+    //設定関係
+    public void SetSpawnFrequency(float value)
+    {
+        spawnFrequency = Mathf.Clamp(value, 0.0f, 100.0f);
+    }
+    public void SetSpawnSeconds(int value)
+    {
+        spanSeconds = Mathf.Max(value, 0);
+    }
+    public void SetOnceSpawnNum(int value)
+    {
+        onceSpawnNum = Mathf.Max(value, 1);
+    }
 }

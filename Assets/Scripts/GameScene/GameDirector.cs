@@ -45,9 +45,9 @@ public class GameDirector : BaseCompornent
         }
     }
 
-    //public void OnGUI()
-    //{
-    //    GUI.TextArea(new Rect(0, 50, 100, 50), "BathingNum : " + bathingCustomerNum);
-    //    GUI.TextArea(new Rect(0, 150, 100, 50), "totalSatisfy : " + totalSatisfyValue);
-    //}
+    public void OnGUI()
+    {
+        GUI.TextArea(new Rect(0, 100, 100, 50), "BathingNum : " + bathingCustomerNum);
+        GUI.TextArea(new Rect(0, 200, 100, 50), "totalSatisfy : " + totalSatisfyValue);
+    }
 }
