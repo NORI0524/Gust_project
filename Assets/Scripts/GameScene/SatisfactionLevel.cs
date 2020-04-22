@@ -34,7 +34,10 @@ public class SatisfactionLevel
         delay.Update();
         if (!delay.IsFinish()) return;
 
-        if (satisfyValue < MaxSatisfyValue) GameDirector.totalSatisfyValue += AddSatisfyValue;
+        //天かすの数によって満足度が溜まりにくくなる
+        var koromoFac = GameObject.Find("KoromoManager").GetComponent<SpawnFactory>();
+
+        if (satisfyValue < MaxSatisfyValue) GameDirector.totalSatisfyValue += AddSatisfyValue - koromoFac.GetCurrentNum();
 
         satisfyValue = Mathf.Clamp(satisfyValue + AddSatisfyValue, MinSatisfyValue, MaxSatisfyValue);
 

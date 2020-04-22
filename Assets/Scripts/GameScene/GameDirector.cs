@@ -6,7 +6,7 @@ using SoundMan = Singleton<SoundManager>;
 
 public class GameDirector : BaseCompornent
 {
-    public const bool DEBUG = false;
+    public static bool DEBUG = false;
 
     //TODO:リザルトにでランクを付ける際に指標になる変数
 
@@ -39,12 +39,14 @@ public class GameDirector : BaseCompornent
     // Update is called once per frame
     void Update()
     {
-        SoundMan.Instance.Update();
+        if (Input.GetKeyDown(KeyCode.E)){ DEBUG = !DEBUG; }
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
             SceneManager.LoadScene("ResultScene");
         }
+
+        SoundMan.Instance.Update();
     }
 
     public void OnGUI()
