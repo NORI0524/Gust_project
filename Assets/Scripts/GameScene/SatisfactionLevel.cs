@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using SoundMan = Singleton<SoundManager>;
+
 //お客さんの満足度クラス
 public class SatisfactionLevel
 {
@@ -44,6 +46,7 @@ public class SatisfactionLevel
         //満足度が最高のとき
         if(satisfyValue == MaxSatisfyValue)
         {
+            if(!IsFull()) SoundMan.Instance.PlaySE("happy");
             state.AddBit(State.Full);
         }
     }
