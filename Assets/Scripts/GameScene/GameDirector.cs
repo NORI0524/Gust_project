@@ -6,7 +6,7 @@ using SoundMan = Singleton<SoundManager>;
 
 public class GameDirector : BaseCompornent
 {
-    public const bool DEBUG = false;
+    public static bool DEBUG = false;
 
     //TODO:リザルトにでランクを付ける際に指標になる変数
 
@@ -39,12 +39,12 @@ public class GameDirector : BaseCompornent
     // Update is called once per frame
     void Update()
     {
-        SoundMan.Instance.Update();
+        SoundMan.Instance.PlaySE("fire");
+        if (bathingCustomerNum > 0) SoundMan.Instance.PlaySE("fried");
 
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            SceneManager.LoadScene("ResultScene");
-        }
+        if (Input.GetKeyDown(KeyCode.E)){ DEBUG = !DEBUG; }
+
+        SoundMan.Instance.Update();
     }
 
     public void OnGUI()
@@ -52,5 +52,19 @@ public class GameDirector : BaseCompornent
         if (!DEBUG) return;
         GUI.TextArea(new Rect(0, 100, 100, 50), "BathingNum : " + bathingCustomerNum);
         GUI.TextArea(new Rect(0, 200, 100, 50), "totalSatisfy : " + totalSatisfyValue);
+
+
+        if (GUI.Button(new Rect(0, 300, 75, 50), "Reset"))
+        {
+            SceneManager.LoadScene("GameScene");
+        }
+        if (GUI.Button(new Rect(100, 300, 75, 50), "Title"))
+        {
+            SceneManager.LoadScene("TitleScene");
+        }
+        if (GUI.Button(new Rect(200, 300, 75, 50), "Result"))
+        {
+            SceneManager.LoadScene("ResultScene");
+        }
     }
 }

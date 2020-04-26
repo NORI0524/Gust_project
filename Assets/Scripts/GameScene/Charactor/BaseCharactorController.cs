@@ -81,14 +81,12 @@ public class BaseCharactorController : BaseCompornent
         state.FoldBit(State.Intrusion);
 
         //表情
-        if (satisfy.GetSatisfyValue() >= 50) face = CharaFaceState.Normal;
-        if (satisfy.GetSatisfyValue() >= 75) face = CharaFaceState.Smile;
-        if (satisfy.GetSatisfyValue() >= 100) face = CharaFaceState.Cat;
+        FacialExpression();
 
-       
-
+        //入浴中なら
         if (state.CheckBitOR(State.Bathing | State.FriedBathing))
         {
+            //満足度の増減
             var nowFirePower = themoCtrl.GetFirePower();
             if (nowFirePower >= themoMan.GetBestFirePowerMin() && nowFirePower <= themoMan.GetBestFirePowerMax())
             {
@@ -99,6 +97,7 @@ public class BaseCharactorController : BaseCompornent
                 satisfy.SubSatisfy();
             }
 
+            //入浴中のお客さんが揚がるかどうか
             if (state.CheckBitOR(State.Bathing) && satisfy.GetSatisfyValue() > FriedSatisfy)
             {
                 state.FoldBit(State.Bathing);
@@ -107,23 +106,12 @@ public class BaseCharactorController : BaseCompornent
             }
         }
         if (state.CheckBit(State.Drag)) return;
-        if (state.CheckBitOR(State.Normal))
-        {
-            PosX = Mathf.Clamp(PosX + 0.05f, -8.0f, -5.0f);
-        }
-        if (state.CheckBit(State.Fried))
-        {
-            PosX += 0.05f;
-        }
-        if(PosX > 10.0f)
-        {
-            state.AddBit(State.Death);
-        }
-        if (state.CheckBit(State.Death))
-        {
-            customerFac.Decrease();
-            Destroy(gameObject);
-        }
+
+        //移動
+        Move();
+
+        //画面外で破棄
+        ScreenOut();
     }
 
     public void OnDown()
@@ -201,5 +189,38 @@ public class BaseCharactorController : BaseCompornent
     public CharaFaceState GetFaceState()
     {
         return face;
+    }
+
+    private void Move()
+    {
+        if (state.CheckBitOR(State.Normal))
+        {
+            PosX = Mathf.Clamp(PosX + 0.05f, -8.0f, -5.0f);
+        }
+        if (state.CheckBit(State.Fried))
+        {
+            PosX += 0.05f;
+        }
+    }
+
+    //表情
+    private void FacialExpression()
+    {
+        if (satisfy.GetSatisfyValue() >= 50) face = CharaFaceState.Normal;
+        if (satisfy.GetSatisfyValue() >= 75) face = CharaFaceState.Smile;
+        if (satisfy.GetSatisfyValue() >= 100) face = CharaFaceState.Cat;
+    }
+
+    private void ScreenOut()
+    {
+        if (PosX > 10.0f)
+        {
+            state.AddBit(State.Death);
+        }
+        if (state.CheckBit(State.Death))
+        {
+            customerFac.Decrease();
+            Destroy();
+        }
     }
 }

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using SoundMan = Singleton<SoundManager>;
+
 public class KoromoController : BaseCompornent
 {
     bool isCatch = false;
@@ -59,6 +61,7 @@ public class KoromoController : BaseCompornent
     public void OnClick()
     {
         isTouch = true;
+        SoundMan.Instance.PlaySE("tenkasu");
     }
 }
 
