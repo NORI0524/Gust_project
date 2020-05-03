@@ -21,6 +21,10 @@ public class GameDirector : BaseCompornent
     //制限時間
     GameObject limitTime;
     LimitTime limitTimeCtrl;
+
+    //開始、終了
+    GameObject startObj;
+    GameObject finishObj;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +32,12 @@ public class GameDirector : BaseCompornent
         totalSatisfyValue = 0;
         totalCustomerNum = 0;
         bathingCustomerNum = 0;
+
+        startObj = GameObject.Find("Start");
+        finishObj = GameObject.Find("Finish");
+
+        //アクティブ無効
+        finishObj.SetActive(false);
 
 
         limitTime = GameObject.Find("LimitTimer");
@@ -39,10 +49,22 @@ public class GameDirector : BaseCompornent
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E)) { DEBUG = !DEBUG; }
+
+        //開始が終わってるならアクティブ無効
+        if (startObj.GetComponent<Transparent>().IsFinish()) startObj.SetActive(false);
+
+        
+
+        //ゲーム終了
+        if (limitTimeCtrl.IsFinish())
+        {
+            finishObj.SetActive(true);
+        }
+
+        //音響
         SoundMan.Instance.PlaySE("fire");
         if (bathingCustomerNum > 0) SoundMan.Instance.PlaySE("fried");
-
-        if (Input.GetKeyDown(KeyCode.E)){ DEBUG = !DEBUG; }
 
         SoundMan.Instance.Update();
     }

@@ -112,7 +112,10 @@ public class SoundManager
 
         //ロード
         if (info.clip == null)
+        {
             info.clip = (AudioClip)Resources.Load(info.resourceName);
+        }
+            
 
         if(soundPlayer == null)
         {
