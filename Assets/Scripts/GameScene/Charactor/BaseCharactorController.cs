@@ -48,6 +48,9 @@ public class BaseCharactorController : BaseCompornent
     //満足度
     SatisfactionLevel satisfy = new SatisfactionLevel();
 
+    //フライド化の目安満足度
+    private const int FriedSatisfy = 70;
+
     Vector3 oldWorldPos;
 
     // Start is called before the first frame update
@@ -74,15 +77,16 @@ public class BaseCharactorController : BaseCompornent
     // Update is called once per frame
     void Update()
     {
+        //入浴フラグ折る
+        state.FoldBit(State.Intrusion);
+
         //表情
-        if (satisfy.GetSatisfyValue() >= 50) face = CharaFaceState.Normal;
-        if (satisfy.GetSatisfyValue() >= 75) face = CharaFaceState.Smile;
-        if (satisfy.GetSatisfyValue() >= 100) face = CharaFaceState.Cat;
+        FacialExpression();
 
-       
-
+        //入浴中なら
         if (state.CheckBitOR(State.Bathing | State.FriedBathing))
         {
+            //満足度の増減
             var nowFirePower = themoCtrl.GetFirePower();
             if (nowFirePower >= themoMan.GetBestFirePowerMin() && nowFirePower <= themoMan.GetBestFirePowerMax())
             {
@@ -92,25 +96,22 @@ public class BaseCharactorController : BaseCompornent
             {
                 satisfy.SubSatisfy();
             }
+
+            //入浴中のお客さんが揚がるかどうか
+            if (state.CheckBitOR(State.Bathing) && satisfy.GetSatisfyValue() > FriedSatisfy)
+            {
+                state.FoldBit(State.Bathing);
+                state.AddBit(State.FriedBathing);
+                spriteRenderer.sprite = FriedBathingSprite;
+            }
         }
         if (state.CheckBit(State.Drag)) return;
-        if (state.CheckBitOR(State.Normal))
-        {
-            PosX = Mathf.Clamp(PosX + 0.05f, -8.0f, -5.0f);
-        }
-        if (state.CheckBit(State.Fried))
-        {
-            PosX += 0.05f;
-        }
-        if(PosX > 10.0f)
-        {
-            state.AddBit(State.Death);
-        }
-        if (state.CheckBit(State.Death))
-        {
-            customerFac.Decrease();
-            Destroy(gameObject);
-        }
+
+        //移動
+        Move();
+
+        //画面外で破棄
+        ScreenOut();
     }
 
     public void OnDown()
@@ -132,9 +133,17 @@ public class BaseCharactorController : BaseCompornent
 
         oldWorldPos = worldPos;
 
-        if (state.CheckBitOR(State.Bathing | State.FriedBathing))
+        if (state.CheckBit(State.Bathing))
         {
-            state.FoldBit(State.Bathing | State.FriedBathing);
+            state.FoldBit(State.Bathing);
+            state.AddBit(State.Normal);
+            spriteRenderer.sprite = NormalSprite;
+
+            GameDirector.bathingCustomerNum--;
+        }
+        else if(state.CheckBit(State.FriedBathing))
+        {
+            state.FoldBit(State.FriedBathing);
             state.AddBit(State.Fried);
             spriteRenderer.sprite = FriedSprite;
 
@@ -169,7 +178,6 @@ public class BaseCharactorController : BaseCompornent
 
     public void RelayOnTriggerStay2D(Collider2D collision)
     {
-        state.FoldBit(State.Intrusion);
         if (collision.CompareTag("Bathtub"))
             state.AddBit(State.Intrusion);
     }
@@ -181,5 +189,38 @@ public class BaseCharactorController : BaseCompornent
     public CharaFaceState GetFaceState()
     {
         return face;
+    }
+
+    private void Move()
+    {
+        if (state.CheckBitOR(State.Normal))
+        {
+            PosX = Mathf.Clamp(PosX + 0.05f, -8.0f, -5.0f);
+        }
+        if (state.CheckBit(State.Fried))
+        {
+            PosX += 0.05f;
+        }
+    }
+
+    //表情
+    private void FacialExpression()
+    {
+        if (satisfy.GetSatisfyValue() >= 50) face = CharaFaceState.Normal;
+        if (satisfy.GetSatisfyValue() >= 75) face = CharaFaceState.Smile;
+        if (satisfy.GetSatisfyValue() >= 100) face = CharaFaceState.Cat;
+    }
+
+    private void ScreenOut()
+    {
+        if (PosX > 10.0f)
+        {
+            state.AddBit(State.Death);
+        }
+        if (state.CheckBit(State.Death))
+        {
+            customerFac.Decrease();
+            Destroy();
+        }
     }
 }

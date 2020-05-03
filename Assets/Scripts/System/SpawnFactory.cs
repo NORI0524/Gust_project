@@ -31,6 +31,8 @@ public class SpawnFactory : BaseCompornent
     public float randY_Max;
     public float dispZ;
 
+    private bool isActive;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +40,13 @@ public class SpawnFactory : BaseCompornent
         spanTimer.Start();
         spanTimer.EnabledLoop();
         currentNum = 0;
+        isActive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!isActive) return;
         spanTimer.Update();
         if (!spanTimer.IsFinish()) return;
         if (currentNum >= ObjDispMax) return;
@@ -52,15 +56,35 @@ public class SpawnFactory : BaseCompornent
         if (random > spawnFrequency) return;
 
         //スポーン処理
-        int select = Random.Range(0, objTypeNum);
-        GameObject obj = Instantiate(obj_Prefab[select]) as GameObject;
-        currentNum++;
+        for(int cnt=0; cnt < onceSpawnNum; cnt++)
+        {
+            int select = Random.Range(0, objTypeNum);
+            GameObject obj = Instantiate(obj_Prefab[select]) as GameObject;
+            currentNum++;
 
-        float px = Random.Range(randX_Min, randX_Max);
-        float py = Random.Range(randY_Min, randY_Max);
-        obj.transform.position = new Vector3(px, py, dispZ);
+            float px = Random.Range(randX_Min, randX_Max);
+            float py = Random.Range(randY_Min, randY_Max);
+            obj.transform.position = new Vector3(px, py, dispZ);
+        }
     }
 
     public int GetCurrentNum() { return currentNum; }
     public void Decrease() { currentNum--; }
+
+    //設定関係
+    public void SetSpawnFrequency(float value)
+    {
+        spawnFrequency = Mathf.Clamp(value, 0.0f, 100.0f);
+    }
+    public void SetSpawnSeconds(int value)
+    {
+        spanSeconds = Mathf.Max(value, 0);
+    }
+    public void SetOnceSpawnNum(int value)
+    {
+        onceSpawnNum = Mathf.Max(value, 1);
+    }
+
+    public void OnActive() { isActive = true; }
+    public void OffActive() { isActive = false; }
 }

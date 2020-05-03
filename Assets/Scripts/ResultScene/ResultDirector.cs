@@ -27,13 +27,13 @@ public class ResultDirector : BaseCompornent
        
     }
 
-    //public void OnGUI()
-    //{
-    //    if (GUI.Button(new Rect(400, 350, 200, 100), "- Title -"))
-    //    {
-    //        SceneManager.LoadScene("TitleScene");
-    //    }
+    public void OnGUI()
+    {
+        if (GUI.Button(new Rect(400, 350, 200, 100), "- Title -"))
+        {
+            SceneManager.LoadScene("TitleScene");
+        }
 
-    //    GUI.TextArea(new Rect(0, 150, 100, 50), "money : " + money);
-    //}
+        GUI.TextArea(new Rect(0, 150, 100, 50), "money : " + money);
+    }
 }

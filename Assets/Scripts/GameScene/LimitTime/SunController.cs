@@ -5,9 +5,9 @@ using UnityEngine;
 public class SunController : BaseCompornent
 {
 
-    private Vector3 start = new Vector3(-10.0f, 1.0f, 3.0f);
-    private Vector3 middle = new Vector3(0.0f, 7.0f, 3.0f);
-    private Vector3 end = new Vector3(10.0f, 1.0f, 3.0f);
+    private Vector3 start = new Vector3(-10.0f, 1.0f, 3.75f);
+    private Vector3 middle = new Vector3(0.0f, 7.0f, 3.75f);
+    private Vector3 end = new Vector3(10.0f, 1.0f, 3.75f);
 
     private float frame;
 

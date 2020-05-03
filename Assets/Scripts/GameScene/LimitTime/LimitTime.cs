@@ -44,23 +44,24 @@ public class LimitTime : BaseCompornent
         moonCtrl.Move(add);
     }
 
-    //private void OnGUI()
-    //{
-    //    GUI.TextArea(new Rect(0, 0, 100, 50), "time : " + time.GetMinute() + " : " + time.GetSeconds());
+    private void OnGUI()
+    {
+        if (!GameDirector.DEBUG) return;
+        GUI.TextArea(new Rect(0, 50, 100, 50), "time : " + time.GetMinute() + " : " + time.GetSeconds());
 
-    //    if (GUI.Button(new Rect(200, 0, 50, 50), "Stop"))
-    //    {
-    //        time.Stop();
-    //    }
+        if (GUI.Button(new Rect(200, 0, 50, 50), "Stop"))
+        {
+            time.Stop();
+        }
 
-    //    if (GUI.Button(new Rect(150, 0, 50, 50), "Start"))
-    //    {
-    //        time.ReStart();
-    //    }
+        if (GUI.Button(new Rect(150, 0, 50, 50), "Start"))
+        {
+            time.ReStart();
+        }
 
-    //    if (time.IsFinish())
-    //    {
-    //        GUI.TextArea(new Rect(0, 50, 100, 50), "-- Finish --");
-    //    }
-    //}
+        if (time.IsFinish())
+        {
+            GUI.TextArea(new Rect(100, 50, 100, 50), "-- Finish --");
+        }
+    }
 }

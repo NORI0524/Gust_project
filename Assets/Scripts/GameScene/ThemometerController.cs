@@ -14,7 +14,11 @@ public class ThemometerController : BaseCompornent
     private float firePower;
     public const float InitFirePower = 80.0f;
 
-    public const float DecreacePower = 2.0f;
+    public const float DecreacePower_Init = 2.0f;
+    public const float DecreacePowerRate_koromo = 1.0f;
+
+    //天かすFac
+    SpawnFactory koromoFac;
 
     //温度と角度の比率
     private const float RateAngle = 180.0f / 80.0f;
@@ -24,12 +28,16 @@ public class ThemometerController : BaseCompornent
     {
         DegAngle = MinAngle;
         firePower = InitFirePower;
+
+        var obj = GameObject.Find("KoromoManager");
+        koromoFac = obj.GetComponent<SpawnFactory>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        firePower -= DecreacePower / 60.0f;
+        float decreace = DecreacePower_Init + koromoFac.GetCurrentNum() * DecreacePowerRate_koromo;
+        firePower -= decreace / 60.0f;
         firePower = Mathf.Clamp(firePower, MinFirePower, MaxFirePower);
         float nowAngle = MaxAngle - (firePower * RateAngle);
         DegAngle = Mathf.Clamp(nowAngle, MinAngle, MaxAngle);

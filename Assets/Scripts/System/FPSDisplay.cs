@@ -29,8 +29,9 @@ public class FPSDisplay : BaseCompornent
         }
     }
 
-    //public void OnGUI()
-    //{
-    //    GUI.TextArea(new Rect(1100, 0, 100, 50), "FPS : " + fps);
-    //}
+    public void OnGUI()
+    {
+        if (!GameDirector.DEBUG) return;
+        GUI.TextArea(new Rect(0, 0, 100, 50), "FPS : " + fps);
+    }
 }

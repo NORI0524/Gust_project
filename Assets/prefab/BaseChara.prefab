@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3936743639904624493}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3936743640206645285}
@@ -102,8 +102,7 @@ MonoBehaviour:
     type: 3}
   NotGood_SecondSprite: {fileID: 21300000, guid: 32e0ec5dd1635a541b67fe07535d845d,
     type: 3}
-  notGood_ThirdSprite: {fileID: 21300000, guid: e2b2c4618bed261439d3e953adf4ec17,
-    type: 3}
+  NotGood_ThirdSprite: {fileID: 0}
   CatSprite: {fileID: 21300000, guid: 58591d50159708a4aa50dd3ac557e88f, type: 3}
   PunsukaSprite: {fileID: 21300000, guid: feef5c91df6d1614b8c98f5077c9ea3f, type: 3}
 --- !u!1 &3936743640206645275
@@ -198,7 +197,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3936743640206645275}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

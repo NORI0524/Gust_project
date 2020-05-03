@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using SoundMan = Singleton<SoundManager>;
+
 public class KoromoController : BaseCompornent
 {
     bool isCatch = false;
@@ -19,7 +21,7 @@ public class KoromoController : BaseCompornent
     // Start is called before the first frame update
     void Start()
     {
-        var obj = GameObject.Find("KoromoFactory");
+        var obj = GameObject.Find("KoromoManager");
         koromoFac = obj.GetComponent<SpawnFactory>();
     }
 
@@ -49,7 +51,7 @@ public class KoromoController : BaseCompornent
         {
             AddPosition(MoveX, MoveY, 0);
         }
-        if (PosY > 500)
+        if (PosY > 10)
         {
             koromoFac.Decrease();
             Destroy(gameObject);
@@ -59,6 +61,18 @@ public class KoromoController : BaseCompornent
     public void OnClick()
     {
         isTouch = true;
-        Debug.Log("クリック");
+        SoundMan.Instance.PlaySE("tenkasu");
     }
 }
+
+//スポーン座標関係　メモ
+
+//float px = Random.Range(-2.7f, 3.1f);
+//float py = Random.Range(-1.3f, 0.3f);
+//var collider = Physics2D.OverlapCircle(new Vector2(px, py), 0.35f);
+
+//        if (collider.CompareTag("Bathtub"))
+//        {
+//            GameObject obj = Instantiate(Koromo_Prefab) as GameObject;
+
+//obj.transform.position = new Vector3(px, py, -1);
