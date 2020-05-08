@@ -35,7 +35,6 @@ public class BGMPlayer
 
     class FadeIn : State
     {
-
         float t = 0.0f;
 
         public FadeIn(BGMPlayer bgmPlayer) : base(bgmPlayer)
@@ -57,11 +56,11 @@ public class BGMPlayer
         public override void UpdateBGM()
         {
             t += Time.deltaTime;
-            bgmPlayer.source.volume = t / bgmPlayer.FadeInTime;
+            bgmPlayer.source.volume = bgmPlayer.initVolume * (t / bgmPlayer.FadeInTime);
 
             if (t >= bgmPlayer.FadeInTime)
             {
-                bgmPlayer.source.volume = 1.0f;
+                bgmPlayer.source.volume = bgmPlayer.initVolume;
                 bgmPlayer.state = new Playing(bgmPlayer);
             }
         }
@@ -73,7 +72,7 @@ public class BGMPlayer
         {
             if (bgmPlayer.source.isPlaying == false)
             {
-                bgmPlayer.source.volume = 1.0f;
+                bgmPlayer.source.volume = bgmPlayer.initVolume;
                 bgmPlayer.source.Play();
             }
         }
@@ -160,11 +159,12 @@ public class BGMPlayer
     State state;
     float FadeInTime = 0.0f;
     float FadeOutTime = 0.0f;
+    float initVolume = 1.0f;
     public bool FadeOutFlg;
 
     public BGMPlayer() { }
 
-    public BGMPlayer(string _bgmFileName)
+    public BGMPlayer(string _bgmFileName, float _volume)
     {
         AudioClip clip = (AudioClip)Resources.Load(_bgmFileName);
 
@@ -173,6 +173,7 @@ public class BGMPlayer
             obj = new GameObject("BGMPlayer");
             source = obj.AddComponent<AudioSource>();
             source.clip = clip;
+            initVolume = _volume;
             state = new Wait(this);
         }
         else

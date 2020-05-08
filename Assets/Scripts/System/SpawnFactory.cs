@@ -5,8 +5,7 @@ using UnityEngine;
 public class SpawnFactory : BaseCompornent
 {
     //オブジェクトの種類
-    public const int objTypeNum = 3;
-    public GameObject[] obj_Prefab = new GameObject[objTypeNum];
+    public GameObject[] obj_Prefab = null;
 
     //１画面に表示する最大数
     public int ObjDispMax = 5;
@@ -58,7 +57,7 @@ public class SpawnFactory : BaseCompornent
         //スポーン処理
         for(int cnt=0; cnt < onceSpawnNum; cnt++)
         {
-            int select = Random.Range(0, objTypeNum);
+            int select = Random.Range(0, obj_Prefab.Length);
             GameObject obj = Instantiate(obj_Prefab[select]) as GameObject;
             currentNum++;
 

@@ -26,13 +26,13 @@ public class SoundManager
         public float attenuate = 0.0f;
 
         //コンストラクタ
-        public AudioClipInfo(string resourceName, string name, int maxSENum, float initVolume)
+        public AudioClipInfo(string _resourceName, string _name, int _maxSENum, float _initVolume)
         {
-            this.resourceName = resourceName;
-            this.name = name;
+            this.resourceName = _resourceName;
+            this.name = _name;
 
-            this.maxSENum = maxSENum;
-            this.initVolume = initVolume;
+            this.maxSENum = _maxSENum;
+            this.initVolume = _initVolume;
             attenuate = CalcAttenuateRate();
 
             // create stock list
@@ -85,20 +85,21 @@ public class SoundManager
     public SoundManager()
     {
         //ここにゲーム全体で使う音源を登録
-
+        // なぜかMaxSENumを2以上にしないとvolume1.0でしか音が鳴らなくなる
         //SE
-        audioClips.Add("fire", new AudioClipInfo(SePath + "fire", "fire", 1, 1.0f));
-        audioClips.Add("tap", new AudioClipInfo(SePath + "tap", "tap", 5, 1.0f));
-        audioClips.Add("tap2", new AudioClipInfo(SePath + "tap2", "tap2", 1, 1.0f));
-        audioClips.Add("pic", new AudioClipInfo(SePath + "pic", "pic", 1, 1.0f));
-        audioClips.Add("pic2", new AudioClipInfo(SePath + "pic2", "pic2", 1, 1.0f));
-        audioClips.Add("happy", new AudioClipInfo(SePath + "happy", "happy", 1, 1.0f));
+        audioClips.Add("fire", new AudioClipInfo(SePath + "fire", "fire", 2, 0.1f));
+        audioClips.Add("tap", new AudioClipInfo(SePath + "tap", "tap", 5, 0.2f));
+        audioClips.Add("tap2", new AudioClipInfo(SePath + "tap2", "tap2", 5, 0.3f));
+        audioClips.Add("pic", new AudioClipInfo(SePath + "pic", "pic", 5, 0.4f));
+        audioClips.Add("pic2", new AudioClipInfo(SePath + "pic2", "pic2", 5, 0.5f));
+        audioClips.Add("happy", new AudioClipInfo(SePath + "happy", "happy", 5, 0.6f));
 
-        audioClips.Add("fried", new AudioClipInfo(SePath + "Fried", "fried", 1, 1.0f));
-        audioClips.Add("tenkasu", new AudioClipInfo(SePath + "tenkasu", "tenkasu", 1, 1.0f));
+
+        audioClips.Add("fried", new AudioClipInfo(SePath + "Fried", "fried", 2, 0.7f));
+        audioClips.Add("tenkasu", new AudioClipInfo(SePath + "tenkasu", "tenkasu", 5, 0.8f));
 
         //BGM
-        audioClips.Add("bgm", new AudioClipInfo(BgmPath + "ほのぼのBGM「MusicMaterial」", "bgm", 1, 0.5f));
+        audioClips.Add("bgm", new AudioClipInfo(BgmPath + "ほのぼのBGM「MusicMaterial」", "bgm", 1, 0.05f));
     }
 
     //SEを再生
@@ -109,14 +110,12 @@ public class SoundManager
 
         AudioClipInfo info = audioClips[seName];
 
-
         //ロード
         if (info.clip == null)
         {
             info.clip = (AudioClip)Resources.Load(info.resourceName);
         }
             
-
         if(soundPlayer == null)
         {
             soundPlayer = new GameObject("SoundPlayer");
@@ -135,6 +134,7 @@ public class SoundManager
 
             // Play SE
             audioSource.PlayOneShot(info.clip, seInfo.volume);
+            Debug.Log("SE_Volume : " + seInfo.volume);
 
             return true;
         }
@@ -161,17 +161,25 @@ public class SoundManager
 
         //BGM
         CurBGMPlayer.UpdateBGM();
+
+
+        if (FadeOutBGMPlayer == null) return;
         FadeOutBGMPlayer.UpdateBGM();
     }
 
     //BGMを再生
     public void PlayBGM(string bgmName, float fadeTime)
     {
-        if (CurBGMPlayer != null && CurBGMPlayer.FadeOutFlg == false)
-            CurBGMPlayer.PlayBGM();
-        if (FadeOutBGMPlayer != null && FadeOutBGMPlayer.FadeOutFlg == false)
-            FadeOutBGMPlayer.PlayBGM();
+        //前のBGMを破棄
+        if (FadeOutBGMPlayer != null) FadeOutBGMPlayer.DestroyBGM();
 
+        //現在BGMを再生していたらフェードアウト
+        if (CurBGMPlayer != null)
+        {
+            CurBGMPlayer.StopBGM(fadeTime);
+            FadeOutBGMPlayer = CurBGMPlayer;
+        }
+            
         // play new BGM
         if (audioClips.ContainsKey(bgmName) == false)
         {
@@ -180,9 +188,17 @@ public class SoundManager
         }
         else
         {
-            CurBGMPlayer = new BGMPlayer(audioClips[bgmName].resourceName);
+            CurBGMPlayer = new BGMPlayer(audioClips[bgmName].resourceName, audioClips[bgmName].initVolume);
             CurBGMPlayer.PlayBGM(fadeTime);
         }
+    }
+
+    public void PlayBGM()
+    {
+        if (CurBGMPlayer != null && CurBGMPlayer.FadeOutFlg == false)
+            CurBGMPlayer.PlayBGM();
+        if (FadeOutBGMPlayer != null && FadeOutBGMPlayer.FadeOutFlg == false)
+            FadeOutBGMPlayer.PlayBGM();
     }
 
     public void PauseBGM()
