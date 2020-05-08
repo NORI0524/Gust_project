@@ -6,6 +6,8 @@ public class KoromoManager : BaseCompornent
 {
     SpawnFactory koromoFac;
 
+    private const float AddFrequency = 20.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +28,6 @@ public class KoromoManager : BaseCompornent
         }
 
         //TODO:入浴中のお客さんの数でスポーンの設定を変えるかも
+        koromoFac.spawnFrequency = GameDirector.bathingCustomerNum * AddFrequency;
     }
 }

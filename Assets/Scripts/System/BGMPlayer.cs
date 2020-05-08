@@ -22,7 +22,6 @@ public class BGMPlayer
     //各Stateクラス////////////////////////////////////////////////
     class Wait : State
     {
-
         public Wait(BGMPlayer bgmPlayer) : base(bgmPlayer) { }
 
         public override void PlayBGM()
@@ -70,7 +69,6 @@ public class BGMPlayer
 
     class Playing : State
     {
-
         public Playing(BGMPlayer bgmPlayer) : base(bgmPlayer)
         {
             if (bgmPlayer.source.isPlaying == false)

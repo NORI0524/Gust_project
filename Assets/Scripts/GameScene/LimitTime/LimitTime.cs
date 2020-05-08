@@ -64,4 +64,6 @@ public class LimitTime : BaseCompornent
             GUI.TextArea(new Rect(100, 50, 100, 50), "-- Finish --");
         }
     }
+
+    public bool IsFinish() { return time.IsFinish(); }
 }
