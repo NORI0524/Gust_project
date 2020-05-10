@@ -94,9 +94,12 @@ public class SoundManager
         audioClips.Add("pic2", new AudioClipInfo(SePath + "pic2", "pic2", 5, 0.5f));
         audioClips.Add("happy", new AudioClipInfo(SePath + "happy", "happy", 5, 0.6f));
 
+        audioClips.Add("start", new AudioClipInfo(SePath + "start", "start", 5, 0.25f));
+        audioClips.Add("finish", new AudioClipInfo(SePath + "finish", "finish", 5, 0.25f));
 
-        audioClips.Add("fried", new AudioClipInfo(SePath + "Fried", "fried", 2, 0.7f));
-        audioClips.Add("tenkasu", new AudioClipInfo(SePath + "tenkasu", "tenkasu", 5, 0.8f));
+
+        audioClips.Add("fried", new AudioClipInfo(SePath + "Fried", "fried", 2, 0.5f));
+        audioClips.Add("tenkasu", new AudioClipInfo(SePath + "tenkasu", "tenkasu", 5, 0.6f));
 
         //BGM
         audioClips.Add("bgm", new AudioClipInfo(BgmPath + "ほのぼのBGM「MusicMaterial」", "bgm", 1, 0.05f));

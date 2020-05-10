@@ -25,6 +25,8 @@ public class GameDirector : BaseCompornent
     //開始、終了
     GameObject startObj;
     GameObject finishObj;
+
+    bool isFinish;
     
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,9 @@ public class GameDirector : BaseCompornent
         limitTimeCtrl = limitTime.GetComponent<LimitTime>();
 
         SoundMan.Instance.PlayBGM("bgm", 3.0f);
+        SoundMan.Instance.PlaySE("start");
+
+        isFinish = false;
     }
 
     // Update is called once per frame
@@ -57,9 +62,11 @@ public class GameDirector : BaseCompornent
         
 
         //ゲーム終了
-        if (limitTimeCtrl.IsFinish())
+        if (limitTimeCtrl.IsFinish() && !isFinish)
         {
             finishObj.SetActive(true);
+            SoundMan.Instance.PlaySE("finish");
+            isFinish = true;
         }
 
         //音響
