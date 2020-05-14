@@ -8,7 +8,11 @@ public class BitFlag {
     private uint bit;
 
     //フラグビットを取得
-    public uint GetBit() { return bit; }
+    public uint Bit
+    {
+        set { bit = value; }
+        get { return bit; }
+    }
     
     //指定したビットが立っているかチェック
     public bool CheckBit(uint targetBit) { return (bit & targetBit) == targetBit; }

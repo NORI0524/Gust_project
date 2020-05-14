@@ -12,7 +12,12 @@ public class SatisfactionLevel
     public const int AddSatisfyValue = 5;
     public const int SubSatisfyValue = 5;
 
-    public int satisfyValue;
+    private int satisfyValue;
+
+    public int SatisfyValue
+    {
+        get { return satisfyValue; }
+    }
 
     BitFlag state = new BitFlag();
 
@@ -64,5 +69,4 @@ public class SatisfactionLevel
     }
 
     public bool IsFull() { return state.CheckBit(State.Full); }
-    public int GetSatisfyValue() { return satisfyValue; }
 }

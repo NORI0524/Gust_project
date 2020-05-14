@@ -172,10 +172,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3936743639904624493, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3936743639904624494, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0001
+      objectReference: {fileID: 0}
     - target: {fileID: 3936743640206645275, guid: c821d95d277af694cb062bafae1da4ac,
         type: 3}
       propertyPath: m_Name
-      value: Mushroom
+      value: Mushroom Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3936743640206645275, guid: c821d95d277af694cb062bafae1da4ac,
         type: 3}
@@ -272,6 +282,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8888e8d1430533a429b17d0aab9a55e0,
         type: 3}
+    - target: {fileID: 6151528967788593588, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: BestFirePowerMin
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151528967788593588, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: BestFirePowerMax
+      value: 110
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c821d95d277af694cb062bafae1da4ac, type: 3}
 --- !u!1 &1893476900828528650 stripped

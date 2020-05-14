@@ -44,6 +44,9 @@ public class BaseCharactorController : BaseCompornent
     //温度管理
     ThemoManager themoMan;
 
+    //適正な温度
+    [SerializeField, Range(ThemometerController.MinFirePower, ThemometerController.MaxFirePower)] private float BestFirePowerMin;
+    [SerializeField, Range(ThemometerController.MinFirePower, ThemometerController.MaxFirePower)] private float BestFirePowerMax;
 
     //満足度
     SatisfactionLevel satisfy = new SatisfactionLevel();
@@ -83,12 +86,17 @@ public class BaseCharactorController : BaseCompornent
         //表情
         FacialExpression();
 
+
+        //TODO:客ごとに共通の適正温度にするなら
+        //BestFirePowerMin = themoMan.GetBestFirePowerMin();
+        //BestFirePowerMax = themoMan.GetBestFirePowerMax();
+
         //入浴中なら
         if (state.CheckBitOR(State.Bathing | State.FriedBathing))
         {
             //満足度の増減
             var nowFirePower = themoCtrl.GetFirePower();
-            if (nowFirePower >= themoMan.GetBestFirePowerMin() && nowFirePower <= themoMan.GetBestFirePowerMax())
+            if (nowFirePower >= BestFirePowerMin && nowFirePower <= BestFirePowerMax)
             {
                 satisfy.AddSatisfy();
             }
@@ -98,7 +106,7 @@ public class BaseCharactorController : BaseCompornent
             }
 
             //入浴中のお客さんが揚がるかどうか
-            if (state.CheckBitOR(State.Bathing) && satisfy.GetSatisfyValue() > FriedSatisfy)
+            if (state.CheckBitOR(State.Bathing) && satisfy.SatisfyValue > FriedSatisfy)
             {
                 state.FoldBit(State.Bathing);
                 state.AddBit(State.FriedBathing);
@@ -184,7 +192,7 @@ public class BaseCharactorController : BaseCompornent
 
     public int GetSatisfy()
     {
-        return satisfy.GetSatisfyValue();
+        return satisfy.SatisfyValue;
     }
     public CharaFaceState GetFaceState()
     {
@@ -206,9 +214,10 @@ public class BaseCharactorController : BaseCompornent
     //表情
     private void FacialExpression()
     {
-        if (satisfy.GetSatisfyValue() >= 50) face = CharaFaceState.Normal;
-        if (satisfy.GetSatisfyValue() >= 75) face = CharaFaceState.Smile;
-        if (satisfy.GetSatisfyValue() >= 100) face = CharaFaceState.Cat;
+        var satisfyVal = satisfy.SatisfyValue;
+        if (satisfyVal >= 50) face = CharaFaceState.Normal;
+        if (satisfyVal >= 75) face = CharaFaceState.Smile;
+        if (satisfyVal >= 100) face = CharaFaceState.Cat;
     }
 
     private void ScreenOut()

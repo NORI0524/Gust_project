@@ -32,6 +32,9 @@ public class SpawnFactory : BaseCompornent
 
     private bool isActive;
 
+    //Zソート用加算
+    private const float zSortValue = 0.0005f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,11 +62,12 @@ public class SpawnFactory : BaseCompornent
         {
             int select = Random.Range(0, obj_Prefab.Length);
             GameObject obj = Instantiate(obj_Prefab[select]) as GameObject;
-            currentNum++;
 
             float px = Random.Range(randX_Min, randX_Max);
             float py = Random.Range(randY_Min, randY_Max);
-            obj.transform.position = new Vector3(px, py, dispZ);
+            obj.transform.position = new Vector3(px, py, dispZ - (zSortValue * currentNum));
+
+            currentNum++;
         }
     }
 
