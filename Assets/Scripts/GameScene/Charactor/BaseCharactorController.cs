@@ -45,8 +45,8 @@ public class BaseCharactorController : BaseCompornent
     ThemoManager themoMan;
 
     //適正な温度
-    [SerializeField, Range(ThemometerController.MinFirePower, ThemometerController.MaxFirePower)] private float BestFirePowerMin;
-    [SerializeField, Range(ThemometerController.MinFirePower, ThemometerController.MaxFirePower)] private float BestFirePowerMax;
+    [SerializeField, Range(ThemometerController.MinFirePower, ThemometerController.MaxFirePower)] private float BestFirePowerMin = 0;
+    [SerializeField, Range(ThemometerController.MinFirePower, ThemometerController.MaxFirePower)] private float BestFirePowerMax = 100;
 
     //満足度
     SatisfactionLevel satisfy = new SatisfactionLevel();
