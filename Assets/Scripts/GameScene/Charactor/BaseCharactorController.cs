@@ -27,12 +27,13 @@ public class BaseCharactorController : BaseCompornent
         public const uint Bathing = 1 << 1;
         public const uint Fried = 1 << 2;
         public const uint FriedBathing = 1 << 3;
+        public const uint Burn = 1 << 4;
 
-        public const uint Intrusion = 1 << 4;
+        public const uint Intrusion = 1 << 5;
 
-        public const uint Death = 1 << 5;
+        public const uint Death = 1 << 6;
 
-        public const uint Drag = 1 << 5;
+        public const uint Drag = 1 << 7;
     }
 
     //表情State
@@ -47,6 +48,12 @@ public class BaseCharactorController : BaseCompornent
     //適正な温度
     [SerializeField, Range(ThemometerController.MinFirePower, ThemometerController.MaxFirePower)] private float BestFirePowerMin = 0;
     [SerializeField, Range(ThemometerController.MinFirePower, ThemometerController.MaxFirePower)] private float BestFirePowerMax = 100;
+
+    //適正な揚げ時間
+    [SerializeField, Range(0, 60)] private int BestFriedTime = 10;
+
+    //揚げ時間タイマー
+    Timer friedTimer = null;
 
     //満足度
     SatisfactionLevel satisfy = new SatisfactionLevel();
@@ -75,6 +82,9 @@ public class BaseCharactorController : BaseCompornent
 
         obj = GameObject.Find("CustomerManager");
         customerFac = obj.GetComponent<SpawnFactory>();
+
+        friedTimer = new Timer(BestFriedTime);
+        friedTimer.Start();
     }
 
     // Update is called once per frame
@@ -94,6 +104,11 @@ public class BaseCharactorController : BaseCompornent
         //入浴中なら
         if (state.CheckBitOR(State.Bathing | State.FriedBathing))
         {
+            friedTimer.Update();
+
+            //揚げ時間を越したら焦げ状態
+            if (friedTimer.IsFinish()) state.AddBit(State.Burn);
+
             //満足度の増減
             var nowFirePower = themoCtrl.GetFirePower();
             if (nowFirePower >= BestFirePowerMin && nowFirePower <= BestFirePowerMax)
