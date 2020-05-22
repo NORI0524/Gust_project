@@ -8,7 +8,6 @@ public class Number_test : MonoBehaviour
 
     //表示関連
     private int point;      //表示する値
-    private float size = 1; //表示サイズ
 
     private static int dam_sort = 0;    //数字の表示順
     private const int SORT_MAX = 30000;

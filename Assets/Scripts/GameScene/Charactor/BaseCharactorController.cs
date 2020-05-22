@@ -11,10 +11,10 @@ public class BaseCharactorController : BaseCompornent
     SpriteRenderer spriteRenderer;
 
     //public宣言しinspectorで設定可能にする
-    public Sprite NormalSprite;
-    public Sprite BathingSprite;
-    public Sprite FriedSprite;
-    public Sprite FriedBathingSprite;
+    [SerializeField] Sprite NormalSprite = null;
+    [SerializeField] Sprite BathingSprite = null;
+    [SerializeField] Sprite FriedSprite = null;
+    [SerializeField] Sprite FriedBathingSprite = null;
 
     //Factory
     SpawnFactory customerFac;
