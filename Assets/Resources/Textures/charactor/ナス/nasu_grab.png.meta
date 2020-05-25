@@ -1,17 +1,13 @@
 fileFormatVersion: 2
-guid: e1aaabcea8223ef4ebb49a7ba85e3cc0
+guid: d818f4d55aa9bb04cb4ed5b2d015345d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "number(200\xD7300)_0"
-    21300002: "number(200\xD7300)_1"
-    21300004: "number(200\xD7300)_2"
-    21300006: "number(200\xD7300)_3"
-    21300008: "number(200\xD7300)_4"
-    21300010: "number(200\xD7300)_5"
-    21300012: "number(200\xD7300)_6"
-    21300014: "number(200\xD7300)_7"
-    21300016: "number(200\xD7300)_8"
-    21300018: "number(200\xD7300)_9"
+    21300000: nasu_grab_0
+    21300002: nasu_grab_1
+    21300004: nasu_grab_2
+    21300006: nasu_grab_3
+    21300008: nasu_grab_4
+    21300010: nasu_grab_5
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -105,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "number(200\xD7300)_0"
+      name: nasu_grab_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 8
-        width: 134
-        height: 284
+        x: 0
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,19 +115,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3441555fd866a78489e5127007e49d08
+      spriteID: 504ddab66f020fd47943da53f0a92416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "number(200\xD7300)_1"
+      name: nasu_grab_1
       rect:
         serializedVersion: 2
-        x: 244
-        y: 13
-        width: 120
-        height: 275
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,19 +135,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0f980870e1b22f45bc2265b41643088
+      spriteID: 7299294e2e5669942a70f74837059bc7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "number(200\xD7300)_2"
+      name: nasu_grab_2
       rect:
         serializedVersion: 2
-        x: 435
-        y: 13
-        width: 132
-        height: 279
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,19 +155,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0855cb23f589ecd4694e5e4a4309cad8
+      spriteID: 6718164d4a976ec48aae50db4e4d2204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "number(200\xD7300)_3"
+      name: nasu_grab_3
       rect:
         serializedVersion: 2
-        x: 630
-        y: 8
-        width: 136
-        height: 283
+        x: 0
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,19 +175,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 406fd0c970f72e443bc8c78b2de9c434
+      spriteID: a2fd536b8a0b80b4492591a58c6ffa6a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "number(200\xD7300)_4"
+      name: nasu_grab_4
       rect:
         serializedVersion: 2
-        x: 824
-        y: 13
-        width: 139
-        height: 275
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,19 +195,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22ccbee42fc9efc4babee70d784c9e6d
+      spriteID: 817aaee0199cb3f4d825765de55bd9d2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "number(200\xD7300)_5"
+      name: nasu_grab_5
       rect:
         serializedVersion: 2
-        x: 1032
-        y: 8
-        width: 133
-        height: 278
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,87 +215,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db81c9f5806abd846beeb0e39e75f00c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "number(200\xD7300)_6"
-      rect:
-        serializedVersion: 2
-        x: 1233
-        y: 8
-        width: 133
-        height: 283
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d50f0d5069ebed84d89c070fb68b983c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "number(200\xD7300)_7"
-      rect:
-        serializedVersion: 2
-        x: 1432
-        y: 13
-        width: 130
-        height: 273
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2fd7332007c9cbf498817acada58d52f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "number(200\xD7300)_8"
-      rect:
-        serializedVersion: 2
-        x: 1628
-        y: 8
-        width: 139
-        height: 283
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e092eb963d2e8124f9ae3a860c117d24
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "number(200\xD7300)_9"
-      rect:
-        serializedVersion: 2
-        x: 1828
-        y: 8
-        width: 133
-        height: 283
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3783256ae801d4d499bafc52fd966cee
+      spriteID: e0cd98710e133a54e91728f3e3e65369
       vertices: []
       indices: 
       edges: []
@@ -307,7 +223,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0b3c194af16e97f40b53c94918cc9618
+    spriteID: b6df72ad74c1f92498a5726b5e2cc655
     vertices: []
     indices: 
     edges: []

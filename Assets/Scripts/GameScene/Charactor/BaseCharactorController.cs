@@ -11,10 +11,10 @@ public class BaseCharactorController : BaseCompornent
     SpriteRenderer spriteRenderer;
 
     //public宣言しinspectorで設定可能にする
-    public Sprite NormalSprite;
-    public Sprite BathingSprite;
-    public Sprite FriedSprite;
-    public Sprite FriedBathingSprite;
+    [SerializeField] Sprite NormalSprite = null;
+    [SerializeField] Sprite BathingSprite = null;
+    [SerializeField] Sprite FriedSprite = null;
+    [SerializeField] Sprite FriedBathingSprite = null;
 
     //Factory
     SpawnFactory customerFac;
@@ -98,8 +98,8 @@ public class BaseCharactorController : BaseCompornent
 
 
         //TODO:客ごとに共通の適正温度にするなら
-        //BestFirePowerMin = themoMan.GetBestFirePowerMin();
-        //BestFirePowerMax = themoMan.GetBestFirePowerMax();
+        BestFirePowerMin = themoMan.GetBestFirePowerMin();
+        BestFirePowerMax = themoMan.GetBestFirePowerMax();
 
         //入浴中なら
         if (state.CheckBitOR(State.Bathing | State.FriedBathing))

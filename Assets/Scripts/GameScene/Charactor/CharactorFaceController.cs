@@ -8,17 +8,17 @@ public class CharactorFaceController : BaseCompornent
     SpriteRenderer spriteRenderer;
 
     //public宣言しinspectorで設定可能にする
-    public Sprite NormalSprite;
-    public Sprite SmileSprite;
-    public Sprite AngerSprite;
-    public Sprite SleepSprite;
-    public Sprite SurpriseSprite;
-    public Sprite NothingSprite;
-    public Sprite NotGood_FirstSprite;
-    public Sprite NotGood_SecondSprite;
-    public Sprite NotGood_ThirdSprite;
-    public Sprite CatSprite;
-    public Sprite PunsukaSprite;
+    [SerializeField] Sprite NormalSprite = null;
+    [SerializeField] Sprite SmileSprite = null;
+    [SerializeField] Sprite AngerSprite = null;
+    [SerializeField] Sprite SleepSprite = null;
+    [SerializeField] Sprite SurpriseSprite = null;
+    [SerializeField] Sprite NothingSprite = null;
+    [SerializeField] Sprite NotGood_FirstSprite = null;
+    [SerializeField] Sprite NotGood_SecondSprite = null;
+    [SerializeField] Sprite NotGood_ThirdSprite = null;
+    [SerializeField] Sprite CatSprite = null;
+    [SerializeField] Sprite PunsukaSprite = null;
 
     //表情
     public enum FaceState

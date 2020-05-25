@@ -42,6 +42,9 @@ public class Fan : BaseCompornent
 
     public void Touch()
     {
+        var obj = GameObject.Find("SaucePan_Lib");
+        if (obj != null) return;
+
         animator.SetBool("FanFlag", true);
         themoCtrl.AddFirePower(AddFirePower);
     }

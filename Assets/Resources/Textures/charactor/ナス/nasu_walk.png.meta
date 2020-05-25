@@ -1,17 +1,16 @@
 fileFormatVersion: 2
-guid: e1aaabcea8223ef4ebb49a7ba85e3cc0
+guid: 8bec5178ac6089743bb04aaaac13aca5
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "number(200\xD7300)_0"
-    21300002: "number(200\xD7300)_1"
-    21300004: "number(200\xD7300)_2"
-    21300006: "number(200\xD7300)_3"
-    21300008: "number(200\xD7300)_4"
-    21300010: "number(200\xD7300)_5"
-    21300012: "number(200\xD7300)_6"
-    21300014: "number(200\xD7300)_7"
-    21300016: "number(200\xD7300)_8"
-    21300018: "number(200\xD7300)_9"
+    21300000: nasu_walk_0
+    21300002: nasu_walk_1
+    21300004: nasu_walk_2
+    21300006: nasu_walk_3
+    21300008: nasu_walk_4
+    21300010: nasu_walk_5
+    21300012: nasu_walk_6
+    21300014: nasu_walk_7
+    21300016: nasu_walk_8
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -105,201 +104,181 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "number(200\xD7300)_0"
+      name: nasu_walk_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 8
-        width: 134
-        height: 284
+        x: 0
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3441555fd866a78489e5127007e49d08
+      spriteID: b613c11000e11424caa1e53adacc9702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "number(200\xD7300)_1"
+      name: nasu_walk_1
       rect:
         serializedVersion: 2
-        x: 244
-        y: 13
-        width: 120
-        height: 275
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0f980870e1b22f45bc2265b41643088
+      spriteID: ed318a217725d284b933dce84f283683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "number(200\xD7300)_2"
+      name: nasu_walk_2
       rect:
         serializedVersion: 2
-        x: 435
-        y: 13
-        width: 132
-        height: 279
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0855cb23f589ecd4694e5e4a4309cad8
+      spriteID: 46c0be41100970c43b4d31b3c99b833d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "number(200\xD7300)_3"
+      name: nasu_walk_3
       rect:
         serializedVersion: 2
-        x: 630
-        y: 8
-        width: 136
-        height: 283
+        x: 0
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 406fd0c970f72e443bc8c78b2de9c434
+      spriteID: ad7b3962f98b57243bdacfcf8a942638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "number(200\xD7300)_4"
+      name: nasu_walk_4
       rect:
         serializedVersion: 2
-        x: 824
-        y: 13
-        width: 139
-        height: 275
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22ccbee42fc9efc4babee70d784c9e6d
+      spriteID: 9a81b9baee66d53449f01d514c7455e2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "number(200\xD7300)_5"
+      name: nasu_walk_5
       rect:
         serializedVersion: 2
-        x: 1032
-        y: 8
-        width: 133
-        height: 278
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db81c9f5806abd846beeb0e39e75f00c
+      spriteID: fcce1485ba5993440b720f78286aee13
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "number(200\xD7300)_6"
+      name: nasu_walk_6
       rect:
         serializedVersion: 2
-        x: 1233
-        y: 8
-        width: 133
-        height: 283
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d50f0d5069ebed84d89c070fb68b983c
+      spriteID: c5d578e424fefd64c9057f3844e77456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "number(200\xD7300)_7"
+      name: nasu_walk_7
       rect:
         serializedVersion: 2
-        x: 1432
-        y: 13
-        width: 130
-        height: 273
+        x: 255
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fd7332007c9cbf498817acada58d52f
+      spriteID: d990c9c41465daa47859dcd7bdc70ebe
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "number(200\xD7300)_8"
+      name: nasu_walk_8
       rect:
         serializedVersion: 2
-        x: 1628
-        y: 8
-        width: 139
-        height: 283
+        x: 512
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e092eb963d2e8124f9ae3a860c117d24
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "number(200\xD7300)_9"
-      rect:
-        serializedVersion: 2
-        x: 1828
-        y: 8
-        width: 133
-        height: 283
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3783256ae801d4d499bafc52fd966cee
+      spriteID: 0ec2713370fee4a40bf046c867c7226f
       vertices: []
       indices: 
       edges: []
@@ -307,7 +286,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0b3c194af16e97f40b53c94918cc9618
+    spriteID: e91f9e2b779f6ef4a928782ecf9c811b
     vertices: []
     indices: 
     edges: []
