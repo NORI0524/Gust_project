@@ -88,8 +88,8 @@ public class BaseCharactorController : BaseCompornent
 
 
         //TODO:客ごとに共通の適正温度にするなら
-        //BestFirePowerMin = themoMan.GetBestFirePowerMin();
-        //BestFirePowerMax = themoMan.GetBestFirePowerMax();
+        BestFirePowerMin = themoMan.GetBestFirePowerMin();
+        BestFirePowerMax = themoMan.GetBestFirePowerMax();
 
         //入浴中なら
         if (state.CheckBitOR(State.Bathing | State.FriedBathing))
