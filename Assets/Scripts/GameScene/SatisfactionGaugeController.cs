@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SatisfactionGaugeController : BaseCompornent
 {
-    public Image obj;
+    [SerializeField] Image obj = null;
 
     private const int GaugeMax = 3000;
     private const int GaugeMin = 0;
