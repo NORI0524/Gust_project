@@ -1,6 +1,7 @@
 fileFormatVersion: 2
 guid: a6238afbc007649478af459d2de7d899
 TextureImporter:
+<<<<<<< HEAD:Assets/Resources/Textures/UI/文字/Rank(1000×400).png.meta
   fileIDToRecycleName:
     21300000: "Rank(1000\xD7400)_0"
     21300002: "Rank(1000\xD7400)_1"
@@ -12,6 +13,9 @@ TextureImporter:
     21300014: "Rank(1000\xD7400)_7"
     21300016: "Rank(1000\xD7400)_8"
     21300018: "Rank(1000\xD7400)_9"
+=======
+  fileIDToRecycleName: {}
+>>>>>>> parent of 9be92fc... ナス一旦スライス:Assets/Resources/Textures/nasu_walk.png.meta
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -50,7 +54,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -79,6 +83,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD:Assets/Resources/Textures/UI/文字/Rank(1000×400).png.meta
   - serializedVersion: 2
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -308,6 +313,15 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 3f475a5fd09d11341a49588537595606
+=======
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e91f9e2b779f6ef4a928782ecf9c811b
+>>>>>>> parent of 9be92fc... ナス一旦スライス:Assets/Resources/Textures/nasu_walk.png.meta
     vertices: []
     indices: 
     edges: []
