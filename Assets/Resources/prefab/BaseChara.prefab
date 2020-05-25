@@ -102,7 +102,8 @@ MonoBehaviour:
     type: 3}
   NotGood_SecondSprite: {fileID: 21300000, guid: 32e0ec5dd1635a541b67fe07535d845d,
     type: 3}
-  NotGood_ThirdSprite: {fileID: 0}
+  NotGood_ThirdSprite: {fileID: 21300000, guid: e2b2c4618bed261439d3e953adf4ec17,
+    type: 3}
   CatSprite: {fileID: 21300000, guid: 58591d50159708a4aa50dd3ac557e88f, type: 3}
   PunsukaSprite: {fileID: 21300000, guid: feef5c91df6d1614b8c98f5077c9ea3f, type: 3}
 --- !u!1 &3936743640206645275
@@ -226,6 +227,9 @@ MonoBehaviour:
   BathingSprite: {fileID: 0}
   FriedSprite: {fileID: 0}
   FriedBathingSprite: {fileID: 0}
+  BestFirePowerMin: 0
+  BestFirePowerMax: 100
+  BestFriedTime: 10
 --- !u!114 &3936743640206645287
 MonoBehaviour:
   m_ObjectHideFlags: 0
