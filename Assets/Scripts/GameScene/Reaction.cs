@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Reaction : MonoBehaviour
 {
-    public float fadeTime = 50.0f;
+    public float fadeTime = 1.0f;
     private float currentRemainTime;
     private SpriteRenderer spRenderer;
 
@@ -38,7 +38,7 @@ public class Reaction : MonoBehaviour
         animator.SetInteger("ReactionStart", start);
 
         //表示からフェードアウトまでの処理
-        currentRemainTime -= 0.005f;
+        currentRemainTime -= 0.1f;
 
         if (currentRemainTime <= 0.0f)
         {
@@ -47,12 +47,10 @@ public class Reaction : MonoBehaviour
         }
 
         //一定時間たったらアルファ値を下げる
-        if (currentRemainTime <= 0.3f)
-        {
-            float alpha = currentRemainTime / fadeTime; ;
+        float alpha = currentRemainTime / fadeTime; ;
             var color = spRenderer.color;
             color.a = alpha;
             spRenderer.color = color;
-        }
+        
     }
 }
