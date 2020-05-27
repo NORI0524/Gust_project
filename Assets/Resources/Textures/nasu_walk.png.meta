@@ -1,21 +1,18 @@
 fileFormatVersion: 2
-guid: a6238afbc007649478af459d2de7d899
+guid: 6c3375f3a77b5e545a5d84a545ccb587
 TextureImporter:
-<<<<<<< HEAD:Assets/Resources/Textures/UI/文字/Rank(1000×400).png.meta
   fileIDToRecycleName:
-    21300000: "Rank(1000\xD7400)_0"
-    21300002: "Rank(1000\xD7400)_1"
-    21300004: "Rank(1000\xD7400)_2"
-    21300006: "Rank(1000\xD7400)_3"
-    21300008: "Rank(1000\xD7400)_4"
-    21300010: "Rank(1000\xD7400)_5"
-    21300012: "Rank(1000\xD7400)_6"
-    21300014: "Rank(1000\xD7400)_7"
-    21300016: "Rank(1000\xD7400)_8"
-    21300018: "Rank(1000\xD7400)_9"
-=======
-  fileIDToRecycleName: {}
->>>>>>> parent of 9be92fc... ナス一旦スライス:Assets/Resources/Textures/nasu_walk.png.meta
+    21300000: nasu_walk_0
+    21300002: nasu_walk_1
+    21300004: nasu_walk_2
+    21300006: nasu_walk_3
+    21300008: nasu_walk_4
+    21300010: nasu_walk_5
+    21300012: nasu_walk_6
+    21300014: nasu_walk_7
+    21300016: nasu_walk_8
+    21300018: nasu_walk_9
+    21300020: nasu_walk_10
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -54,7 +51,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -83,20 +80,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-<<<<<<< HEAD:Assets/Resources/Textures/UI/文字/Rank(1000×400).png.meta
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,13 +95,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Rank(1000\xD7400)_0"
+      name: nasu_walk_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 3608
-        width: 946
-        height: 383
+        x: 54
+        y: 517
+        width: 154
+        height: 243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,19 +109,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f8df32bb97f6ab4e8b62e55997c1411
+      spriteID: 3460d95b20531a142b776dbc9524733d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Rank(1000\xD7400)_1"
+      name: nasu_walk_1
       rect:
         serializedVersion: 2
-        x: 28
-        y: 3208
-        width: 946
-        height: 383
+        x: 315
+        y: 518
+        width: 149
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,19 +129,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de494e8aed6477f47a733337a14392d9
+      spriteID: 1b2934229b144f549aeee036e39b6e65
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Rank(1000\xD7400)_2"
+      name: nasu_walk_2
       rect:
         serializedVersion: 2
-        x: 26
-        y: 2808
-        width: 948
-        height: 384
+        x: 570
+        y: 519
+        width: 150
+        height: 241
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,19 +149,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c14d41b51b60544fa021cd766f660a1
+      spriteID: fd505b8c8a1703941be49ee28dea54f3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Rank(1000\xD7400)_3"
+      name: nasu_walk_3
       rect:
         serializedVersion: 2
-        x: 26
-        y: 2406
-        width: 948
-        height: 386
+        x: 54
+        y: 262
+        width: 146
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,19 +169,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93cbc6e14d97bd9438a4c783e91337c6
+      spriteID: 92c27eeac2363e14c83d2acb878e278a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Rank(1000\xD7400)_4"
+      name: nasu_walk_4
       rect:
         serializedVersion: 2
-        x: 24
-        y: 2007
-        width: 952
-        height: 383
+        x: 309
+        y: 263
+        width: 148
+        height: 241
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,19 +189,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6b2be305399f3b4b8c9511bda8414e9
+      spriteID: df04b1f7c0d05c44a8bbe2192e2b9a56
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Rank(1000\xD7400)_5"
+      name: nasu_walk_5
       rect:
         serializedVersion: 2
-        x: 24
-        y: 1610
-        width: 952
-        height: 383
+        x: 571
+        y: 262
+        width: 150
+        height: 242
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,79 +209,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf0ed05e23786fd46ac030a7fa47aae2
+      spriteID: 9a7af2fd17a5f4d48be214181359585e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Rank(1000\xD7400)_6"
+      name: nasu_walk_6
       rect:
         serializedVersion: 2
-        x: 26
-        y: 1208
-        width: 948
-        height: 386
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5723cdecb45b7bc48abc7a0259cf95aa
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Rank(1000\xD7400)_7"
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 808
-        width: 952
-        height: 382
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ac037324a4ebcb4da1be9610eb38304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Rank(1000\xD7400)_8"
-      rect:
-        serializedVersion: 2
-        x: 26
-        y: 406
-        width: 948
-        height: 386
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25d1eac28decaf841a575057720871fa
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Rank(1000\xD7400)_9"
-      rect:
-        serializedVersion: 2
-        x: 23
+        x: 61
         y: 9
-        width: 954
-        height: 383
+        width: 143
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,7 +229,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00d8ed16996f83d4bb07117094a09727
+      spriteID: d4688da57f31a854eac5bbd4b73e8afa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nasu_walk_7
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 6
+        width: 13
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ed2beaacf967d48b0eee48758b4ec6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nasu_walk_8
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 8
+        width: 147
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d445053011d6943aaa940573587427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nasu_walk_9
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 6
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813f138c236cff14cb0282d556866900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nasu_walk_10
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 4
+        width: 144
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe53ae260f7aa04bbbf877dd3ab450b
       vertices: []
       indices: 
       edges: []
@@ -312,16 +317,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3f475a5fd09d11341a49588537595606
-=======
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
-    outline: []
-    physicsShape: []
-    bones: []
-    spriteID: e91f9e2b779f6ef4a928782ecf9c811b
->>>>>>> parent of 9be92fc... ナス一旦スライス:Assets/Resources/Textures/nasu_walk.png.meta
+    spriteID: 8a9bda79b8228684dba2672eb0e3dee5
     vertices: []
     indices: 
     edges: []
