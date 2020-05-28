@@ -9,8 +9,6 @@ public class ResultDirector : BaseCompornent
     private int money;
     private Rank rank;
 
-  
-
     // Start is called before the first frame update
     void Start()
     {
