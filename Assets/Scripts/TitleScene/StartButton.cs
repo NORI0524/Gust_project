@@ -18,6 +18,7 @@ public class StartButton : BaseCompornent
     {
         fade.Update();
         ScaleX = fade.GetCurrentValue();
+        ScaleY = fade.GetCurrentValue();
     }
 
     public void Click()
@@ -28,5 +29,6 @@ public class StartButton : BaseCompornent
     public void OnGUI()
     {
         GUI.TextArea(new Rect(0, 0, 100, 50), "scaleX " + ScaleX);
+        GUI.TextArea(new Rect(0, 0, 100, 50), "scaleY " + ScaleY * -1);
     }
 }
