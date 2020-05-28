@@ -21,6 +21,5 @@ public class SatisfactionGaugeController : BaseCompornent
     { 
         int value = Mathf.Clamp(GameDirector.totalSatisfyValue, GaugeMin, GaugeMax);
         obj.fillAmount = (float)value / GaugeMax;
-        
     }
 }
