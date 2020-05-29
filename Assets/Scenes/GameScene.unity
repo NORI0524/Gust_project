@@ -282,6 +282,7 @@ Transform:
   - {fileID: 1650481640}
   - {fileID: 2050433665}
   - {fileID: 1231766823}
+  - {fileID: 702392434}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1172,6 +1173,73 @@ Transform:
   m_Father: {fileID: 2056343282}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &702392433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 702392434}
+  - component: {fileID: 702392436}
+  - component: {fileID: 702392435}
+  m_Layer: 0
+  m_Name: OilFlyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &702392434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702392433}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.5773354, y: -6.375498, z: -0.13528627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 121580695}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &702392435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702392433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7435dbb4db12124d819fe1ad662839a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj_Prefab:
+  - {fileID: 1749601132}
+  ObjDispMax: 4
+  onceSpawnNum: 1
+  spawnFrequency: 100
+  spanSeconds: 2
+  randX_Min: 0
+  randX_Max: 0
+  randY_Min: 0
+  randY_Max: 0
+  dispZ: 0
+--- !u!114 &702392436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702392433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d88765ad541f74c9daac4fcca5174d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &748689976
 GameObject:
   m_ObjectHideFlags: 0
@@ -2564,6 +2632,12 @@ MonoBehaviour:
   randY_Min: -1
   randY_Max: 0
   dispZ: -0.1
+--- !u!1 &1749601132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2076804215961629067, guid: 9d6db41cfc571654697ccbe29e8361ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 2076804215285873383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1938586466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2798,3 +2872,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082685229}
   m_CullTransparentMesh: 0
+--- !u!1001 &2076804215285873383
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2076804215961629064, guid: 9d6db41cfc571654697ccbe29e8361ee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.3986244
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076804215961629064, guid: 9d6db41cfc571654697ccbe29e8361ee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20487852
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076804215961629064, guid: 9d6db41cfc571654697ccbe29e8361ee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076804215961629064, guid: 9d6db41cfc571654697ccbe29e8361ee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076804215961629064, guid: 9d6db41cfc571654697ccbe29e8361ee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076804215961629064, guid: 9d6db41cfc571654697ccbe29e8361ee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076804215961629064, guid: 9d6db41cfc571654697ccbe29e8361ee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076804215961629064, guid: 9d6db41cfc571654697ccbe29e8361ee,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076804215961629064, guid: 9d6db41cfc571654697ccbe29e8361ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076804215961629064, guid: 9d6db41cfc571654697ccbe29e8361ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076804215961629064, guid: 9d6db41cfc571654697ccbe29e8361ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076804215961629067, guid: 9d6db41cfc571654697ccbe29e8361ee,
+        type: 3}
+      propertyPath: m_Name
+      value: OilFly
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9d6db41cfc571654697ccbe29e8361ee, type: 3}
