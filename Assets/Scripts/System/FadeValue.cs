@@ -7,10 +7,10 @@ public class FadeValue
     private float curValue;
     private int time;
     private float frame;
-    private bool isPlus;
+    public bool isPlus;
 
-    private float minValue;
-    private float maxValue;
+    public float minValue;
+    public float maxValue;
   
     public FadeValue(float current, int oneWayTime, float min, float max)
     {
