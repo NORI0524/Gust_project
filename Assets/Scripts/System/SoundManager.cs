@@ -5,9 +5,25 @@ using UnityEngine;
 //サウンド管理用クラス
 public class SoundManager
 {
+    //SEパス
+    public const string GameSceneSePath = "Sounds/SE/GameScene_SE/";        //ゲームシーン全般
+    public const string TapSePath = "Sounds/SE/Tap_SE/";                    //タップ
+    public const string SpaSePath = "Sounds/SE/Spa_SE/";                    //油温泉
+    public const string CharaSePath = "Sounds/SE/Character_SE/";            //キャラクター
+    public const string OilSplashSePath = "Sounds/SE/OilSplash_SE/";        //油跳ね
+    public const string FlamSePath = "Sounds/SE/Flam_SE/";                  //炎
+    public const string PotLidSePath = "Sounds/SE/PotLid_SE/";              //鍋蓋
+    public const string ThermometerSePath = "Sounds/SE/Thermometer_SE/";    //温度計
+    public const string TenkasuSePath = "Sounds/SE/Tenkasu_SE/";            //天かす
+    public const string EndOfDaySePath = "Sounds/SE/EndOfDay_SE/";          //一日の終わり
+    public const string TitleSePath = "Sounds/SE/Title_SE/";                //タイトル
+    public const string ResultSePath = "Sounds/SE/Result_SE/";              //リザルト
 
-    public const string SePath = "Sounds/SE/";
-    public const string BgmPath = "Sounds/BGM/";
+
+    //BGMパス
+    public const string GameBgmPath = "Sounds/BGM/Game_BGM/";
+    public const string TitleBgmPath = "Sounds/BGM/Title_BGM/";
+    public const string ResultBgmPath = "Sounds/BGM/Result_BGM/";
 
     BGMPlayer CurBGMPlayer = null;
     BGMPlayer FadeOutBGMPlayer = null;
@@ -87,22 +103,22 @@ public class SoundManager
         //ここにゲーム全体で使う音源を登録
         // なぜかMaxSENumを2以上にしないとvolume1.0でしか音が鳴らなくなる
         //SE
-        audioClips.Add("fire", new AudioClipInfo(SePath + "fire", "fire", 2, 0.1f));
-        audioClips.Add("tap", new AudioClipInfo(SePath + "tap", "tap", 5, 0.2f));
-        audioClips.Add("tap2", new AudioClipInfo(SePath + "tap2", "tap2", 5, 0.3f));
-        audioClips.Add("pic", new AudioClipInfo(SePath + "pic", "pic", 5, 0.4f));
-        audioClips.Add("pic2", new AudioClipInfo(SePath + "pic2", "pic2", 5, 0.5f));
-        audioClips.Add("happy", new AudioClipInfo(SePath + "happy", "happy", 5, 0.6f));
+        audioClips.Add("fire", new AudioClipInfo(FlamSePath + "fire", "fire", 2, 0.1f));
+        audioClips.Add("tap", new AudioClipInfo(TapSePath + "tap", "tap", 5, 0.2f));
+        audioClips.Add("tap2", new AudioClipInfo(TapSePath + "tap2", "tap2", 5, 0.3f));
+        audioClips.Add("pic", new AudioClipInfo(CharaSePath + "pic", "pic", 5, 0.4f));
+        audioClips.Add("pic2", new AudioClipInfo(CharaSePath + "pic2", "pic2", 5, 0.5f));
+        audioClips.Add("happy", new AudioClipInfo(CharaSePath + "happy", "happy", 5, 0.6f));
 
-        audioClips.Add("start", new AudioClipInfo(SePath + "start", "start", 5, 0.25f));
-        audioClips.Add("finish", new AudioClipInfo(SePath + "finish", "finish", 5, 0.25f));
+        audioClips.Add("start", new AudioClipInfo(GameSceneSePath + "start", "start", 5, 0.25f));
+        audioClips.Add("finish", new AudioClipInfo(GameSceneSePath + "finish", "finish", 5, 0.25f));
 
 
-        audioClips.Add("fried", new AudioClipInfo(SePath + "Fried", "fried", 2, 0.5f));
-        audioClips.Add("tenkasu", new AudioClipInfo(SePath + "tenkasu", "tenkasu", 5, 0.6f));
+        audioClips.Add("fried", new AudioClipInfo(SpaSePath + "fried", "fried", 2, 0.5f));
+        audioClips.Add("tenkasu", new AudioClipInfo(TenkasuSePath + "tenkasu", "tenkasu", 5, 0.6f));
 
         //BGM
-        audioClips.Add("bgm", new AudioClipInfo(BgmPath + "ほのぼのBGM「MusicMaterial」", "bgm", 1, 0.05f));
+        audioClips.Add("bgm", new AudioClipInfo(GameBgmPath + "Game_BGM1", "bgm", 1, 0.05f));
     }
 
     //SEを再生
