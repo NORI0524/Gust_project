@@ -17,9 +17,14 @@ public class OilFlyController : BaseCompornent
 
     FadeValue scaleFade, posFade;
 
+    SpawnFactory oilFac;
+
     // Start is called before the first frame update
     void Start()
     {
+        var obj = GameObject.Find("OilFlyManager");
+        oilFac = obj.GetComponent<SpawnFactory>();
+
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = NormalSprite;
 
@@ -53,6 +58,10 @@ public class OilFlyController : BaseCompornent
             ScaleX = ScaleY = scaleFade.maxValue;
             PosY = posFade.minValue;
             spriteRenderer.sprite = DamageSprite;
+
+
+            oilFac.Decrease();
+            Destroy(gameObject);
         }
     }
 }
