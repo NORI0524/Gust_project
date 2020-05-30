@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class OilFlyController : BaseCompornent
 {
     SpriteRenderer spriteRenderer;
+
+    private Transparent destroyTrans = null;
 
     [SerializeField] Sprite NormalSprite = null;
     [SerializeField] Sprite DamageSprite = null;
@@ -31,6 +34,7 @@ public class OilFlyController : BaseCompornent
         scaleFade = new FadeValue(0.01f, OilFlyHitTime, 0.01f, 1.0f);
         posFade = new FadeValue(PosY, OilFlyHitTime / 2, PosY, PosY + OilFlyBowHeight);
 
+
         posFade.isPlus = true;
         scaleFade.isPlus = true;
         isHit = false;
@@ -50,6 +54,9 @@ public class OilFlyController : BaseCompornent
         if(ScaleX >= 1.0f)
         {
             isHit = true;
+            gameObject.AddComponent<Transparent>();
+
+            destroyTrans = GetComponent<Transparent>();
         }
 
         if (isHit)
@@ -59,6 +66,7 @@ public class OilFlyController : BaseCompornent
             PosY = posFade.minValue;
             spriteRenderer.sprite = DamageSprite;
 
+            if (!destroyTrans.IsFinish()) return;
 
             oilFac.Decrease();
             Destroy(gameObject);
