@@ -7,10 +7,6 @@ public class OilFlyController : BaseCompornent
 {
     SpriteRenderer spriteRenderer;
 
-
-    //鍋蓋
-    SaucePanManager saucePanManager = null;
-
     private Transparent destroyTrans = null;
 
     [SerializeField] Sprite NormalSprite = null;
@@ -31,8 +27,6 @@ public class OilFlyController : BaseCompornent
     {
         var obj = GameObject.Find("OilFlyManager");
         oilFac = obj.GetComponent<SpawnFactory>();
-
-        saucePanManager = GetComponent<SaucePanManager>("Saucepan_Lid_icon");
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = NormalSprite;
@@ -56,8 +50,6 @@ public class OilFlyController : BaseCompornent
 
         PosY = posFade.GetCurrentValue();
         ScaleX = ScaleY = scaleFade.GetCurrentValue();
-
-        if(saucePanManager)
 
         if(ScaleX >= 1.0f)
         {
