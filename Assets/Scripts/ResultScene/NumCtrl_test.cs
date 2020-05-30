@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class NumCtrl_test : MonoBehaviour
 {
     [SerializeField] private Sprite[] sp = new Sprite[10];
-    public int abc = 0;
+    
 
     
     public void ChangeSprite(int no)

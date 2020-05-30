@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RankManager
 {
+     
     public enum Rank
     {
         Beginner,
