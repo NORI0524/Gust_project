@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TitleDirector : BaseCompornent
-{
+{ 
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +16,7 @@ public class TitleDirector : BaseCompornent
     {
         
     }
+
 
     public void OnGUI()
     {
