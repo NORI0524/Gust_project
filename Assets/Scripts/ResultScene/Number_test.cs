@@ -17,7 +17,7 @@ public class Number_test : MonoBehaviour
     {
         //初期化
         //ここではテスト用にスタートで初期化しているけど、数字を表示させたいタイミングで呼び出すのがベター
-        Init(125, new Vector3(0, 0, 0));
+        Init(30000, new Vector3(0, 0, 0));
 
     }
 
