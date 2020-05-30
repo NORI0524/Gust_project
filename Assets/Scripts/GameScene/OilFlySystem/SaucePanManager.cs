@@ -8,6 +8,8 @@ public class SaucePanManager : BaseCompornent
     [SerializeField] GameObject prefab = null;
     bool isAlive;
 
+    public bool IsAlive { get { return isAlive; } }
+
     // Start is called before the first frame update
     void Start()
     {

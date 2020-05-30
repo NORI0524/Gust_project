@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class OilFlyController : BaseCompornent
 {
+    //鍋蓋
+    SaucePanManager saucePanManager = null;
+
+
     SpriteRenderer spriteRenderer;
 
     private Transparent destroyTrans = null;
@@ -25,6 +29,9 @@ public class OilFlyController : BaseCompornent
     // Start is called before the first frame update
     void Start()
     {
+        saucePanManager = GetComponent<SaucePanManager>("Saucepan_Lid_Icon");
+
+
         var obj = GameObject.Find("OilFlyManager");
         oilFac = obj.GetComponent<SpawnFactory>();
 
@@ -57,6 +64,12 @@ public class OilFlyController : BaseCompornent
             gameObject.AddComponent<Transparent>();
 
             destroyTrans = GetComponent<Transparent>();
+        }
+
+        if(saucePanManager.IsAlive)
+        {
+            oilFac.Decrease();
+            Destroy(gameObject);
         }
 
         if (isHit)

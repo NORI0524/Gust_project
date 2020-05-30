@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4796025884790462413}
   - component: {fileID: 4796025884790462412}
   - component: {fileID: 4796025884790462415}
-  - component: {fileID: 4796025884790462414}
   m_Layer: 0
   m_Name: Title_Steam
   m_TagString: Untagged
@@ -108,26 +107,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitAlpha: 1
   TransparentSeconds: 5
---- !u!114 &4796025884790462414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4796025884790462417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7435dbb4db12124d819fe1ad662839a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj_Prefab:
-  - {fileID: 4796025884790462417}
-  ObjDispMax: 3
-  onceSpawnNum: 1
-  spawnFrequency: 80
-  spanSeconds: 2
-  randX_Min: -5
-  randX_Max: -2
-  randY_Min: -3
-  randY_Max: 0
-  dispZ: -2
