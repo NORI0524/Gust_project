@@ -11,7 +11,8 @@ public class FadeValue
 
     public float minValue;
     public float maxValue;
-  
+    public float nowValue;
+
     public FadeValue(float current, int oneWayTime, float min, float max)
     {
         curValue = current;

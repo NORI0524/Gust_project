@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 942e21112ed84c74b9e0e0ac71afe4b7
+guid: 6b4512a2a2304024f8a5216a5bbebbee
 TextureImporter:
   fileIDToRecycleName:
     21300000: "Title_Shishiodoshi(1600\xD7900)_0"
@@ -8,6 +8,11 @@ TextureImporter:
     21300006: "Title_Shishiodoshi(1600\xD7900)_3"
     21300008: "Title_Shishiodoshi(1600\xD7900)_4"
     21300010: "Title_Shishiodoshi(1600\xD7900)_5"
+    21300012: "Title_Shishiodoshi(1600\xD7900)_6"
+    21300014: "Title_Shishiodoshi(1600\xD7900)_7"
+    21300016: "Title_Shishiodoshi(1600\xD7900)_8"
+    21300018: "Title_Shishiodoshi(1600\xD7900)_9"
+    21300020: "Title_Shishiodoshi(1600\xD7900)_10"
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -66,7 +71,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -77,7 +82,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -95,16 +100,16 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1087
+        width: 1086
         height: 900
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e3513ec12b26794e93f4890ee39864b
+      spriteID: b37afc7ef5ec5c847983ee01918b02c2
       vertices: []
       indices: 
       edges: []
@@ -113,18 +118,18 @@ TextureImporter:
       name: "Title_Shishiodoshi(1600\xD7900)_1"
       rect:
         serializedVersion: 2
-        x: 1596
+        x: 1593
         y: 0
-        width: 1087
+        width: 1089
         height: 900
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdca3c09ea3255d4382733ee3ea10529
+      spriteID: 151ea022b0b59494d9ce97e315b43034
       vertices: []
       indices: 
       edges: []
@@ -133,18 +138,18 @@ TextureImporter:
       name: "Title_Shishiodoshi(1600\xD7900)_2"
       rect:
         serializedVersion: 2
-        x: 3195
+        x: 3189
         y: 0
-        width: 1087
+        width: 1097
         height: 900
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4a5f3bc5063caa4f8619f4aca206bdf
+      spriteID: 09c83174cd4e08b43941e3f3849cc6be
       vertices: []
       indices: 
       edges: []
@@ -153,18 +158,18 @@ TextureImporter:
       name: "Title_Shishiodoshi(1600\xD7900)_3"
       rect:
         serializedVersion: 2
-        x: 4793
+        x: 4792
         y: 0
-        width: 1087
+        width: 1096
         height: 900
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f77034497d37270478f6a59deac76b0b
+      spriteID: eb109f3c1b35f544c8753b4bc1603906
       vertices: []
       indices: 
       edges: []
@@ -173,18 +178,18 @@ TextureImporter:
       name: "Title_Shishiodoshi(1600\xD7900)_4"
       rect:
         serializedVersion: 2
-        x: 6396
+        x: 6388
         y: 0
-        width: 1087
+        width: 1097
         height: 900
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e704dec33e251140823a546ca9748c8
+      spriteID: de9e24be5e6567a4f87e9d1952fad1ff
       vertices: []
       indices: 
       edges: []
@@ -193,18 +198,118 @@ TextureImporter:
       name: "Title_Shishiodoshi(1600\xD7900)_5"
       rect:
         serializedVersion: 2
-        x: 7995
+        x: 7988
         y: 0
-        width: 1087
+        width: 1100
         height: 900
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5cfca4ee5865d94bb35b529bc54f1d4
+      spriteID: 63844645756ebe54b83d71dd43509698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Title_Shishiodoshi(1600\xD7900)_6"
+      rect:
+        serializedVersion: 2
+        x: 9589
+        y: 0
+        width: 1098
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d29257023a2b1418789dd1dc8aecf8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Title_Shishiodoshi(1600\xD7900)_7"
+      rect:
+        serializedVersion: 2
+        x: 11190
+        y: 0
+        width: 1100
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e14da9c1cd03014a8139fd096bb54be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Title_Shishiodoshi(1600\xD7900)_8"
+      rect:
+        serializedVersion: 2
+        x: 12793
+        y: 0
+        width: 1100
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1400909feb1c254199a57cd0e6bf06c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Title_Shishiodoshi(1600\xD7900)_9"
+      rect:
+        serializedVersion: 2
+        x: 14396
+        y: 833
+        width: 4
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22cbd5da4b24a444ba44d22723cea116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Title_Shishiodoshi(1600\xD7900)_10"
+      rect:
+        serializedVersion: 2
+        x: 14396
+        y: 0
+        width: 4
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f4914ae74aec8458944fb026495591
       vertices: []
       indices: 
       edges: []
@@ -212,7 +317,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5c3b0dbabceab3f4ea2e93a4434f49aa
+    spriteID: 7c15eb6c6b2f99f428f218ce98226719
     vertices: []
     indices: 
     edges: []
