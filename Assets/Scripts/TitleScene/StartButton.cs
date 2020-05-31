@@ -44,7 +44,7 @@ public class StartButton : BaseCompornent
 
             if (startSEflg)
             {
-                var sceneFadeIn = GetComponent<SceneFadeInSteam>("SceneFadeSteamManager");
+                var sceneFadeIn = GetComponent<SceneFadeInSteam>("SceneFadeInSteamManager");
                 sceneFadeIn.IsStart = true;
             }
         }

@@ -195,4 +195,10 @@ public class BaseCompornent : MonoBehaviour {
     {
         Destroy(gameObject);
     }
+
+    //指定のオブジェクトを破棄
+    public void Destroy(string _objectName)
+    {
+        Destroy(GameObject.Find(_objectName));
+    }
 }

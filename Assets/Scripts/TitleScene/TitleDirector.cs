@@ -6,13 +6,16 @@ using SoundMan = Singleton<SoundManager>;
 
 public class TitleDirector : BaseCompornent
 {
-    SceneFadeInSteam sceneFade;
+    SceneFadeInSteam sceneFadeIn;
+    SceneFadeOutSteam sceneFadeOut;
 
     // Start is called before the first frame update
     void Start()
     {
         SoundMan.Instance.PlayBGM("titlebgm", 1.0f);
-        sceneFade = GetComponent<SceneFadeInSteam>("SceneFadeSteamManager");
+        sceneFadeIn = GetComponent<SceneFadeInSteam>("SceneFadeInSteamManager");
+        sceneFadeOut = GetComponent<SceneFadeOutSteam>("SceneFadeOutSteamManager");
+        sceneFadeOut.IsStart = true;
     }
 
     // Update is called once per frame
@@ -21,7 +24,7 @@ public class TitleDirector : BaseCompornent
         SoundMan.Instance.Update();
 
 
-        if (sceneFade.IsFinish)
+        if (sceneFadeIn.IsFinish)
         {
             SceneManager.LoadScene("GameScene");
         }
