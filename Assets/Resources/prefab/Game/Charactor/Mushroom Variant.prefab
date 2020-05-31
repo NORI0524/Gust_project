@@ -17,7 +17,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.67, y: 2.17}
+    oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 7.68, y: 7.68}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -214,13 +214,13 @@ PrefabInstance:
         type: 3}
       propertyPath: BathingSprite
       value: 
-      objectReference: {fileID: 21300000, guid: bf7cd8e546105d841bab285d7affd7f9,
+      objectReference: {fileID: 21300000, guid: d0cf3d2dfefc92746b5e36bdf34611b7,
         type: 3}
     - target: {fileID: 6151528967788593588, guid: c821d95d277af694cb062bafae1da4ac,
         type: 3}
       propertyPath: NormalSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 033b8e5c2ea3fd0448735625da75829d,
+      objectReference: {fileID: 21300000, guid: 732f7b773b368ca418d067e4254aecbf,
         type: 3}
     - target: {fileID: 6151528967788593588, guid: c821d95d277af694cb062bafae1da4ac,
         type: 3}
