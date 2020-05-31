@@ -32,7 +32,8 @@ public class GameDirector : BaseCompornent
     GameObject startObj;
     GameObject finishObj;
 
-    bool isFinish;
+    public static bool isStart;
+    public static bool isFinish;
 
     Timer finishBreakTimer = new Timer(3);
 
@@ -49,6 +50,7 @@ public class GameDirector : BaseCompornent
         finishObj = GameObject.Find("Finish");
 
         //アクティブ無効
+        startObj.SetActive(false);
         finishObj.SetActive(false);
 
 
@@ -60,8 +62,8 @@ public class GameDirector : BaseCompornent
         sceneFadeOut.IsStart = true;
 
         SoundMan.Instance.PlayBGM("bgm", 3.0f);
-        SoundMan.Instance.PlaySE("start");
 
+        isStart = false;
         isFinish = false;
     }
 
@@ -70,9 +72,17 @@ public class GameDirector : BaseCompornent
     {
         if (Input.GetKeyDown(KeyCode.E)) { DEBUG = !DEBUG; }
 
+        //フェードアウトが終わったらゲーム開始
+        if (sceneFadeOut.IsFinish && !isStart)
+        {
+            isStart = true;
+            SoundMan.Instance.PlaySE("start");
+            startObj.SetActive(true);
+        }
 
         //開始が終わってるならアクティブ無効
         if (startObj.GetComponent<Transparent>().IsFinish()) startObj.SetActive(false);
+
 
         finishBreakTimer.Update();
 
@@ -89,6 +99,11 @@ public class GameDirector : BaseCompornent
         {
             var sceneFadeIn = GetComponent<SceneFadeInSteam>("SceneFadeInSteamManager");
             sceneFadeIn.IsStart = true;
+        }
+
+        if (sceneFadeIn.IsFinish)
+        {
+            SceneManager.LoadScene("ResultScene");
         }
 
         //音響

@@ -24,6 +24,8 @@ public class SaucePanManager : BaseCompornent
 
     public void Click()
     {
+        if (!GameDirector.isStart && GameDirector.isFinish) return;
+
         if (isAlive)
         {
             var obj = GameObject.Find("SaucePan_Lib");
