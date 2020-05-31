@@ -93,10 +93,10 @@ TextureImporter:
       name: renkon_grab_over_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 576
-        width: 182
-        height: 140
+        x: 0
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,7 +104,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e48627c06c1996e42b6d330ac3b071dc
+      spriteID: 3d49ef13cad234347ad091db237e5fa8
       vertices: []
       indices: 
       edges: []
@@ -113,10 +113,10 @@ TextureImporter:
       name: renkon_grab_over_1
       rect:
         serializedVersion: 2
-        x: 279
-        y: 576
-        width: 209
-        height: 137
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,7 +124,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 952b5eb597cfddb4bbb0605f7caf2666
+      spriteID: 779ab45174fb0e445ad4aac2d5772c71
       vertices: []
       indices: 
       edges: []
@@ -133,10 +133,10 @@ TextureImporter:
       name: renkon_grab_over_2
       rect:
         serializedVersion: 2
-        x: 549
-        y: 576
-        width: 182
-        height: 173
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,7 +144,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d4d8406c782cfb499014a9c13d824a2
+      spriteID: ef4beceba108c0f4c8a5d24d3060dbe3
       vertices: []
       indices: 
       edges: []
@@ -153,10 +153,10 @@ TextureImporter:
       name: renkon_grab_over_3
       rect:
         serializedVersion: 2
-        x: 40
-        y: 320
-        width: 184
-        height: 160
+        x: 0
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,7 +164,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46eacc7ba47153a4dbe8e91ac754fc6b
+      spriteID: 76014fdcb63e3c041a2046fa5cf8810e
       vertices: []
       indices: 
       edges: []
@@ -173,10 +173,10 @@ TextureImporter:
       name: renkon_grab_over_4
       rect:
         serializedVersion: 2
-        x: 295
-        y: 320
-        width: 176
-        height: 165
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,7 +184,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a811399f488d5f54fa0cfe2a815c85f8
+      spriteID: 29bfe89c9cb37e547a2d291a505f47c7
       vertices: []
       indices: 
       edges: []
@@ -193,10 +193,10 @@ TextureImporter:
       name: renkon_grab_over_5
       rect:
         serializedVersion: 2
-        x: 552
-        y: 320
-        width: 172
-        height: 142
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,7 +204,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c357a79ec757e614a909e8639c63561c
+      spriteID: fc60f71b6daa63949bff5b80e1a5c7bd
       vertices: []
       indices: 
       edges: []

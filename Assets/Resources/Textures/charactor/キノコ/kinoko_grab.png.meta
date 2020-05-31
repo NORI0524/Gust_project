@@ -93,10 +93,10 @@ TextureImporter:
       name: kinoko_grab_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 535
-        width: 162
-        height: 213
+        x: 0
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,7 +104,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1dbb7c496f113046a054eeec2e025e5
+      spriteID: 07fc6057c68e68a4f9b9fd1b502f4e8a
       vertices: []
       indices: 
       edges: []
@@ -113,10 +113,10 @@ TextureImporter:
       name: kinoko_grab_1
       rect:
         serializedVersion: 2
-        x: 292
-        y: 539
-        width: 183
-        height: 211
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,7 +124,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ef6c36fafef13147a63f60d6ebf91ac
+      spriteID: b3a22c8fab0833a4b985116fbe17c320
       vertices: []
       indices: 
       edges: []
@@ -133,10 +133,10 @@ TextureImporter:
       name: kinoko_grab_2
       rect:
         serializedVersion: 2
-        x: 547
-        y: 535
-        width: 181
-        height: 213
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,7 +144,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e22752180dd9fa54097109614d7717c4
+      spriteID: 637a461c64c30d94eb10a1d7eb55c95b
       vertices: []
       indices: 
       edges: []
@@ -153,10 +153,10 @@ TextureImporter:
       name: kinoko_grab_3
       rect:
         serializedVersion: 2
-        x: 36
-        y: 280
-        width: 156
-        height: 208
+        x: 0
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,7 +164,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9aebd802bb4765140b7921e05c043ed2
+      spriteID: 8d04d9258d7cfa34a8e31587c0c76ed8
       vertices: []
       indices: 
       edges: []
@@ -173,10 +173,10 @@ TextureImporter:
       name: kinoko_grab_4
       rect:
         serializedVersion: 2
-        x: 291
-        y: 288
-        width: 180
-        height: 200
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,7 +184,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 591316fa4c9ff0e4fbbdc262f41a7f79
+      spriteID: 4a15f8f8c70c0c44c9c44fedd9efab05
       vertices: []
       indices: 
       edges: []
@@ -193,10 +193,10 @@ TextureImporter:
       name: kinoko_grab_5
       rect:
         serializedVersion: 2
-        x: 548
-        y: 280
-        width: 181
-        height: 208
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,7 +204,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8a87e1870c499146818af3b3fe6ff4b
+      spriteID: 270e58b633d6e3d4ba71c471dfc468f6
       vertices: []
       indices: 
       edges: []

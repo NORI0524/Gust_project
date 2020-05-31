@@ -96,10 +96,10 @@ TextureImporter:
       name: nusu_walk_0
       rect:
         serializedVersion: 2
-        x: 54
-        y: 519
-        width: 152
-        height: 241
+        x: 0
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,7 +107,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa57824bb2713e142834bc54065050ee
+      spriteID: 72bc353ce8abbdc4f9c36cc9b94d8c42
       vertices: []
       indices: 
       edges: []
@@ -116,10 +116,10 @@ TextureImporter:
       name: nusu_walk_1
       rect:
         serializedVersion: 2
-        x: 315
-        y: 520
-        width: 149
-        height: 244
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,7 +127,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8eda62bceeb21a04d9eb938490700ee0
+      spriteID: 7b5d504dc5acf464590cf974cdd50714
       vertices: []
       indices: 
       edges: []
@@ -136,10 +136,10 @@ TextureImporter:
       name: nusu_walk_2
       rect:
         serializedVersion: 2
-        x: 569
-        y: 520
-        width: 151
-        height: 240
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,7 +147,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfe9b91f217d1de46ac24ce9f13d5310
+      spriteID: 37048972b6ccd67459a926b1e439764e
       vertices: []
       indices: 
       edges: []
@@ -156,10 +156,10 @@ TextureImporter:
       name: nusu_walk_3
       rect:
         serializedVersion: 2
-        x: 54
-        y: 267
-        width: 145
-        height: 241
+        x: 0
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,7 +167,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43f3d90c325c09645b7e37b4026bc707
+      spriteID: d270c653fa231dc41981b6263ef08349
       vertices: []
       indices: 
       edges: []
@@ -176,10 +176,10 @@ TextureImporter:
       name: nusu_walk_4
       rect:
         serializedVersion: 2
-        x: 311
-        y: 263
-        width: 146
-        height: 240
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,7 +187,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad443bec97865ff478ec45134eed8380
+      spriteID: dd2eaf95f1233c245a1ce39b566d87ff
       vertices: []
       indices: 
       edges: []
@@ -196,10 +196,10 @@ TextureImporter:
       name: nusu_walk_5
       rect:
         serializedVersion: 2
-        x: 568
-        y: 264
-        width: 145
-        height: 242
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,7 +207,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6aabea9a205590498cda635b8d1cb40
+      spriteID: 4b5addf7951c6934fac29a3dc7b25788
       vertices: []
       indices: 
       edges: []
@@ -216,10 +216,10 @@ TextureImporter:
       name: nusu_walk_6
       rect:
         serializedVersion: 2
-        x: 61
-        y: 10
-        width: 143
-        height: 238
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,7 +227,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 561a4585f1ac0ad478e996aeb8f47072
+      spriteID: 0e2fa95612fc0bd4db79591da0b4e869
       vertices: []
       indices: 
       edges: []
@@ -236,10 +236,10 @@ TextureImporter:
       name: nusu_walk_7
       rect:
         serializedVersion: 2
-        x: 311
-        y: 8
-        width: 145
-        height: 241
+        x: 256
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,7 +247,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5270f17647c56c84d9cef8b322a59225
+      spriteID: ca47810c11910dd48a548f65e8076159
       vertices: []
       indices: 
       edges: []
@@ -256,10 +256,10 @@ TextureImporter:
       name: nusu_walk_8
       rect:
         serializedVersion: 2
-        x: 564
-        y: 4
-        width: 144
-        height: 248
+        x: 512
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,7 +267,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c8b116c26321fa459b2e04422fd0b2e
+      spriteID: b48e45153f1172c4ca5a9774846e6897
       vertices: []
       indices: 
       edges: []

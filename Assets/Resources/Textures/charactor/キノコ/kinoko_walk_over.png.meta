@@ -97,10 +97,10 @@ TextureImporter:
       name: kinoko_walk_over_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 576
-        width: 167
-        height: 164
+        x: 0
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,7 +108,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71b812590553b77469ba5b45b1193153
+      spriteID: 61f271dd34f27cc4b9ab268f728a9e4f
       vertices: []
       indices: 
       edges: []
@@ -117,10 +117,10 @@ TextureImporter:
       name: kinoko_walk_over_1
       rect:
         serializedVersion: 2
-        x: 294
-        y: 576
-        width: 161
-        height: 164
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,7 +128,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c48ebc72a4dd51a459411af6349f1fdc
+      spriteID: 8d127de3577ce904f91004507ebe4bbe
       vertices: []
       indices: 
       edges: []
@@ -137,10 +137,10 @@ TextureImporter:
       name: kinoko_walk_over_2
       rect:
         serializedVersion: 2
-        x: 549
-        y: 576
-        width: 194
-        height: 162
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,7 +148,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 134373e806429194f8147a7476589789
+      spriteID: defcb931264045c4e839f35fd485cc4c
       vertices: []
       indices: 
       edges: []
@@ -157,10 +157,10 @@ TextureImporter:
       name: kinoko_walk_over_3
       rect:
         serializedVersion: 2
-        x: 36
-        y: 320
-        width: 166
-        height: 172
+        x: 0
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,7 +168,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8675071a149c5d7469f39044959c19c9
+      spriteID: 326b3e531d48b354c8d5bbed7fa07108
       vertices: []
       indices: 
       edges: []
@@ -177,10 +177,10 @@ TextureImporter:
       name: kinoko_walk_over_4
       rect:
         serializedVersion: 2
-        x: 288
-        y: 320
-        width: 206
-        height: 168
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,7 +188,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3272401d8a68f64f9d217fe1cc24764
+      spriteID: 6c5aa9401d231264c9e531a6a314f2d3
       vertices: []
       indices: 
       edges: []
@@ -197,10 +197,10 @@ TextureImporter:
       name: kinoko_walk_over_5
       rect:
         serializedVersion: 2
-        x: 544
-        y: 320
-        width: 190
-        height: 177
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,7 +208,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 496a2b4518f1ec445b6b32c29041e9f1
+      spriteID: e9b49d38268b7204e9d9f4b1cdeee4c7
       vertices: []
       indices: 
       edges: []
@@ -217,10 +217,10 @@ TextureImporter:
       name: kinoko_walk_over_6
       rect:
         serializedVersion: 2
-        x: 33
-        y: 64
-        width: 167
-        height: 168
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,7 +228,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1e6c5b88ccd7f446be64714375ea279
+      spriteID: 572a0556478eba84ab88a59e3b972d7c
       vertices: []
       indices: 
       edges: []
@@ -237,10 +237,10 @@ TextureImporter:
       name: kinoko_walk_over_7
       rect:
         serializedVersion: 2
-        x: 296
-        y: 23
-        width: 171
-        height: 209
+        x: 256
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,7 +248,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eae23d7a27b4c84d8d72016b1cf5305
+      spriteID: 7c0f15a972b8d0346bc8ba9c2f19dba5
       vertices: []
       indices: 
       edges: []
@@ -257,10 +257,10 @@ TextureImporter:
       name: kinoko_walk_over_8
       rect:
         serializedVersion: 2
-        x: 468
-        y: 218
-        width: 4
-        height: 4
+        x: 512
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,27 +268,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ce6cbfda28407b44ad3373a42edba77
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: kinoko_walk_over_9
-      rect:
-        serializedVersion: 2
-        x: 549
-        y: 64
-        width: 191
-        height: 169
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9dd1c12e31bfaff4db33dd55f3a0808e
+      spriteID: 080c9c63082daa34ca1ec320a3779042
       vertices: []
       indices: 
       edges: []
