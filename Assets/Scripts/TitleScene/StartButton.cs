@@ -6,7 +6,7 @@ using SoundMan = Singleton<SoundManager>;
 
 public class StartButton : BaseCompornent
 {
-    FadeValue fade = new FadeValue(1.0f, 2, 0.5f, 1.5f);
+    FadeValue fade = new FadeValue(1.0f, 1, 1.0f, 1.15f);
 
     Animator anim;
 
@@ -21,7 +21,7 @@ public class StartButton : BaseCompornent
         anim = GetComponent<Animator>("Shishiodoshi");
         if (anim == null)
         {
-            Debug.LogError("ぴえん");
+            Debug.LogError("Error");
         }
         anim.SetBool("Play", false);
 
@@ -32,7 +32,7 @@ public class StartButton : BaseCompornent
     void Update()
     {
         fade.Update();
-        ScaleX = fade.GetCurrentValue();
+        ScaleX = ScaleY = fade.GetCurrentValue();
 
         startSETimer.Update();
 
@@ -61,10 +61,5 @@ public class StartButton : BaseCompornent
 
         anim.SetBool("Play", true);
         startSETimer.Start();
-    }
-
-    public void OnGUI()
-    {
-        GUI.TextArea(new Rect(0, 0, 100, 50), "scaleX " + ScaleX);
     }
 }

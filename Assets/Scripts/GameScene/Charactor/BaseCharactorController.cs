@@ -16,6 +16,9 @@ public class BaseCharactorController : BaseCompornent
     [SerializeField] Sprite FriedSprite = null;
     [SerializeField] Sprite FriedBathingSprite = null;
 
+    //アニメーター
+    Animator animator = null;
+
     //Factory
     SpawnFactory customerFac;
 
@@ -83,6 +86,10 @@ public class BaseCharactorController : BaseCompornent
         obj = GameObject.Find("CustomerManager");
         customerFac = obj.GetComponent<SpawnFactory>();
 
+        animator = GetComponent<Animator>();
+        animator.SetBool("Grab", false);
+        animator.SetBool("Walk", true);
+
         friedTimer = new Timer(BestFriedTime);
         friedTimer.Start();
     }
@@ -95,6 +102,9 @@ public class BaseCharactorController : BaseCompornent
 
         //表情
         FacialExpression();
+
+        animator.SetBool("Grab", true);
+        animator.SetBool("Walk", false);
 
 
         //TODO:客ごとに共通の適正温度にするなら

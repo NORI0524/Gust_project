@@ -20,7 +20,7 @@ public class OilFlyController : BaseCompornent
     [SerializeField] int OilFlyRotateSpeed = 5;
     [SerializeField] int OilFlyBowHeight = 3;
 
-    bool isHit;
+    bool isHit, isProtect;
 
     FadeValue scaleFade, posFade;
 
@@ -45,44 +45,61 @@ public class OilFlyController : BaseCompornent
         posFade.isPlus = true;
         scaleFade.isPlus = true;
         isHit = false;
+        isProtect = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        DegAngle += OilFlyRotateSpeed;
-
         posFade.Update();
         scaleFade.Update();
 
-        PosY = posFade.GetCurrentValue();
-        ScaleX = ScaleY = scaleFade.GetCurrentValue();
+        if (!isProtect)
+        {
+            DegAngle += OilFlyRotateSpeed;
+            PosY = posFade.GetCurrentValue();
+            ScaleX = ScaleY = scaleFade.GetCurrentValue();
+        }
 
-        if(ScaleX >= 1.0f)
+        if (ScaleX >= 1.0f)
         {
             isHit = true;
-            gameObject.AddComponent<Transparent>();
-
-            destroyTrans = GetComponent<Transparent>();
+            GameDirector.oilFlyHitNum++;
+            CreateDestroyTrans();
         }
 
+        //防いだ時の処理
         if(saucePanManager.IsAlive)
         {
-            oilFac.Decrease();
-            Destroy(gameObject);
+            if (!isProtect)
+            {
+                isProtect = true;
+                CreateDestroyTrans();
+                destroyTrans.TransparentSeconds = 2;
+            }
         }
 
-        if (isHit)
+        //消失処理
+        if (destroyTrans == null) return;
+        if (destroyTrans.IsFinish())
         {
-            DegAngle = 0;
-            ScaleX = ScaleY = scaleFade.maxValue;
-            PosY = posFade.minValue;
-            spriteRenderer.sprite = DamageSprite;
-
-            if (!destroyTrans.IsFinish()) return;
-
             oilFac.Decrease();
             Destroy(gameObject);
         }
+
+        //食らった時の処理
+        if (!isHit) return;
+        
+        DegAngle = 0;
+        ScaleX = ScaleY = scaleFade.maxValue;
+        PosY = posFade.minValue;
+        spriteRenderer.sprite = DamageSprite;
+    }
+
+    private void CreateDestroyTrans()
+    {
+        if (destroyTrans != null) return;
+        gameObject.AddComponent<Transparent>();
+        destroyTrans = GetComponent<Transparent>();
     }
 }

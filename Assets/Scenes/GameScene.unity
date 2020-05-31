@@ -1221,7 +1221,7 @@ MonoBehaviour:
   - {fileID: 2076804215961629067, guid: 9d6db41cfc571654697ccbe29e8361ee, type: 3}
   ObjDispMax: 4
   onceSpawnNum: 1
-  spawnFrequency: 100
+  spawnFrequency: 50
   spanSeconds: 4
   randX_Min: -3
   randX_Max: 3

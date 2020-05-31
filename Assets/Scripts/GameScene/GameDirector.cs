@@ -18,6 +18,9 @@ public class GameDirector : BaseCompornent
     //入浴中のお客さんの数
     public static int bathingCustomerNum;
 
+    //油跳ねを食らった回数
+    public static int oilFlyHitNum;
+
     //制限時間
     GameObject limitTime;
     LimitTime limitTimeCtrl;
@@ -27,6 +30,7 @@ public class GameDirector : BaseCompornent
     GameObject finishObj;
 
     bool isFinish;
+
     
     // Start is called before the first frame update
     void Start()
@@ -34,6 +38,7 @@ public class GameDirector : BaseCompornent
         totalSatisfyValue = 0;
         totalCustomerNum = 0;
         bathingCustomerNum = 0;
+        oilFlyHitNum = 0;
 
         startObj = GameObject.Find("Start");
         finishObj = GameObject.Find("Finish");
