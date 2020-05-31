@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using SoundMan = Singleton<SoundManager>;
 
 public class StartButton : BaseCompornent
@@ -37,13 +36,17 @@ public class StartButton : BaseCompornent
         startSETimer.Update();
 
        
-
+        //ししおどし終了
         AnimatorStateInfo animInfo = anim.GetCurrentAnimatorStateInfo(0);
         if (animInfo.normalizedTime < 1.0f)
         {
-            
             anim.SetBool("Play", false);
-            
+
+            if (startSEflg)
+            {
+                var sceneFadeIn = GetComponent<SceneFadeInSteam>("SceneFadeSteamManager");
+                sceneFadeIn.IsStart = true;
+            }
         }
 
         //ししおどしタイミング調整
@@ -56,7 +59,6 @@ public class StartButton : BaseCompornent
 
     public void Click()
     {
-        //SceneManager.LoadScene("GameScene");
         SoundMan.Instance.PlaySE("tap");
 
         anim.SetBool("Play", true);

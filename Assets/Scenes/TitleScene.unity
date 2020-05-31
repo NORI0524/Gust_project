@@ -672,20 +672,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1647520527}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7435dbb4db12124d819fe1ad662839a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7abab43abac1fc44db1d7bcf60950a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj_Prefab:
-  - {fileID: 5277220684457124899, guid: 652907145f042f0419fb9ce0b0f8cfa1, type: 3}
-  ObjDispMax: 13
-  onceSpawnNum: 1
-  spawnFrequency: 100
-  spanSeconds: 1
-  randX_Min: 0
-  randX_Max: 0
-  randY_Min: 0
-  randY_Max: 0
-  dispZ: 0
+  prefab: {fileID: 5277220684457124899, guid: 652907145f042f0419fb9ce0b0f8cfa1, type: 3}
+  SteamNum: 15
+  FadeFrame: 15
 --- !u!4 &1647520529
 Transform:
   m_ObjectHideFlags: 0
