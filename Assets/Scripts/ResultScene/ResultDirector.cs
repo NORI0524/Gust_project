@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Rank = RankManager.Rank;
+using SoundMan = Singleton<SoundManager>;
 
 public class ResultDirector : BaseCompornent
 {
@@ -17,6 +18,10 @@ public class ResultDirector : BaseCompornent
     // Start is called before the first frame update
     void Start()
     {
+     
+        SoundMan.Instance.PlaySE("cheer");
+        SoundMan.Instance.PlayBGM("resultbgm",1.0f);
+
         GameDirector.totalSatisfyValue = 10000;
 
         minus = -500;
@@ -60,6 +65,8 @@ public class ResultDirector : BaseCompornent
                 cameraTrans.position = pos;
             }
         }
+
+        SoundMan.Instance.Update();
     }
 
     public void InResult()

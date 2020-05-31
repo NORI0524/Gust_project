@@ -46,7 +46,7 @@ public class Timer
     {
         if (flag.CheckBit(TimerState.Exception)) flag.FoldBit(TimerState.Finish);
 
-        if (flag.CheckBit(~TimerState.Start)) return;
+        if (!flag.CheckBit(TimerState.Start)) return;
         if (flag.CheckBit(TimerState.Pause))   return;
 
         //１フレームにかかった時間を加算
