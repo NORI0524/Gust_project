@@ -93,10 +93,10 @@ TextureImporter:
       name: nusu_grab_over_0
       rect:
         serializedVersion: 2
-        x: 54
-        y: 576
-        width: 142
-        height: 184
+        x: 0
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,7 +104,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3e0cd28ec6b83a458e081a6c958b7ff
+      spriteID: e0b40b288fe2ba344b84a6300b9651d4
       vertices: []
       indices: 
       edges: []
@@ -113,10 +113,10 @@ TextureImporter:
       name: nusu_grab_over_1
       rect:
         serializedVersion: 2
-        x: 312
-        y: 576
-        width: 131
-        height: 161
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,7 +124,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eda0941826175bc4f92e283dbe48f9fc
+      spriteID: efbdde3adc9cd0742b799967da3cf9d7
       vertices: []
       indices: 
       edges: []
@@ -133,10 +133,10 @@ TextureImporter:
       name: nusu_grab_over_2
       rect:
         serializedVersion: 2
-        x: 566
-        y: 576
-        width: 142
-        height: 184
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,7 +144,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c445c71c0b222241af8bab352bc3dc4
+      spriteID: fb6b784609479d945ace4d0623e8c812
       vertices: []
       indices: 
       edges: []
@@ -153,10 +153,10 @@ TextureImporter:
       name: nusu_grab_over_3
       rect:
         serializedVersion: 2
-        x: 52
-        y: 320
-        width: 145
-        height: 186
+        x: 0
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,7 +164,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb5d235895012ca428ca7fbfc85c7104
+      spriteID: 1f855af9d3e0aaf42ada936b5b213b3c
       vertices: []
       indices: 
       edges: []
@@ -173,10 +173,10 @@ TextureImporter:
       name: nusu_grab_over_4
       rect:
         serializedVersion: 2
-        x: 301
-        y: 320
-        width: 144
-        height: 174
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,7 +184,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95f83eb024f0e0e4980b07dc3249adb4
+      spriteID: 58589f5e28cdc52439824e2b937881ee
       vertices: []
       indices: 
       edges: []
@@ -193,10 +193,10 @@ TextureImporter:
       name: nusu_grab_over_5
       rect:
         serializedVersion: 2
-        x: 564
-        y: 320
-        width: 145
-        height: 186
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,7 +204,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 217b90f9fb335f344b8db23532904fb4
+      spriteID: 3548dafc69c4a28488542cf51016ec50
       vertices: []
       indices: 
       edges: []

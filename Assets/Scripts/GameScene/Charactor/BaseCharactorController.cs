@@ -114,6 +114,10 @@ public class BaseCharactorController : BaseCompornent
         //入浴中なら
         if (state.CheckBitOR(State.Bathing | State.FriedBathing))
         {
+            animator.SetBool("Grab", false);
+            animator.SetBool("Walk", false);
+            animator.enabled = false;
+
             friedTimer.Update();
 
             //揚げ時間を越したら焦げ状態
