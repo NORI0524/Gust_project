@@ -11,7 +11,7 @@ public class LimitTime : BaseCompornent
     SunController sunCtrl;
     MoonController moonCtrl;
 
-    private Timer time = new Timer(3, 0);
+    private Timer time = new Timer(3,0);
 
     // Start is called before the first frame update
     void Start()

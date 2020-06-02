@@ -16,8 +16,6 @@ public class Number_test : MonoBehaviour
     void Start()
     {
         //初期化
-        //ここではテスト用にスタートで初期化しているけど、数字を表示させたいタイミングで呼び出すのがベター
-        Init(30000, new Vector3(0, 0, 0));
 
     }
 
@@ -46,12 +44,11 @@ public class Number_test : MonoBehaviour
     //描画用の数字を作る
     private void CreateNum(int point)
     {
-        
         //桁を割り出す
         int digit = ChkDigit(point);
 
         //数字プレハブを読み込む、テスト用のフォルダとファイル名
-        GameObject obj = LoadGObject("prefab", "pref_num_test");
+        GameObject obj = LoadGObject("prefab/Result", "pref_num_test");
 
 
         //桁の分だけオブジェクトを作り登録していく

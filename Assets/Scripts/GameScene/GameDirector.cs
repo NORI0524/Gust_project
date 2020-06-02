@@ -8,6 +8,9 @@ public class GameDirector : BaseCompornent
 {
     public static bool DEBUG = false;
 
+    SceneFadeInSteam sceneFadeIn;
+    SceneFadeOutSteam sceneFadeOut;
+
     //TODO:リザルトにでランクを付ける際に指標になる変数
 
     //満足度の合計
@@ -18,6 +21,9 @@ public class GameDirector : BaseCompornent
     //入浴中のお客さんの数
     public static int bathingCustomerNum;
 
+    //油跳ねを食らった回数
+    public static int oilFlyHitNum;
+
     //制限時間
     GameObject limitTime;
     LimitTime limitTimeCtrl;
@@ -26,7 +32,11 @@ public class GameDirector : BaseCompornent
     GameObject startObj;
     GameObject finishObj;
 
-    bool isFinish;
+    public static bool isStart;
+    public static bool isFinish;
+
+    Timer finishBreakTimer = new Timer(3);
+
     
     // Start is called before the first frame update
     void Start()
@@ -34,20 +44,26 @@ public class GameDirector : BaseCompornent
         totalSatisfyValue = 0;
         totalCustomerNum = 0;
         bathingCustomerNum = 0;
+        oilFlyHitNum = 0;
 
         startObj = GameObject.Find("Start");
         finishObj = GameObject.Find("Finish");
 
         //アクティブ無効
+        startObj.SetActive(false);
         finishObj.SetActive(false);
 
 
         limitTime = GameObject.Find("LimitTimer");
         limitTimeCtrl = limitTime.GetComponent<LimitTime>();
 
-        SoundMan.Instance.PlayBGM("bgm", 3.0f);
-        SoundMan.Instance.PlaySE("start");
+        sceneFadeIn = GetComponent<SceneFadeInSteam>("SceneFadeInSteamManager");
+        sceneFadeOut = GetComponent<SceneFadeOutSteam>("SceneFadeOutSteamManager");
+        sceneFadeOut.IsStart = true;
 
+        SoundMan.Instance.PlayBGM("bgm", 3.0f);
+
+        isStart = false;
         isFinish = false;
     }
 
@@ -56,10 +72,19 @@ public class GameDirector : BaseCompornent
     {
         if (Input.GetKeyDown(KeyCode.E)) { DEBUG = !DEBUG; }
 
+        //フェードアウトが終わったらゲーム開始
+        if (sceneFadeOut.IsFinish && !isStart)
+        {
+            isStart = true;
+            SoundMan.Instance.PlaySE("start");
+            startObj.SetActive(true);
+        }
+
         //開始が終わってるならアクティブ無効
         if (startObj.GetComponent<Transparent>().IsFinish()) startObj.SetActive(false);
 
-        
+
+        finishBreakTimer.Update();
 
         //ゲーム終了
         if (limitTimeCtrl.IsFinish() && !isFinish)
@@ -67,6 +92,18 @@ public class GameDirector : BaseCompornent
             finishObj.SetActive(true);
             SoundMan.Instance.PlaySE("finish");
             isFinish = true;
+            finishBreakTimer.Start();
+        }
+
+        if (finishBreakTimer.IsFinish())
+        {
+            var sceneFadeIn = GetComponent<SceneFadeInSteam>("SceneFadeInSteamManager");
+            sceneFadeIn.IsStart = true;
+        }
+
+        if (sceneFadeIn.IsFinish)
+        {
+            SceneManager.LoadScene("ResultScene");
         }
 
         //音響

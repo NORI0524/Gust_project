@@ -3,41 +3,58 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Rank = RankManager.Rank;
+using SoundMan = Singleton<SoundManager>;
 
 public class ResultDirector : BaseCompornent
 {
+    SceneFadeInSteam sceneFadeIn;
+    SceneFadeOutSteam sceneFadeOut;
+
     private int money;
     private Rank rank;
-    private int minus;
     private int missTimes = 0;
     public Rank RankResult { get { return rank; } }
     private bool CharacterMoveFlg = false;
     private string[] CharName = new string[6] { "nasu_left", "renkon_left", "kinoko_left", "nasu_right", "renkon_right", "kinoko_right" };
 
+
+    [SerializeField] int OilFlyMinus = 500;
+
+    bool isStart;
+
     // Start is called before the first frame update
     void Start()
-    {
-        GameDirector.totalSatisfyValue = 10000;
-
-        minus = -500;
+    {        
+        SoundMan.Instance.PlayBGM("resultbgm",1.0f);
 
         //missTimes=GameDirector     ここにミスの回数入れてね!
 
         //満足度の合計でランクを決定
-        rank = RankManager.GetRank(GameDirector.totalSatisfyValue - (missTimes * minus));
+        rank = RankManager.GetRank(GameDirector.totalSatisfyValue - (missTimes * -1 * OilFlyMinus));
 
 
         //１日分の客の人数と決めたランクで売り上げの合計を算出
         money = SalesManager.CalcMoney(GameDirector.totalCustomerNum, rank);
         
+        sceneFadeOut = GetComponent<SceneFadeOutSteam>("SceneFadeOutSteamManager");
 
-        InResult();
+        sceneFadeOut.IsStart = true;
+        isStart = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-       if(CharacterMoveFlg==true)
+        if (sceneFadeOut.IsFinish && !isStart)
+        {
+            InResult();
+            SoundMan.Instance.PlaySE("cheer");
+            isStart = true;
+            var numberMan = GetComponent<Number_test>("NumberManager");
+            numberMan.Init(money, new Vector3(0, 0, 0));
+        }
+
+        if (CharacterMoveFlg)
         {
             for (int i = 0; i < 3; i++)
             {
@@ -56,6 +73,8 @@ public class ResultDirector : BaseCompornent
                 cameraTrans.position = pos;
             }
         }
+
+        SoundMan.Instance.Update();
     }
 
     public void InResult()
@@ -68,15 +87,5 @@ public class ResultDirector : BaseCompornent
         CharacterMoveFlg = true;
         
         yield return null;
-    }
-
-    public void OnGUI()
-    {
-        if (GUI.Button(new Rect(400, 350, 200, 100), "- Title -"))
-        {
-            SceneManager.LoadScene("TitleScene");
-        }
-
-        GUI.TextArea(new Rect(0, 150, 100, 50), "money : " + money);
     }
 }

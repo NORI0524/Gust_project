@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class OilFlyController : BaseCompornent
 {
+    //鍋蓋
+    SaucePanManager saucePanManager = null;
+
+
     SpriteRenderer spriteRenderer;
 
     private Transparent destroyTrans = null;
@@ -16,7 +19,7 @@ public class OilFlyController : BaseCompornent
     [SerializeField] int OilFlyRotateSpeed = 5;
     [SerializeField] int OilFlyBowHeight = 3;
 
-    bool isHit;
+    bool isHit, isProtect;
 
     FadeValue scaleFade, posFade;
 
@@ -25,6 +28,9 @@ public class OilFlyController : BaseCompornent
     // Start is called before the first frame update
     void Start()
     {
+        saucePanManager = GetComponent<SaucePanManager>("Saucepan_Lid_Icon");
+
+
         var obj = GameObject.Find("OilFlyManager");
         oilFac = obj.GetComponent<SpawnFactory>();
 
@@ -38,38 +44,61 @@ public class OilFlyController : BaseCompornent
         posFade.isPlus = true;
         scaleFade.isPlus = true;
         isHit = false;
+        isProtect = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        DegAngle += OilFlyRotateSpeed;
-
         posFade.Update();
         scaleFade.Update();
 
-        PosY = posFade.GetCurrentValue();
-        ScaleX = ScaleY = scaleFade.GetCurrentValue();
-
-        if(ScaleX >= 1.0f)
+        if (!isProtect)
         {
-            isHit = true;
-            gameObject.AddComponent<Transparent>();
-
-            destroyTrans = GetComponent<Transparent>();
+            DegAngle += OilFlyRotateSpeed;
+            PosY = posFade.GetCurrentValue();
+            ScaleX = ScaleY = scaleFade.GetCurrentValue();
         }
 
-        if (isHit)
+        if (ScaleX >= 1.0f)
         {
-            DegAngle = 0;
-            ScaleX = ScaleY = scaleFade.maxValue;
-            PosY = posFade.minValue;
-            spriteRenderer.sprite = DamageSprite;
+            isHit = true;
+            GameDirector.oilFlyHitNum++;
+            CreateDestroyTrans();
+        }
 
-            if (!destroyTrans.IsFinish()) return;
+        //防いだ時の処理
+        if(saucePanManager.IsAlive)
+        {
+            if (!isProtect)
+            {
+                isProtect = true;
+                CreateDestroyTrans();
+                destroyTrans.TransparentSeconds = 2;
+            }
+        }
 
+        //消失処理
+        if (destroyTrans == null) return;
+        if (destroyTrans.IsFinish())
+        {
             oilFac.Decrease();
             Destroy(gameObject);
         }
+
+        //食らった時の処理
+        if (!isHit) return;
+        
+        DegAngle = 0;
+        ScaleX = ScaleY = scaleFade.maxValue;
+        PosY = posFade.minValue;
+        spriteRenderer.sprite = DamageSprite;
+    }
+
+    private void CreateDestroyTrans()
+    {
+        if (destroyTrans != null) return;
+        gameObject.AddComponent<Transparent>();
+        destroyTrans = GetComponent<Transparent>();
     }
 }

@@ -104,11 +104,18 @@ public class SoundManager
         // なぜかMaxSENumを2以上にしないとvolume1.0でしか音が鳴らなくなる
         //SE
         audioClips.Add("fire", new AudioClipInfo(FlamSePath + "fire", "fire", 2, 0.1f));
-        audioClips.Add("tap", new AudioClipInfo(TapSePath + "tap", "tap", 5, 0.2f));
+        audioClips.Add("tap", new AudioClipInfo(TapSePath + "tap", "tap", 5, 0.25f));
         audioClips.Add("tap2", new AudioClipInfo(TapSePath + "tap2", "tap2", 5, 0.3f));
         audioClips.Add("pic", new AudioClipInfo(CharaSePath + "pic", "pic", 5, 0.4f));
         audioClips.Add("pic2", new AudioClipInfo(CharaSePath + "pic2", "pic2", 5, 0.5f));
         audioClips.Add("happy", new AudioClipInfo(CharaSePath + "happy", "happy", 5, 0.6f));
+
+        audioClips.Add("shishiodoshi", new AudioClipInfo(TitleSePath + "Shishiodoshi", "shishiodoshi", 2, 0.5f));
+
+        audioClips.Add("startdrumroll", new AudioClipInfo(ResultSePath + "Start_DrumRoll", "startdrumroll", 2, 0.5f));
+        audioClips.Add("enddrumroll", new AudioClipInfo(ResultSePath + "End_DrumRoll", "enddrumroll", 2, 0.5f));
+        audioClips.Add("register", new AudioClipInfo(ResultSePath + "Register", "Register", 2, 0.5f));
+        audioClips.Add("cheer", new AudioClipInfo(ResultSePath + "cheer", "cheer", 2, 0.3f));
 
         audioClips.Add("start", new AudioClipInfo(GameSceneSePath + "start", "start", 5, 0.25f));
         audioClips.Add("finish", new AudioClipInfo(GameSceneSePath + "finish", "finish", 5, 0.25f));
@@ -119,6 +126,8 @@ public class SoundManager
 
         //BGM
         audioClips.Add("bgm", new AudioClipInfo(GameBgmPath + "Game_BGM1", "bgm", 1, 0.05f));
+        audioClips.Add("titlebgm", new AudioClipInfo(TitleBgmPath + "Title_BGM1", "titlebgm", 1, 0.05f));
+        audioClips.Add("resultbgm", new AudioClipInfo(ResultBgmPath + "Result_BGM3", "risultbgm", 1, 0.1f));
     }
 
     //SEを再生
