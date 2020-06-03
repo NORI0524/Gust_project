@@ -153,6 +153,8 @@ public class BaseCharactorController : BaseCompornent
 
     public void OnDown()
     {
+        if (!GameDirector.isStart || GameDirector.isFinish) return;
+
         Vector3 screenPos = Input.mousePosition;
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
         oldWorldPos = worldPos;
@@ -162,6 +164,8 @@ public class BaseCharactorController : BaseCompornent
 
     public void OnDrag()
     {
+        if (!GameDirector.isStart || GameDirector.isFinish) return;
+
         Vector3 screenPos = Input.mousePosition;
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
 
@@ -192,6 +196,8 @@ public class BaseCharactorController : BaseCompornent
 
     public void OnDrop()
     {
+        if (!GameDirector.isStart || GameDirector.isFinish) return;
+
         if (state.CheckBit(State.Normal | State.Intrusion))
         {
             state.FoldBit(State.Normal | State.Intrusion);

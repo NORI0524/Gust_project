@@ -11,11 +11,15 @@ public class LimitTime : BaseCompornent
     SunController sunCtrl;
     MoonController moonCtrl;
 
-    private Timer time = new Timer(3,0);
+    [SerializeField] int LimitMinute = 3;
+    [SerializeField] int LimitSeconds = 0;
+
+    private Timer time = null;
 
     // Start is called before the first frame update
     void Start()
     {
+        time = new Timer(LimitMinute, LimitSeconds);
         time.Start();
 
         sun = GameObject.Find("Sun");
