@@ -42,7 +42,7 @@ public class Fan : BaseCompornent
 
     public void Touch()
     {
-        if (!GameDirector.isStart && GameDirector.isFinish) return;
+        if (!GameDirector.isStart || GameDirector.isFinish) return;
 
         var obj = GameObject.Find("SaucePan_Lib");
         if (obj != null) return;
