@@ -227,6 +227,10 @@ MonoBehaviour:
   BathingSprite: {fileID: 0}
   FriedSprite: {fileID: 0}
   FriedBathingSprite: {fileID: 0}
+  ReactionPrefabs:
+  - {fileID: 191998222489389122, guid: 7153f67a6d528e640b961c75952e54a7, type: 3}
+  - {fileID: 1899427870414077826, guid: 6039b4584edd75b4c878be479aa37893, type: 3}
+  - {fileID: 243113935576227254, guid: 4c3a74e3f386bee41869e2932538d3f0, type: 3}
   BestFirePowerMin: 0
   BestFirePowerMax: 100
   BestFriedTime: 10

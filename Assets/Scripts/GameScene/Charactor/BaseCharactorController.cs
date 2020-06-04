@@ -16,6 +16,9 @@ public class BaseCharactorController : BaseCompornent
     [SerializeField] Sprite FriedSprite = null;
     [SerializeField] Sprite FriedBathingSprite = null;
 
+    //リアクションPrefabs
+    [SerializeField] GameObject[] ReactionPrefabs = new GameObject[3]; 
+
     //アニメーター
     Animator animator = null;
 
@@ -38,6 +41,17 @@ public class BaseCharactorController : BaseCompornent
 
         public const uint Drag = 1 << 7;
     }
+
+    enum ReactionState
+    {
+        None,
+        Good,
+        Shock,
+        Bad,
+        Num
+    }
+
+    ReactionState reactionState;
 
     //表情State
     CharaFaceState face;
@@ -128,10 +142,12 @@ public class BaseCharactorController : BaseCompornent
             if (nowFirePower >= BestFirePowerMin && nowFirePower <= BestFirePowerMax)
             {
                 satisfy.AddSatisfy();
+                reactionState = ReactionState.Good;
             }
             else
             {
                 satisfy.SubSatisfy();
+                reactionState = ReactionState.Shock;
             }
 
             //入浴中のお客さんが揚がるかどうか
@@ -253,6 +269,22 @@ public class BaseCharactorController : BaseCompornent
         if (satisfyVal >= 50) face = CharaFaceState.Normal;
         if (satisfyVal >= 75) face = CharaFaceState.Smile;
         if (satisfyVal >= 100) face = CharaFaceState.Cat;
+    }
+
+    private void Reaction()
+    {
+        if (reactionState == ReactionState.Good)
+        {
+            GameObject obj = Instantiate(ReactionPrefabs[(int)ReactionState.Good]) as GameObject;
+        }
+        if (reactionState == ReactionState.Bad)
+        {
+            GameObject obj = Instantiate(ReactionPrefabs[(int)ReactionState.Bad]) as GameObject;
+        }
+        if (reactionState == ReactionState.Shock)
+        {
+            GameObject obj = Instantiate(ReactionPrefabs[(int)ReactionState.Shock]) as GameObject;
+        }
     }
 
     private void ScreenOut()

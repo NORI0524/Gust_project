@@ -92,6 +92,14 @@ public class GameDirector : BaseCompornent
             finishObj.SetActive(true);
             SoundMan.Instance.PlaySE("finish");
             isFinish = true;
+
+            //Factoryクラスを停止
+            var customerFac = GetComponent<SpawnFactory>("CustomerManager");
+            customerFac.OffActive();
+            var oilFac = GetComponent<SpawnFactory>("OilFlyManager");
+            oilFac.OffActive();
+
+            
             finishBreakTimer.Start();
         }
 
