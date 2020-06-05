@@ -8,49 +8,40 @@ public class Reaction : MonoBehaviour
     private float currentRemainTime;
     private SpriteRenderer spRenderer;
 
+    //アニメーター
+    Animator animator = null;
+
     private void Start()
     {
         currentRemainTime = fadeTime;
         spRenderer = GetComponent<SpriteRenderer>();
+
+        animator = GetComponent<Animator>();
+        animator.SetBool("Start", false);
     }
 
     void Update()
     {
-        //GetComponentを用いてAnimatorコンポーネントを取り出す.
-        Animator animator = GetComponent<Animator>();
+        animator.SetBool("Start", true);
 
-        //あらかじめ設定していたintパラメーター「trans」の値を取り出す.
-        int start = animator.GetInteger("ReactionStart");
-
-        //上矢印キーを押した際にパラメータ「trans」の値を増加させる.
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        //アニメーションが開始されたらフェードアウト開始
+        if (animator.GetBool("Start"))
         {
-            start++;
-        }
+            //表示からフェードアウトまでの処理
+            currentRemainTime -= Time.deltaTime;
 
-        //下矢印キーを押した際にパラメータ「trans」の値を減少させる.
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            start--;
-        }
+            if (currentRemainTime <= 0.0f)
+            {
+                Animator.Destroy(gameObject);
+                return;
+            }
 
-        //intパラメーターの値を設定する.
-        animator.SetInteger("ReactionStart", start);
-
-        //表示からフェードアウトまでの処理
-        currentRemainTime -= 0.1f;
-
-        if (currentRemainTime <= 0.0f)
-        {
-            Animator.Destroy(gameObject);
-            return;
-        }
-
-        //一定時間たったらアルファ値を下げる
-        float alpha = currentRemainTime / fadeTime; ;
+            //一定時間たったらアルファ値を下げる
+            float alpha = currentRemainTime / fadeTime;
             var color = spRenderer.color;
             color.a = alpha;
             spRenderer.color = color;
+        }
         
     }
 }

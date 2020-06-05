@@ -88,7 +88,7 @@ public class BaseCharactorController : BaseCompornent
 
         animator = GetComponent<Animator>();
         animator.SetBool("Grab", false);
-        animator.SetBool("Walk", true);
+        animator.SetBool("Walk", false);
 
         friedTimer = new Timer(BestFriedTime);
         friedTimer.Start();
@@ -103,9 +103,7 @@ public class BaseCharactorController : BaseCompornent
         //表情
         FacialExpression();
 
-        animator.SetBool("Grab", true);
-        animator.SetBool("Walk", false);
-
+        
 
         //TODO:客ごとに共通の適正温度にするなら
         BestFirePowerMin = themoMan.GetBestFirePowerMin();
@@ -173,6 +171,9 @@ public class BaseCharactorController : BaseCompornent
         PosY += worldPos.y - oldWorldPos.y;
 
         oldWorldPos = worldPos;
+
+        animator.SetBool("Grab", true);
+        animator.SetBool("Walk", false);
 
         if (state.CheckBit(State.Bathing))
         {
@@ -244,6 +245,9 @@ public class BaseCharactorController : BaseCompornent
         {
             PosX += 0.05f;
         }
+
+        animator.SetBool("Grab", false);
+        animator.SetBool("Walk", true);
     }
 
     //表情
