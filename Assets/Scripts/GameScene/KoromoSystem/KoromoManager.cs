@@ -27,6 +27,8 @@ public class KoromoManager : BaseCompornent
             koromoFac.OffActive();
         }
 
+        if (GameDirector.isFinish) koromoFac.OffActive();
+
         //TODO:入浴中のお客さんの数でスポーンの設定を変えるかも
         koromoFac.spawnFrequency = GameDirector.bathingCustomerNum * AddFrequency;
     }

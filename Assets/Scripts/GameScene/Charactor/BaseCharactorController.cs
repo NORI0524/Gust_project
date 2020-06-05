@@ -16,6 +16,9 @@ public class BaseCharactorController : BaseCompornent
     [SerializeField] Sprite FriedSprite = null;
     [SerializeField] Sprite FriedBathingSprite = null;
 
+    //リアクションPrefabs
+    [SerializeField] GameObject[] ReactionPrefabs = new GameObject[3]; 
+
     //アニメーター
     Animator animator = null;
 
@@ -39,6 +42,21 @@ public class BaseCharactorController : BaseCompornent
         public const uint Drag = 1 << 7;
     }
 
+    enum ReactionState
+    {
+        None,
+        Good,
+        Bad,
+        Shock,
+        Num
+    }
+
+    //リアクション
+    ReactionState reactionState;
+    Timer reactionTimer;
+
+    readonly Vector3 reactionDisp = new Vector3(2.0f, 2.0f, 0.01f);
+
     //表情State
     CharaFaceState face;
 
@@ -53,7 +71,7 @@ public class BaseCharactorController : BaseCompornent
     [SerializeField, Range(ThemometerController.MinFirePower, ThemometerController.MaxFirePower)] private float BestFirePowerMax = 100;
 
     //適正な揚げ時間
-    [SerializeField, Range(0, 60)] private int BestFriedTime = 10;
+    [SerializeField, Range(0, 60)] public int BestFriedTime = 10;
 
     //揚げ時間タイマー
     Timer friedTimer = null;
@@ -92,6 +110,13 @@ public class BaseCharactorController : BaseCompornent
 
         friedTimer = new Timer(BestFriedTime);
         friedTimer.Start();
+
+
+        //リアクション
+        reactionState = ReactionState.None;
+        reactionTimer = new Timer(6);
+        reactionTimer.EnabledLoop();
+        reactionTimer.Start();
     }
 
     // Update is called once per frame
@@ -117,6 +142,7 @@ public class BaseCharactorController : BaseCompornent
             animator.enabled = false;
 
             friedTimer.Update();
+            reactionTimer.Update();
 
             //揚げ時間を越したら焦げ状態
             if (friedTimer.IsFinish()) state.AddBit(State.Burn);
@@ -126,10 +152,17 @@ public class BaseCharactorController : BaseCompornent
             if (nowFirePower >= BestFirePowerMin && nowFirePower <= BestFirePowerMax)
             {
                 satisfy.AddSatisfy();
+                reactionState = ReactionState.Good;
             }
             else
             {
                 satisfy.SubSatisfy();
+                reactionState = ReactionState.Bad;
+            }
+
+            if (reactionTimer.IsFinish())
+            {
+                Reaction();
             }
 
             //入浴中のお客さんが揚がるかどうか
@@ -257,6 +290,25 @@ public class BaseCharactorController : BaseCompornent
         if (satisfyVal >= 50) face = CharaFaceState.Normal;
         if (satisfyVal >= 75) face = CharaFaceState.Smile;
         if (satisfyVal >= 100) face = CharaFaceState.Cat;
+    }
+
+    private void Reaction()
+    {
+        if (reactionState == ReactionState.Good)
+        {
+            GameObject obj = Instantiate(ReactionPrefabs[(int)ReactionState.Good]) as GameObject;
+            obj.transform.position = new Vector3(PosX + reactionDisp.x, PosY + reactionDisp.y, PosZ + reactionDisp.z);
+        }
+        if (reactionState == ReactionState.Bad)
+        {
+            GameObject obj = Instantiate(ReactionPrefabs[(int)ReactionState.Bad]) as GameObject;
+            obj.transform.position = new Vector3(PosX + reactionDisp.x, PosY + reactionDisp.y, PosZ + reactionDisp.z);
+        }
+        if (reactionState == ReactionState.Shock)
+        {
+            GameObject obj = Instantiate(ReactionPrefabs[(int)ReactionState.Shock]) as GameObject;
+            obj.transform.position = new Vector3(PosX + reactionDisp.x, PosY + reactionDisp.y, PosZ + reactionDisp.z);
+        }
     }
 
     private void ScreenOut()

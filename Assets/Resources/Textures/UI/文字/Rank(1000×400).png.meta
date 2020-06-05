@@ -1,7 +1,6 @@
 fileFormatVersion: 2
-guid: a6238afbc007649478af459d2de7d899
+guid: 06d6a207457638a4d95b235f884b64a3
 TextureImporter:
-<<<<<<< HEAD:Assets/Resources/Textures/UI/文字/Rank(1000×400).png.meta
   fileIDToRecycleName:
     21300000: "Rank(1000\xD7400)_0"
     21300002: "Rank(1000\xD7400)_1"
@@ -13,9 +12,6 @@ TextureImporter:
     21300014: "Rank(1000\xD7400)_7"
     21300016: "Rank(1000\xD7400)_8"
     21300018: "Rank(1000\xD7400)_9"
-=======
-  fileIDToRecycleName: {}
->>>>>>> parent of 9be92fc... ナス一旦スライス:Assets/Resources/Textures/nasu_walk.png.meta
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -54,7 +50,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -83,7 +79,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-<<<<<<< HEAD:Assets/Resources/Textures/UI/文字/Rank(1000×400).png.meta
   - serializedVersion: 2
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -124,7 +119,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f8df32bb97f6ab4e8b62e55997c1411
+      spriteID: b3641d6e9e8baa6408db897f5cf1f430
       vertices: []
       indices: 
       edges: []
@@ -144,7 +139,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de494e8aed6477f47a733337a14392d9
+      spriteID: 907e08ebdfd02f54ba75cf7c838156c9
       vertices: []
       indices: 
       edges: []
@@ -164,7 +159,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c14d41b51b60544fa021cd766f660a1
+      spriteID: 8c8781e1b82c1d447be88b90c34fec7e
       vertices: []
       indices: 
       edges: []
@@ -184,7 +179,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93cbc6e14d97bd9438a4c783e91337c6
+      spriteID: 71e6cbfcb4971744d9f0339bac628dec
       vertices: []
       indices: 
       edges: []
@@ -204,7 +199,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6b2be305399f3b4b8c9511bda8414e9
+      spriteID: 5a10eef49851b134db3630c72b2cdd5e
       vertices: []
       indices: 
       edges: []
@@ -224,7 +219,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf0ed05e23786fd46ac030a7fa47aae2
+      spriteID: 35a4244ee2c480a4c95d4374e3e40543
       vertices: []
       indices: 
       edges: []
@@ -244,7 +239,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5723cdecb45b7bc48abc7a0259cf95aa
+      spriteID: 8ae87d11e6fabcf44ad01591009d523e
       vertices: []
       indices: 
       edges: []
@@ -264,7 +259,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ac037324a4ebcb4da1be9610eb38304
+      spriteID: 1f1f4203b8e36684a916230afc60ef54
       vertices: []
       indices: 
       edges: []
@@ -284,7 +279,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25d1eac28decaf841a575057720871fa
+      spriteID: 805c2a6a0db6e414aae7d384d9b9eb71
       vertices: []
       indices: 
       edges: []
@@ -304,7 +299,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00d8ed16996f83d4bb07117094a09727
+      spriteID: c2d9792298dd3c84eb1680e915aa309c
       vertices: []
       indices: 
       edges: []
@@ -312,16 +307,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3f475a5fd09d11341a49588537595606
-=======
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
-    outline: []
-    physicsShape: []
-    bones: []
-    spriteID: e91f9e2b779f6ef4a928782ecf9c811b
->>>>>>> parent of 9be92fc... ナス一旦スライス:Assets/Resources/Textures/nasu_walk.png.meta
+    spriteID: 2e60e978450dc734fa983c56ef7d3468
     vertices: []
     indices: 
     edges: []
