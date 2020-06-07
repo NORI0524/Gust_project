@@ -16,6 +16,7 @@ public class SoundManager
     public const string ThermometerSePath = "Sounds/SE/Thermometer_SE/";    //温度計
     public const string TenkasuSePath = "Sounds/SE/Tenkasu_SE/";            //天かす
     public const string EndOfDaySePath = "Sounds/SE/EndOfDay_SE/";          //一日の終わり
+    public const string StampSePath = "Sounds/SE/Stamp_SE/";                //リザルトのスタンプ
     public const string TitleSePath = "Sounds/SE/Title_SE/";                //タイトル
     public const string ResultSePath = "Sounds/SE/Result_SE/";              //リザルト
 
@@ -109,6 +110,7 @@ public class SoundManager
         audioClips.Add("pic", new AudioClipInfo(CharaSePath + "pic", "pic", 5, 0.4f));
         audioClips.Add("pic2", new AudioClipInfo(CharaSePath + "pic2", "pic2", 5, 0.5f));
         audioClips.Add("happy", new AudioClipInfo(CharaSePath + "happy", "happy", 5, 0.6f));
+        audioClips.Add("stamp", new AudioClipInfo(StampSePath + "Stamp4", "stamp",2, 0.5f));
 
         audioClips.Add("shishiodoshi", new AudioClipInfo(TitleSePath + "Shishiodoshi", "shishiodoshi", 2, 0.5f));
 
@@ -126,6 +128,7 @@ public class SoundManager
 
         //BGM
         audioClips.Add("bgm", new AudioClipInfo(GameBgmPath + "Game_BGM1", "bgm", 1, 0.05f));
+        audioClips.Add("anotherbgm", new AudioClipInfo(GameBgmPath + "Game_BGM5", "anotherBGM", 1, 0.05f)); //転換後BGM
         audioClips.Add("titlebgm", new AudioClipInfo(TitleBgmPath + "Title_BGM1", "titlebgm", 1, 0.05f));
         audioClips.Add("resultbgm", new AudioClipInfo(ResultBgmPath + "Result_BGM3", "risultbgm", 1, 0.1f));
     }
