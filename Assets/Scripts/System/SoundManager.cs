@@ -104,12 +104,12 @@ public class SoundManager
         //ここにゲーム全体で使う音源を登録
         // なぜかMaxSENumを2以上にしないとvolume1.0でしか音が鳴らなくなる
         //SE
-        audioClips.Add("fire", new AudioClipInfo(FlamSePath + "fire", "fire", 2, 0.1f));
+        audioClips.Add("fire", new AudioClipInfo(FlamSePath + "fire", "fire", 2, 0.05f));
         audioClips.Add("tap", new AudioClipInfo(TapSePath + "tap", "tap", 5, 0.25f));
         audioClips.Add("tap2", new AudioClipInfo(TapSePath + "tap2", "tap2", 5, 0.3f));
         audioClips.Add("pic", new AudioClipInfo(CharaSePath + "pic", "pic", 5, 0.4f));
         audioClips.Add("pic2", new AudioClipInfo(CharaSePath + "pic2", "pic2", 5, 0.5f));
-        audioClips.Add("happy", new AudioClipInfo(CharaSePath + "happy", "happy", 5, 0.6f));
+        audioClips.Add("happy", new AudioClipInfo(CharaSePath + "happy", "happy", 5, 0.3f));
         audioClips.Add("stamp", new AudioClipInfo(StampSePath + "Stamp4", "stamp",2, 0.5f));
 
         audioClips.Add("shishiodoshi", new AudioClipInfo(TitleSePath + "Shishiodoshi", "shishiodoshi", 2, 0.5f));

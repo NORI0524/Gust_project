@@ -46,6 +46,7 @@ public class SceneFadeInSteam : BaseCompornent
         if(nowCount == SteamNum)
         {
             isFinish = true;
+            Destroy(gameObject);
         }
     }
 }

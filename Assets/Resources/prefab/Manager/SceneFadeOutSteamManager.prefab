@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62945a3806b0723408a9020060cbc4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5277220684457124899, guid: 652907145f042f0419fb9ce0b0f8cfa1, type: 3}
+  prefab: {fileID: 842908021081945070, guid: 652907145f042f0419fb9ce0b0f8cfa1, type: 3}
   SteamNum: 15
   FadeFrame: 8
