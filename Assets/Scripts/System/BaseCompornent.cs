@@ -184,7 +184,11 @@ public class BaseCompornent : MonoBehaviour {
 
     //指定のオブジェクトのコンポーネントを取得
     public T GetComponent<T>(GameObject _obj) { return _obj.GetComponent<T>(); }
-    public T GetComponent<T>(string _objectName) { return GameObject.Find(_objectName).GetComponent<T>(); }
+    public T GetComponent<T>(string _objectName)
+    {
+        var obj = GameObject.Find(_objectName);
+        return obj.GetComponent<T>();
+    }
 
     //自身の指定のコンポーネントを取得
     public T GetThisComponent<T>() { return gameObject.GetComponent<T>(); }

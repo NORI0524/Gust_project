@@ -28,7 +28,6 @@ public class SceneFadeOutSteam : BaseCompornent
             obj.transform.position = new Vector3(0, 0, 0);
             obj.name = "SceneSteam_" + nowCount;
         }
-        
         isStart = false;
     }
 
@@ -47,6 +46,7 @@ public class SceneFadeOutSteam : BaseCompornent
         if (nowCount == 0)
         {
             isFinish = true;
+            Destroy(gameObject);
         }
     }
 }

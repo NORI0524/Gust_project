@@ -14,7 +14,9 @@ public class TitleDirector : BaseCompornent
     {
         SoundMan.Instance.PlayBGM("titlebgm", 1.0f);
         sceneFadeIn = GetComponent<SceneFadeInSteam>("SceneFadeInSteamManager");
-        sceneFadeOut = GetComponent<SceneFadeOutSteam>("SceneFadeOutSteamManager");
+
+        var obj = GameObject.Find("SceneFadeOutSteamManager");
+        sceneFadeOut = obj.GetComponent<SceneFadeOutSteam>();
         sceneFadeOut.IsStart = true;
     }
 

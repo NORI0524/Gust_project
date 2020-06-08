@@ -92,5 +92,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Title_Steam Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4796025884790462415, guid: 375cce5e58da5af4c88feb9585f8cbbd, type: 3}
+    - {fileID: 4796025884790462412, guid: 375cce5e58da5af4c88feb9585f8cbbd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 375cce5e58da5af4c88feb9585f8cbbd, type: 3}

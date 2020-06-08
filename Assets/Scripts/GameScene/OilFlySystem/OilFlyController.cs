@@ -7,7 +7,6 @@ public class OilFlyController : BaseCompornent
     //鍋蓋
     SaucePanManager saucePanManager = null;
 
-
     SpriteRenderer spriteRenderer;
 
     private Transparent destroyTrans = null;

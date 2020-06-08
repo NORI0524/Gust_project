@@ -8,8 +8,8 @@ public class GameDirector : BaseCompornent
 {
     public static bool DEBUG = false;
 
-    SceneFadeInSteam sceneFadeIn;
-    SceneFadeOutSteam sceneFadeOut;
+    SceneFadeInSteam sceneFadeIn = null;
+    SceneFadeOutSteam sceneFadeOut = null;
 
     //TODO:リザルトにでランクを付ける際に指標になる変数
 
@@ -56,9 +56,14 @@ public class GameDirector : BaseCompornent
 
         limitTime = GameObject.Find("LimitTimer");
         limitTimeCtrl = limitTime.GetComponent<LimitTime>();
-
         sceneFadeIn = GetComponent<SceneFadeInSteam>("SceneFadeInSteamManager");
         sceneFadeOut = GetComponent<SceneFadeOutSteam>("SceneFadeOutSteamManager");
+
+        if (sceneFadeOut == null)
+        {
+            Debug.Log("nullのまま");
+        }
+
         sceneFadeOut.IsStart = true;
 
         SoundMan.Instance.PlayBGM("bgm", 3.0f);
