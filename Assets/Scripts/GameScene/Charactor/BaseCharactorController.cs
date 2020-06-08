@@ -44,10 +44,10 @@ public class BaseCharactorController : BaseCompornent
 
     enum ReactionState
     {
-        None,
         Good,
         Bad,
         Shock,
+        None,
         Num
     }
 
@@ -55,7 +55,7 @@ public class BaseCharactorController : BaseCompornent
     ReactionState reactionState;
     Timer reactionTimer;
 
-    readonly Vector3 reactionDisp = new Vector3(2.0f, 2.0f, 0.01f);
+    Vector3 reactionDisp;
 
     //表情State
     CharaFaceState face;
@@ -115,6 +115,7 @@ public class BaseCharactorController : BaseCompornent
         //リアクション
         reactionState = ReactionState.None;
         reactionTimer = new Timer(6);
+        reactionDisp = new Vector3(0.5f, 0.5f, PosZ - 0.01f); ;
         reactionTimer.EnabledLoop();
         reactionTimer.Start();
     }
@@ -205,6 +206,7 @@ public class BaseCharactorController : BaseCompornent
 
         oldWorldPos = worldPos;
 
+        animator.enabled = true;
         animator.SetBool("Grab", true);
         animator.SetBool("Walk", false);
 
@@ -279,6 +281,9 @@ public class BaseCharactorController : BaseCompornent
             PosX += 0.05f;
         }
 
+        if (state.CheckBitOR(State.Bathing | State.FriedBathing)) return;
+
+        animator.enabled = true;
         animator.SetBool("Grab", false);
         animator.SetBool("Walk", true);
     }
