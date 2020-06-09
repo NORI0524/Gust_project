@@ -95,9 +95,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NormalSprite: {fileID: 21300000, guid: e1af19825fe379448b36f41a66722e6c, type: 3}
   DamageSprite: {fileID: 21300000, guid: 3c4f7adcbcf55a24eb66de4787a60b40, type: 3}
-  OilFlyHitTime: 4
+  OilFlyHitTime: 1
+  DestroyOilFlyTime: 3
   OilFlyRotateSpeed: 5
-  OilFlyBowHeight: 3
 --- !u!1001 &8533775158223023693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105,6 +105,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2076804215961629064}
     m_Modifications:
+    - target: {fileID: 2519664900446722474, guid: 8163dd141be20ec4faca949c506298b7,
+        type: 3}
+      propertyPath: MaxScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519664900446722474, guid: 8163dd141be20ec4faca949c506298b7,
+        type: 3}
+      propertyPath: MinScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519664900446722474, guid: 8163dd141be20ec4faca949c506298b7,
+        type: 3}
+      propertyPath: centerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519664900446722474, guid: 8163dd141be20ec4faca949c506298b7,
+        type: 3}
+      propertyPath: finishColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7924432187476235085, guid: 8163dd141be20ec4faca949c506298b7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -163,12 +183,12 @@ PrefabInstance:
     - target: {fileID: 7924432187476235085, guid: 8163dd141be20ec4faca949c506298b7,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7924432187476235085, guid: 8163dd141be20ec4faca949c506298b7,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7924432187476235087, guid: 8163dd141be20ec4faca949c506298b7,
         type: 3}

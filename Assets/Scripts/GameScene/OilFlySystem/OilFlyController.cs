@@ -15,12 +15,12 @@ public class OilFlyController : BaseCompornent
     [SerializeField] Sprite DamageSprite = null;
 
     [SerializeField] int OilFlyHitTime = 4;
+    [SerializeField] int DestroyOilFlyTime = 3;
     [SerializeField] int OilFlyRotateSpeed = 5;
-    [SerializeField] int OilFlyBowHeight = 3;
 
     bool isHit, isProtect;
 
-    FadeValue scaleFade, posFade;
+    FadeValue scaleFade;
 
     SpawnFactory oilFac;
 
@@ -37,11 +37,8 @@ public class OilFlyController : BaseCompornent
         spriteRenderer.sprite = NormalSprite;
 
         scaleFade = new FadeValue(0.01f, OilFlyHitTime, 0.01f, 1.0f);
-        posFade = new FadeValue(PosY, OilFlyHitTime / 2, PosY, PosY + OilFlyBowHeight);
-
-
-        posFade.isPlus = true;
         scaleFade.isPlus = true;
+
         isHit = false;
         isProtect = false;
     }
@@ -49,13 +46,12 @@ public class OilFlyController : BaseCompornent
     // Update is called once per frame
     void Update()
     {
-        posFade.Update();
+        //posFade.Update();
         scaleFade.Update();
 
         if (!isProtect)
         {
             DegAngle += OilFlyRotateSpeed;
-            PosY = posFade.GetCurrentValue();
             ScaleX = ScaleY = scaleFade.GetCurrentValue();
         }
 
@@ -64,6 +60,7 @@ public class OilFlyController : BaseCompornent
             isHit = true;
             GameDirector.oilFlyHitNum++;
             CreateDestroyTrans();
+            
         }
 
         //防いだ時の処理
@@ -73,7 +70,6 @@ public class OilFlyController : BaseCompornent
             {
                 isProtect = true;
                 CreateDestroyTrans();
-                destroyTrans.TransparentSeconds = 2;
             }
         }
 
@@ -90,7 +86,6 @@ public class OilFlyController : BaseCompornent
         
         DegAngle = 0;
         ScaleX = ScaleY = scaleFade.maxValue;
-        PosY = posFade.minValue;
         spriteRenderer.sprite = DamageSprite;
     }
 
@@ -99,5 +94,11 @@ public class OilFlyController : BaseCompornent
         if (destroyTrans != null) return;
         gameObject.AddComponent<Transparent>();
         destroyTrans = GetComponent<Transparent>();
+        destroyTrans.TransparentSeconds = DestroyOilFlyTime;
+    }
+
+    public int GetOilFlyhitTime()
+    {
+        return OilFlyHitTime;
     }
 }
