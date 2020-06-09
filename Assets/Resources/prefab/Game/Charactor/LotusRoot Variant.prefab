@@ -1,24 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!95 &2858079861618495463
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8847311352768901949}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1570c32501bfa984a98fc1829095c6ec, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!60 &2420771771870243992
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -118,6 +99,25 @@ PolygonCollider2D:
       - {x: 0.04, y: 0.53999996}
       - {x: 0.14999999, y: 0.48999998}
       - {x: 0.12, y: 0.31}
+--- !u!95 &2858079861618495463
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8847311352768901949}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1570c32501bfa984a98fc1829095c6ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5505063093754506022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -125,6 +125,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 382537830270330776, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 07c5aa08681969a4aaad2925d7674281,
+        type: 3}
+    - target: {fileID: 382537830270330776, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 672882645891513628, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4caf2dc0bc7c9e846b1b64bfa8f81003, type: 2}
+    - target: {fileID: 1185835939441790145, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00005
+      objectReference: {fileID: 0}
     - target: {fileID: 3936743639904624494, guid: c821d95d277af694cb062bafae1da4ac,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -251,6 +272,35 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 4530828681141866984, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: NormalSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 07c5aa08681969a4aaad2925d7674281,
+        type: 3}
+    - target: {fileID: 4530828681141866984, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: BathingSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a1ed369180fc7e49ae0e5f27429343c,
+        type: 3}
+    - target: {fileID: 4530828681141866984, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: testFlame
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530828681141866984, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: NormalEffectSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 07c5aa08681969a4aaad2925d7674281,
+        type: 3}
+    - target: {fileID: 4530828681141866984, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: BathingEffectSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a1ed369180fc7e49ae0e5f27429343c,
+        type: 3}
     - target: {fileID: 6151528967788593588, guid: c821d95d277af694cb062bafae1da4ac,
         type: 3}
       propertyPath: BathingSprite

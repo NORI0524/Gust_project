@@ -104,6 +104,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 382537830270330776, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a94fc0235eafc2469c7bd94a3fed005,
+        type: 3}
+    - target: {fileID: 382537830270330776, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 382537830270330776, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 672882645891513628, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 672882645891513628, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fa8fbbf09d5d4254bb96c4fb3858c4b4, type: 2}
+    - target: {fileID: 1185835939441790145, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00005
+      objectReference: {fileID: 0}
     - target: {fileID: 3936743639904624494, guid: c821d95d277af694cb062bafae1da4ac,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -215,6 +246,30 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 4530828681141866984, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: NormalSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a94fc0235eafc2469c7bd94a3fed005,
+        type: 3}
+    - target: {fileID: 4530828681141866984, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: BathingSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0a68a5fac2cbf34458982deb01e10280,
+        type: 3}
+    - target: {fileID: 4530828681141866984, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: NormalEffectSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a94fc0235eafc2469c7bd94a3fed005,
+        type: 3}
+    - target: {fileID: 4530828681141866984, guid: c821d95d277af694cb062bafae1da4ac,
+        type: 3}
+      propertyPath: BathingEffectSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0a68a5fac2cbf34458982deb01e10280,
+        type: 3}
     - target: {fileID: 6151528967788593588, guid: c821d95d277af694cb062bafae1da4ac,
         type: 3}
       propertyPath: NormalSprite

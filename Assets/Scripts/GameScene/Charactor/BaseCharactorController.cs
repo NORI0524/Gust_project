@@ -70,8 +70,8 @@ public class BaseCharactorController : BaseCompornent
     [SerializeField, Range(ThemometerController.MinFirePower, ThemometerController.MaxFirePower)] private float BestFirePowerMin = 0;
     [SerializeField, Range(ThemometerController.MinFirePower, ThemometerController.MaxFirePower)] private float BestFirePowerMax = 100;
 
-    //適正な揚げ時間
-    [SerializeField, Range(0, 60)] public int BestFriedTime = 10;
+    //揚げ時間（焦げるまで）
+    [SerializeField, Range(0, 60)] public int BurnFriedTime = 10;
 
     //揚げ時間タイマー
     Timer friedTimer = null;
@@ -108,7 +108,9 @@ public class BaseCharactorController : BaseCompornent
         animator.SetBool("Grab", false);
         animator.SetBool("Walk", false);
 
-        friedTimer = new Timer(BestFriedTime);
+
+        //揚げ時間
+        friedTimer = new Timer(BurnFriedTime);
         friedTimer.Start();
 
 
@@ -327,5 +329,21 @@ public class BaseCharactorController : BaseCompornent
             customerFac.Decrease();
             Destroy();
         }
+    }
+
+    public bool GetBathing()
+    {
+        return state.CheckBitOR(State.Bathing | State.FriedBathing);
+    }
+
+    public bool GetGrab()
+    {
+        return state.CheckBit(State.Drag);
+    }
+
+    public float AddFrameToFriedTime()
+    {
+        float add = 1.0f / friedTimer.GetInitSeconds() / 60.0f;
+        return add;
     }
 }

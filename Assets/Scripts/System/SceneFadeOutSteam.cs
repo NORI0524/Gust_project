@@ -25,7 +25,7 @@ public class SceneFadeOutSteam : BaseCompornent
         {
             //湯気生成
             GameObject obj = Instantiate(prefab) as GameObject;
-            obj.transform.position = new Vector3(0, 0, 0);
+            obj.transform.position = new Vector3(0, 0, 0.01f * -nowCount);
             obj.name = "SceneSteam_" + nowCount;
         }
         isStart = false;
