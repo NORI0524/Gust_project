@@ -16,7 +16,8 @@ public class OilFlyRingController : BaseCompornent
     [SerializeField] float MaxScale = 1.5f;
 
     private float frame;
-   
+    private Transparent destroyTrans = null;
+
     bool isFinish;
 
     // Start is called before the first frame update
@@ -33,6 +34,12 @@ public class OilFlyRingController : BaseCompornent
     // Update is called once per frame
     void Update()
     {
+        if (parentCtrl.IsProtect() || parentCtrl.IsHit())
+        {
+            CreateDestroyTrans();
+            return;
+        }
+
         var add = 1.0f / 60.0f / (float)parentCtrl.GetOilFlyhitTime();
         frame += add;
         MaterialColor = Interpolation.BezierCurve(startColor, centerColor, finishColor, frame);
@@ -40,5 +47,13 @@ public class OilFlyRingController : BaseCompornent
         var nowScale = ScaleX;
         nowScale = Mathf.Max(nowScale - ScaleSpeed, MinScale);
         ScaleX = ScaleY = nowScale;
+    }
+
+    private void CreateDestroyTrans()
+    {
+        if (destroyTrans != null) return;
+        gameObject.AddComponent<Transparent>();
+        destroyTrans = GetComponent<Transparent>();
+        destroyTrans.TransparentSeconds = parentCtrl.GetDestroyOilFlyTime();
     }
 }

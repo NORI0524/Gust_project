@@ -101,4 +101,19 @@ public class OilFlyController : BaseCompornent
     {
         return OilFlyHitTime;
     }
+
+    public int GetDestroyOilFlyTime()
+    {
+        return DestroyOilFlyTime;
+    }
+
+    public bool IsHit()
+    {
+        return isHit;
+    }
+
+    public bool IsProtect()
+    {
+        return isProtect;
+    }
 }

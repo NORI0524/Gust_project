@@ -39,7 +39,9 @@ public class SceneFadeOutSteam : BaseCompornent
         if (frame > FadeFrame)
         {
             frame = 0;
-            Destroy("SceneSteam_" + nowCount);
+            var obj = GameObject.Find("SceneSteam_" + nowCount);
+            DestroyImmediate(obj);
+            //Destroy(obj);
             nowCount--;
         }
 
