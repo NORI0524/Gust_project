@@ -16,7 +16,7 @@ public class Number_test : MonoBehaviour
     void Start()
     {
         //初期化
-
+        
 
     }
 
@@ -27,7 +27,7 @@ public class Number_test : MonoBehaviour
 
         //表示用のダメージを作る
         CreateNum(point);
-
+       
         init_pos = pos;
 
         //表示順を一番上に
