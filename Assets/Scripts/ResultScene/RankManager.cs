@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RankManager
 {
-     
+
     public enum Rank
     {
         Beginner,
@@ -22,17 +22,19 @@ public class RankManager
 
     private class RankJudge
     {
-        public const int Beginner = 100;
+        public const int Beginner = 0;
         public const int Bronze = 500;
-        public const int Iron = 1000;
-        public const int Silver = 1500;
-        public const int Gold = 2000;
-        public const int Ruby = 2500;
-        public const int Platinum = 3000;
-        public const int Diamond = 3500;
-        public const int Master = 4000;
-        public const int Predator = 4500;
+        public const int Iron = 800;
+        public const int Silver = 1000;
+        public const int Gold = 1500;
+        public const int Ruby = 1800;
+        public const int Platinum = 2000;
+        public const int Diamond = 2500;
+        public const int Master = 2800;
+        public const int Predator = 3000;
     }
+
+
 
 
     public static Rank GetRank(int value)

@@ -25,7 +25,7 @@ public class SatisfactionGauge : BaseCompornent
     {
         GameObject SceneFadeOutSteamManager = GameObject.Find("SceneFadeOutSteamManager");
         scene = SceneFadeOutSteamManager.GetComponent<SceneFadeOutSteam>();
-        value = Mathf.Clamp(3000, GaugeMin, GaugeMax);
+        value = Mathf.Clamp(GameDirector.totalSatisfyValue, GaugeMin, GaugeMax);
         obj.fillAmount = 0.0f;
 
     }

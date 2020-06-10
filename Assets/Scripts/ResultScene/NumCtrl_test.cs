@@ -56,7 +56,7 @@ public class NumCtrl_test : MonoBehaviour
                 animeFlg = true;
             }
         }
-        
+
         SoundMan.Instance.Update();
     }
 
