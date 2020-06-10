@@ -5647,7 +5647,7 @@ GameObject:
   - component: {fileID: 558536187}
   - component: {fileID: 558536186}
   m_Layer: 0
-  m_Name: Sky
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5690,7 +5690,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a59678ad9389ca49a8ecc462e876a4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e77e6c08c0d63f444b5a84676d2654ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5709,8 +5709,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558536185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -2.837, z: 0}
-  m_LocalScale: {x: 1.009961, y: 2.0007236, z: 1}
+  m_LocalPosition: {x: 0.088, y: -0.196, z: 0}
+  m_LocalScale: {x: 2.2366066, y: 2.2300913, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
