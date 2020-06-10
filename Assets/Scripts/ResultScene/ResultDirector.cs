@@ -30,11 +30,8 @@ public class ResultDirector : BaseCompornent
     {
         SoundMan.Instance.PlayBGM("resultbgm",1.0f);
 
-        //missTimes=GameDirector     ここにミスの回数入れてね!
-
         //満足度の合計でランクを決定
-        //rank = RankManager.GetRank(GameDirector.totalSatisfyValue - (missTimes * -1 * OilFlyMinus));
-        rank = RankManager.GetRank(GameDirector.totalSatisfyValue);
+        rank = RankManager.GetRank(GameDirector.totalSatisfyValue - (GameDirector.oilFlyHitNum * -1 * OilFlyMinus));
 
         var rankCtrl = GetComponent<RankController>("Rank");
         rankCtrl.DispRank = rank;
