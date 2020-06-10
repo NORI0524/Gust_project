@@ -4,12 +4,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using Scene = SatisfactionGauge;
+using SoundMan = Singleton<SoundManager>;
+
 public class NumCtrl_test : MonoBehaviour
 {
     [SerializeField] private Sprite[] sp = new Sprite[10];
 
     private byte animecnt = 0;
     private Scene scene;
+
+    private bool seflg;
 
     private bool animeFlg;
 
@@ -32,20 +36,22 @@ public class NumCtrl_test : MonoBehaviour
     }
     void Update()
     {
-       
 
-        if (scene.NextAnimeFlg)
+
+        if (scene.NextAnimeFlg && seflg == false)
         {
+            SoundMan.Instance.PlaySE("register");
             SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
             spriteRenderer.color = new Color32(255, 255, 255, 255);
             animecnt++;
+            seflg = true;
             if(animecnt>60)
             {
                 animeFlg = true;
             }
             
         }
-
+        SoundMan.Instance.Update();
     }
 
 }
