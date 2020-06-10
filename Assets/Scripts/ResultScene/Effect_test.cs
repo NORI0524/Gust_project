@@ -1,21 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using SetParticle = RankController;
 public class Effect_test : BaseCompornent
 {
     ParticleSystem particle = null;
-    bool Flg = false;
+    
+
+    private SetParticle setparticle; 
 
     private void Start()
     {
+        GameObject Rank = GameObject.Find("Rank");
+        setparticle = Rank.GetComponent<RankController>();
         particle = GetComponent<ParticleSystem>();
         particle.Pause();
     }
 
     public void Update()
     {
-        if (Flg == true)
+        if (setparticle.ParticleFlg)
         {
             StartCoroutine("Particle");
             Debug.Log("1");
@@ -29,14 +33,13 @@ public class Effect_test : BaseCompornent
         yield return new WaitForSeconds(1);
         particle.Stop();
         Debug.Log("2");
-        Flg = false;
         Debug.Log("3");
         yield return null;
     }
 
     public void ParticleFlgOn()
     {
-        Flg = true;
+
         Debug.Log("0");
     }
 

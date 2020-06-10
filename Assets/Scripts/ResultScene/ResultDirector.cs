@@ -12,7 +12,6 @@ public class ResultDirector : BaseCompornent
 
     private int money;
     private Rank rank;
-    private int missTimes = 0;
     public Rank RankResult { get { return rank; } }
     private float CharaSpace = 2.0f;
 
@@ -35,7 +34,7 @@ public class ResultDirector : BaseCompornent
 
         //満足度の合計でランクを決定
         //rank = RankManager.GetRank(GameDirector.totalSatisfyValue - (missTimes * -1 * OilFlyMinus));
-        rank = RankManager.GetRank(2000);
+        rank = RankManager.GetRank(GameDirector.totalSatisfyValue);
 
         var rankCtrl = GetComponent<RankController>("Rank");
         rankCtrl.DispRank = rank;

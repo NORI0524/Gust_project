@@ -13,8 +13,11 @@ public class RankController : BaseCompornent
 
     private bool seflg;
 
+    private bool particleFlg;
+
     SpriteRenderer spriteRenderer = null;
 
+    public bool ParticleFlg { get { return particleFlg; } }
 
     [SerializeField] Sprite[] Ranksprite=new Sprite[10];
 
@@ -44,6 +47,7 @@ public class RankController : BaseCompornent
 
             spriteRenderer.color = new Color32(255, 255, 255, 255);
             seflg = true;
+            particleFlg = true;
         }
 
 
