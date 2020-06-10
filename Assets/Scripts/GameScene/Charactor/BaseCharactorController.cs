@@ -80,7 +80,7 @@ public class BaseCharactorController : BaseCompornent
     SatisfactionLevel satisfy = new SatisfactionLevel();
 
     //フライド化の目安満足度
-    private const int FriedSatisfy = 70;
+    [SerializeField] int FriedSatisfy = 70;
 
     Vector3 oldWorldPos;
 
@@ -146,8 +146,11 @@ public class BaseCharactorController : BaseCompornent
             var nowFirePower = themoCtrl.GetFirePower();
             if (nowFirePower >= BestFirePowerMin && nowFirePower <= BestFirePowerMax)
             {
-                satisfy.AddSatisfy();
-                reactionState = ReactionState.Good;
+                if (!state.CheckBit(State.Burn))
+                {
+                    satisfy.AddSatisfy();
+                    reactionState = ReactionState.Good;
+                }
             }
             else
             {
@@ -277,11 +280,11 @@ public class BaseCharactorController : BaseCompornent
 
     private void Move()
     {
-        if (state.CheckBitOR(State.Normal))
+        if (state.CheckBit(State.Normal) && !state.CheckBit(State.Burn))
         {
             PosX = Mathf.Clamp(PosX + 0.02f, -8.0f, -5.5f);
         }
-        if (state.CheckBit(State.Fried))
+        if (state.CheckBit(State.Fried) || state.CheckBit(State.Burn | State.Normal))
         {
             PosX += 0.02f;
         }

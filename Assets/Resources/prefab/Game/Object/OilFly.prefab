@@ -96,7 +96,7 @@ MonoBehaviour:
   NormalSprite: {fileID: 21300000, guid: e1af19825fe379448b36f41a66722e6c, type: 3}
   DamageSprite: {fileID: 21300000, guid: 3c4f7adcbcf55a24eb66de4787a60b40, type: 3}
   OilFlyHitTime: 1
-  DestroyOilFlyTime: 3
+  DestroyOilFlyTime: 1
   OilFlyRotateSpeed: 5
 --- !u!1001 &8621388515252925388
 PrefabInstance:

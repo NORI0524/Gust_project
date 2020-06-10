@@ -54,6 +54,6 @@ public class OilFlyRingController : BaseCompornent
         if (destroyTrans != null) return;
         gameObject.AddComponent<Transparent>();
         destroyTrans = GetComponent<Transparent>();
-        destroyTrans.TransparentSeconds = 1;
+        destroyTrans.TransparentSeconds = parentCtrl.GetDestroyOilFlyTime();
     }
 }
