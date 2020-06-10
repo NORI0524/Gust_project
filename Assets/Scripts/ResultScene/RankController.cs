@@ -4,6 +4,8 @@ using System.Diagnostics;
 using UnityEngine;
 using Rank = RankManager.Rank;
 using Scene = NumCtrl_test;
+using SoundMan = Singleton<SoundManager>;
+
 public class RankController : BaseCompornent
 {
     private Rank rank;
@@ -32,8 +34,10 @@ public class RankController : BaseCompornent
     void Update()
     {
 
-        if(scene.LastAnimeFlg&&seflg)
+        if(scene.LastAnimeFlg&&seflg == false)
         {
+            SoundMan.Instance.PlaySE("stamp");
+
             SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
             spriteRenderer.color = new Color32(255, 255, 255, 255);
             seflg = true;
@@ -79,5 +83,7 @@ public class RankController : BaseCompornent
         {
             spriterenderer.sprite = Ranksprite[9];
         }
+
+        SoundMan.Instance.Update();
     }
 }
