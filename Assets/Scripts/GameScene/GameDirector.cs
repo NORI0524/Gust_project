@@ -37,7 +37,7 @@ public class GameDirector : BaseCompornent
 
     Timer finishBreakTimer = new Timer(3);
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -104,7 +104,7 @@ public class GameDirector : BaseCompornent
             var oilFac = GetComponent<SpawnFactory>("OilFlyManager");
             oilFac.OffActive();
 
-            
+
             finishBreakTimer.Start();
         }
 
