@@ -60,7 +60,6 @@ public class OilFlyController : BaseCompornent
             isHit = true;
             GameDirector.oilFlyHitNum++;
             CreateDestroyTrans();
-            
         }
 
         //防いだ時の処理
@@ -83,7 +82,7 @@ public class OilFlyController : BaseCompornent
 
         //食らった時の処理
         if (!isHit) return;
-        
+
         DegAngle = 0;
         ScaleX = ScaleY = scaleFade.maxValue;
         spriteRenderer.sprite = DamageSprite;
