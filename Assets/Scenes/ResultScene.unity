@@ -245,7 +245,13 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7572188836533188334, guid: d330ca94ef37ffa478b2f7b09523424a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7572188836533188334, guid: d330ca94ef37ffa478b2f7b09523424a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d330ca94ef37ffa478b2f7b09523424a, type: 3}
 --- !u!1 &236850038
 GameObject:
@@ -5330,6 +5336,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: nasu_right
       objectReference: {fileID: 0}
+    - target: {fileID: 4167576637790272231, guid: 785a523f932e039479b6d377b74b96a7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4167576638629100947, guid: 785a523f932e039479b6d377b74b96a7,
         type: 3}
       propertyPath: m_SortingOrder
@@ -5523,6 +5534,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: renkon_left
       objectReference: {fileID: 0}
+    - target: {fileID: 8847311352768901949, guid: ea2102d2b27ce3a4798c2ed50276a97f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8847311353003816009, guid: ea2102d2b27ce3a4798c2ed50276a97f,
         type: 3}
       propertyPath: m_SortingOrder
@@ -5650,6 +5666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: nasu_left
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167576637790272231, guid: 785a523f932e039479b6d377b74b96a7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4167576638629100947, guid: 785a523f932e039479b6d377b74b96a7,
         type: 3}
@@ -5863,6 +5884,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: renkon_right
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847311352768901949, guid: ea2102d2b27ce3a4798c2ed50276a97f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8847311353003816009, guid: ea2102d2b27ce3a4798c2ed50276a97f,
         type: 3}
@@ -6108,6 +6134,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: kinoko_right
       objectReference: {fileID: 0}
+    - target: {fileID: 1893476900828528650, guid: 8ef6e7c564900ce4ea9b28239d208d38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1893476900828528692, guid: 8ef6e7c564900ce4ea9b28239d208d38,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6218,6 +6249,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: kinoko_left
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893476900828528650, guid: 8ef6e7c564900ce4ea9b28239d208d38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1893476900828528692, guid: 8ef6e7c564900ce4ea9b28239d208d38,
         type: 3}
