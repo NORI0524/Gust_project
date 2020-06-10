@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using Rank = RankManager.Rank;
+using Scene = NumCtrl_test;
 public class RankController : BaseCompornent
 {
     private Rank rank;
+
+    private Scene scene;
+
+    private bool seflg;
 
     [SerializeField] Sprite[] Ranksprite=new Sprite[10];
     SpriteRenderer spriterenderer = null;
@@ -14,8 +19,11 @@ public class RankController : BaseCompornent
     {
         spriterenderer = GetComponent<SpriteRenderer>();
         var Result = GetComponent<ResultDirector>("ResultDirector");
+        GameObject pref_num_test = GameObject.Find("pref_num_test");
+        scene = pref_num_test.GetComponent<NumCtrl_test>();
         rank = Result.RankResult;
-       
+        SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer.color = new Color32(0, 0, 0, 0);
     }
     
     
@@ -24,6 +32,12 @@ public class RankController : BaseCompornent
     void Update()
     {
 
+        if(scene.LastAnimeFlg&&seflg)
+        {
+            SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            spriteRenderer.color = new Color32(255, 255, 255, 255);
+            seflg = true;
+        }
        
         if (rank == Rank.Beginner)
         {
