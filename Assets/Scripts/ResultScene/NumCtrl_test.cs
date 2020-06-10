@@ -8,7 +8,7 @@ public class NumCtrl_test : MonoBehaviour
 {
     [SerializeField] private Sprite[] sp = new Sprite[10];
 
-    private byte anime = 0;
+    private byte animecnt = 0;
     private Scene scene;
 
     private bool animeFlg;
@@ -32,20 +32,18 @@ public class NumCtrl_test : MonoBehaviour
     }
     void Update()
     {
-        SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        spriteRenderer.color = new Color32(0, 0, 0, anime);
+       
 
         if (scene.NextAnimeFlg)
         {
-            if (anime < 255)
+            SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            spriteRenderer.color = new Color32(255, 255, 255, 255);
+            animecnt++;
+            if(animecnt>60)
             {
-                anime += 3;
-            }
-            else
-            {
-                anime = 255;
                 animeFlg = true;
             }
+            
         }
 
     }
