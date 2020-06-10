@@ -16,6 +16,7 @@ public class Number_test : MonoBehaviour
     void Start()
     {
         //初期化
+       
 
     }
 

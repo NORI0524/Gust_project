@@ -14,6 +14,7 @@ public class RankController : BaseCompornent
 
     private bool seflg;
 
+
     [SerializeField] Sprite[] Ranksprite=new Sprite[10];
     SpriteRenderer spriterenderer = null;
     // Start is called before the first frame update
