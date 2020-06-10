@@ -26,6 +26,7 @@ public class RankController : BaseCompornent
         rank = Result.RankResult;
         SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         spriteRenderer.color = new Color32(0, 0, 0, 0);
+        seflg = true;
     }
     
     
@@ -34,13 +35,13 @@ public class RankController : BaseCompornent
     void Update()
     {
 
-        if(scene.LastAnimeFlg&&seflg == false)
+        if(scene.LastAnimeFlg&&seflg)
         {
             SoundMan.Instance.PlaySE("stamp");
 
             SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
             spriteRenderer.color = new Color32(255, 255, 255, 255);
-            seflg = true;
+            seflg = false;
         }
        
         if (rank == Rank.Beginner)

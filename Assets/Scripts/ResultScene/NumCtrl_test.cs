@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using Scene = SatisfactionGauge;
 using SoundMan = Singleton<SoundManager>;
+using System;
 
 public class NumCtrl_test : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class NumCtrl_test : MonoBehaviour
     private Scene scene;
 
     private bool seflg;
-
+    private bool delayFlg;
     private bool animeFlg;
 
     public bool LastAnimeFlg { get { return animeFlg; } }
@@ -24,6 +25,7 @@ public class NumCtrl_test : MonoBehaviour
         scene = Satisfaction_gauge.GetComponent<SatisfactionGauge>();
         SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         spriteRenderer.color = new Color32(0, 0, 0, 0);
+        seflg = true;
 
     }
     public void ChangeSprite(int no)
@@ -38,19 +40,23 @@ public class NumCtrl_test : MonoBehaviour
     {
 
 
-        if (scene.NextAnimeFlg && seflg == false)
+        if (scene.NextAnimeFlg && seflg)
         {
             SoundMan.Instance.PlaySE("register");
             SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
             spriteRenderer.color = new Color32(255, 255, 255, 255);
+            seflg = false;
+            delayFlg = true;
+        }
+        if(delayFlg)
+        {
             animecnt++;
-            seflg = true;
-            if(animecnt>60)
+            if (animecnt > 60)
             {
                 animeFlg = true;
             }
-            
         }
+        
         SoundMan.Instance.Update();
     }
 
