@@ -66,10 +66,6 @@ public class BaseCharactorController : BaseCompornent
     //温度管理
     ThemoManager themoMan;
 
-    //適正な温度
-    [SerializeField, Range(ThemometerController.MinFirePower, ThemometerController.MaxFirePower)] private float BestFirePowerMin = 0;
-    [SerializeField, Range(ThemometerController.MinFirePower, ThemometerController.MaxFirePower)] private float BestFirePowerMax = 100;
-
     //揚げ時間（焦げるまで）
     [SerializeField, Range(0, 60)] public int BurnFriedTime = 10;
 
@@ -129,8 +125,8 @@ public class BaseCharactorController : BaseCompornent
         state.FoldBit(State.Intrusion);
 
         //TODO:客ごとに共通の適正温度にするなら
-        BestFirePowerMin = themoMan.GetBestFirePowerMin();
-        BestFirePowerMax = themoMan.GetBestFirePowerMax();
+        var BestFirePowerMin = themoMan.GetBestFirePowerMin();
+        var BestFirePowerMax = themoMan.GetBestFirePowerMax();
 
         //入浴中なら
         if (state.CheckBitOR(State.Bathing | State.FriedBathing))
