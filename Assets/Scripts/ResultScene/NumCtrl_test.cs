@@ -18,6 +18,8 @@ public class NumCtrl_test : MonoBehaviour
     {
         GameObject Satisfaction_gauge = GameObject.Find("Satisfaction_gauge");
         scene = Satisfaction_gauge.GetComponent<SatisfactionGauge>();
+        SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer.color = new Color32(0, 0, 0, 0);
 
     }
     public void ChangeSprite(int no)
