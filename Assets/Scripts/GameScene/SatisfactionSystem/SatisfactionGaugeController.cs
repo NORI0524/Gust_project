@@ -18,7 +18,7 @@ public class SatisfactionGaugeController : BaseCompornent
 
     // Update is called once per frame
     void Update()
-    { 
+    {
         int value = Mathf.Clamp(GameDirector.totalSatisfyValue, GaugeMin, GaugeMax);
         obj.fillAmount = (float)value / GaugeMax;
     }

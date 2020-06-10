@@ -116,6 +116,8 @@ public class BaseCharactorController : BaseCompornent
         reactionDisp = new Vector3(0.5f, 0.5f, PosZ - 0.01f); ;
         reactionTimer.EnabledLoop();
         reactionTimer.Start();
+
+        GameDirector.totalCustomerNum++;
     }
 
     // Update is called once per frame
@@ -152,6 +154,12 @@ public class BaseCharactorController : BaseCompornent
             {
                 satisfy.SubSatisfy();
                 reactionState = ReactionState.Shock;
+            }
+
+            //焦げたら満足度減少
+            if (state.CheckBit(State.Burn))
+            {
+                satisfy.SubSatisfy();
             }
 
             //揚げ時間を越したら焦げ状態
