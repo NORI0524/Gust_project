@@ -14,8 +14,8 @@ public class ThemometerController : BaseCompornent
     private float firePower;
     public const float InitFirePower = 80.0f;
 
-    public const float DecreacePower_Init = 2.0f;
-    public const float DecreacePowerRate_koromo = 1.0f;
+    [SerializeField] float DecreacePower_Init = 2.0f;
+    [SerializeField] float DecreacePowerRate_koromo = 1.0f;
 
     //天かすFac
     SpawnFactory koromoFac;
