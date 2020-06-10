@@ -29,7 +29,7 @@ Transform:
   m_LocalPosition: {x: -6.3986244, y: 0.20487852, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children:
-  - {fileID: 1988113132028886272}
+  - {fileID: 1899514346811760769}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
   OilFlyHitTime: 1
   DestroyOilFlyTime: 3
   OilFlyRotateSpeed: 5
---- !u!1001 &8533775158223023693
+--- !u!1001 &8621388515252925388
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -108,22 +108,12 @@ PrefabInstance:
     - target: {fileID: 2519664900446722474, guid: 8163dd141be20ec4faca949c506298b7,
         type: 3}
       propertyPath: MaxScale
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2519664900446722474, guid: 8163dd141be20ec4faca949c506298b7,
         type: 3}
       propertyPath: MinScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2519664900446722474, guid: 8163dd141be20ec4faca949c506298b7,
-        type: 3}
-      propertyPath: centerColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2519664900446722474, guid: 8163dd141be20ec4faca949c506298b7,
-        type: 3}
-      propertyPath: finishColor.a
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7924432187476235085, guid: 8163dd141be20ec4faca949c506298b7,
         type: 3}
@@ -180,16 +170,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7924432187476235085, guid: 8163dd141be20ec4faca949c506298b7,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924432187476235085, guid: 8163dd141be20ec4faca949c506298b7,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7924432187476235086, guid: 8163dd141be20ec4faca949c506298b7,
         type: 3}
       propertyPath: m_SortingOrder
@@ -202,9 +182,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8163dd141be20ec4faca949c506298b7, type: 3}
---- !u!4 &1988113132028886272 stripped
+--- !u!4 &1899514346811760769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7924432187476235085, guid: 8163dd141be20ec4faca949c506298b7,
     type: 3}
-  m_PrefabInstance: {fileID: 8533775158223023693}
+  m_PrefabInstance: {fileID: 8621388515252925388}
   m_PrefabAsset: {fileID: 0}

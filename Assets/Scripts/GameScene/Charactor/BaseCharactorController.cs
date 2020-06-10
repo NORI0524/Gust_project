@@ -17,7 +17,7 @@ public class BaseCharactorController : BaseCompornent
     [SerializeField] Sprite FriedBathingSprite = null;
 
     //リアクションPrefabs
-    [SerializeField] GameObject[] ReactionPrefabs = new GameObject[3]; 
+    [SerializeField] GameObject[] ReactionPrefabs = new GameObject[3];
 
     //アニメーター
     Animator animator = null;
@@ -128,11 +128,6 @@ public class BaseCharactorController : BaseCompornent
         //入浴フラグ折る
         state.FoldBit(State.Intrusion);
 
-        //表情
-        FacialExpression();
-
-        
-
         //TODO:客ごとに共通の適正温度にするなら
         BestFirePowerMin = themoMan.GetBestFirePowerMin();
         BestFirePowerMax = themoMan.GetBestFirePowerMax();
@@ -147,9 +142,6 @@ public class BaseCharactorController : BaseCompornent
             friedTimer.Update();
             reactionTimer.Update();
 
-            //揚げ時間を越したら焦げ状態
-            if (friedTimer.IsFinish()) state.AddBit(State.Burn);
-
             //満足度の増減
             var nowFirePower = themoCtrl.GetFirePower();
             if (nowFirePower >= BestFirePowerMin && nowFirePower <= BestFirePowerMax)
@@ -160,6 +152,13 @@ public class BaseCharactorController : BaseCompornent
             else
             {
                 satisfy.SubSatisfy();
+                reactionState = ReactionState.Shock;
+            }
+
+            //揚げ時間を越したら焦げ状態
+            if (friedTimer.IsFinish())
+            {
+                state.AddBit(State.Burn);
                 reactionState = ReactionState.Bad;
             }
 
@@ -176,6 +175,10 @@ public class BaseCharactorController : BaseCompornent
                 spriteRenderer.sprite = FriedBathingSprite;
             }
         }
+
+        //表情
+        FacialExpression();
+
         if (state.CheckBit(State.Drag)) return;
 
         //移動
@@ -276,11 +279,11 @@ public class BaseCharactorController : BaseCompornent
     {
         if (state.CheckBitOR(State.Normal))
         {
-            PosX = Mathf.Clamp(PosX + 0.05f, -8.0f, -5.0f);
+            PosX = Mathf.Clamp(PosX + 0.02f, -8.0f, -5.5f);
         }
         if (state.CheckBit(State.Fried))
         {
-            PosX += 0.05f;
+            PosX += 0.02f;
         }
 
         if (state.CheckBitOR(State.Bathing | State.FriedBathing)) return;
@@ -297,6 +300,8 @@ public class BaseCharactorController : BaseCompornent
         if (satisfyVal >= 50) face = CharaFaceState.Normal;
         if (satisfyVal >= 75) face = CharaFaceState.Smile;
         if (satisfyVal >= 100) face = CharaFaceState.Cat;
+
+        if (state.CheckBit(State.Burn)) face = CharaFaceState.Anger;
     }
 
     private void Reaction()

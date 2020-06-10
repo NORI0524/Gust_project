@@ -19,12 +19,12 @@ public class SaucePanManager : BaseCompornent
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Click()
     {
-        if (!GameDirector.isStart && GameDirector.isFinish) return;
+        if (!GameDirector.isStart || GameDirector.isFinish) return;
 
         if (isAlive)
         {
@@ -37,6 +37,6 @@ public class SaucePanManager : BaseCompornent
             var obj = Instantiate(prefab) as GameObject;
             obj.name = "SaucePan_Lib";
             isAlive = true;
-        }  
+        }
     }
 }

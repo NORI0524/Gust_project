@@ -46,7 +46,7 @@ public class OilFlyRingController : BaseCompornent
 
         var nowScale = ScaleX;
         nowScale = Mathf.Max(nowScale - ScaleSpeed, MinScale);
-        ScaleX = ScaleY = nowScale;
+        //ScaleX = ScaleY = nowScale;
     }
 
     private void CreateDestroyTrans()
@@ -54,6 +54,6 @@ public class OilFlyRingController : BaseCompornent
         if (destroyTrans != null) return;
         gameObject.AddComponent<Transparent>();
         destroyTrans = GetComponent<Transparent>();
-        destroyTrans.TransparentSeconds = parentCtrl.GetDestroyOilFlyTime();
+        destroyTrans.TransparentSeconds = 1;
     }
 }
