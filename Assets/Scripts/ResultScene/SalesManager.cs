@@ -14,6 +14,7 @@ public class SalesManager
         {Rank.Gold,15000 },
         {Rank.Ruby,20000 },
         {Rank.Platinum,25000 },
+        {Rank.Diamond,35000 },
         {Rank.Master,40000 },
         {Rank.Predator,50000 }
     };
