@@ -22,6 +22,8 @@ public class SalesManager
     {
         int money = 500;
         money = money * value + rankBonusDic[rank];
+        Debug.Log(value);
+        Debug.Log(rankBonusDic[rank]);
         return money;
     }
 

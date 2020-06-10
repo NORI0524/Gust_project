@@ -16,7 +16,7 @@ public class Number_test : MonoBehaviour
     void Start()
     {
         //初期化
-       
+
 
     }
 
@@ -77,7 +77,7 @@ public class Number_test : MonoBehaviour
 
             numObj = null;
         }
-        
+
     }
 
 

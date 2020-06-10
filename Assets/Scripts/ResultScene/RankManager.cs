@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RankManager
 {
-     
+
     public enum Rank
     {
         Beginner,
@@ -33,9 +33,9 @@ public class RankManager
         public const int Master = 2800;
         public const int Predator = 3000;
     }
-   
 
-    
+
+
 
     public static Rank GetRank(int value)
     {

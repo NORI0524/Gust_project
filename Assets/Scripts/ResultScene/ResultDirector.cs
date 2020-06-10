@@ -14,6 +14,9 @@ public class ResultDirector : BaseCompornent
     private Rank rank;
     private int missTimes = 0;
     public Rank RankResult { get { return rank; } }
+
+
+    //客の演出
     private bool CharacterMoveFlg = false;
     private string[] CharName = new string[6] { "nasu_left", "renkon_left", "kinoko_left", "nasu_right", "renkon_right", "kinoko_right" };
 
@@ -24,18 +27,22 @@ public class ResultDirector : BaseCompornent
 
     // Start is called before the first frame update
     void Start()
-    {        
+    {
         SoundMan.Instance.PlayBGM("resultbgm",1.0f);
 
         //missTimes=GameDirector     ここにミスの回数入れてね!
 
         //満足度の合計でランクを決定
-        rank = RankManager.GetRank(GameDirector.totalSatisfyValue - (missTimes * -1 * OilFlyMinus));
+        //rank = RankManager.GetRank(GameDirector.totalSatisfyValue - (missTimes * -1 * OilFlyMinus));
+        rank = RankManager.GetRank(2000);
+
+        var rankCtrl = GetComponent<RankController>("Rank");
+        rankCtrl.DispRank = rank;
 
 
         //１日分の客の人数と決めたランクで売り上げの合計を算出
         money = SalesManager.CalcMoney(GameDirector.totalCustomerNum, rank);
-        
+
         sceneFadeOut = GetComponent<SceneFadeOutSteam>("SceneFadeOutSteamManager");
 
         sceneFadeOut.IsStart = true;
@@ -85,7 +92,7 @@ public class ResultDirector : BaseCompornent
     IEnumerator InResultUpdate()
     {
         CharacterMoveFlg = true;
-        
+
         yield return null;
     }
 }
