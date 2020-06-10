@@ -14,6 +14,7 @@ public class ResultDirector : BaseCompornent
     private Rank rank;
     private int missTimes = 0;
     public Rank RankResult { get { return rank; } }
+    private float CharaSpace = 2.0f;
 
 
     //客の演出
@@ -68,7 +69,7 @@ public class ResultDirector : BaseCompornent
                 Transform cameraTrans = GameObject.Find(CharName[i]).transform;
                 Vector3 pos = cameraTrans.position;
                 pos.x = pos.x + 0.1f;
-                if (pos.x > 3*i-7.5) pos.x = (float)(3 * i - 7.5);
+                if (pos.x > CharaSpace*i-7.0f) pos.x = (float)(CharaSpace * i - 7.0f);
                 cameraTrans.position = pos;
             }
             for (int i = 3; i < 6; i++)
@@ -76,7 +77,7 @@ public class ResultDirector : BaseCompornent
                 Transform cameraTrans = GameObject.Find(CharName[i]).transform;
                 Vector3 pos = cameraTrans.position;
                 pos.x = pos.x - 0.1f;
-                if (pos.x < 3 * i- 7.5) pos.x = (float)(3 * i - 7.5);
+                if (pos.x < CharaSpace * i- 3.0f) pos.x = (float)(CharaSpace * i - 3.0f);
                 cameraTrans.position = pos;
             }
         }
