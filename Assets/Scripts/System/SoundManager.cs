@@ -114,7 +114,7 @@ public class SoundManager
 
         audioClips.Add("shishiodoshi", new AudioClipInfo(TitleSePath + "Shishiodoshi", "shishiodoshi", 2, 0.5f));
 
-        audioClips.Add("startdrumroll", new AudioClipInfo(ResultSePath + "Start_DrumRoll", "startdrumroll", 2, 0.5f));
+        audioClips.Add("startdrumroll", new AudioClipInfo(ResultSePath + "Start_DrumRoll", "startdrumroll", 2, 0.1f));
         audioClips.Add("enddrumroll", new AudioClipInfo(ResultSePath + "End_DrumRoll", "enddrumroll", 2, 0.5f));
         audioClips.Add("register", new AudioClipInfo(ResultSePath + "Register", "Register", 2, 0.5f));
         audioClips.Add("cheer", new AudioClipInfo(ResultSePath + "cheer", "cheer", 2, 0.3f));

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Scene = SceneFadeOutSteam;
+using SoundMan = Singleton<SoundManager>;
 
 public class SatisfactionGauge : BaseCompornent
 {
@@ -36,7 +37,9 @@ public class SatisfactionGauge : BaseCompornent
         if (scene.IsFinish)
         {
             //サウンド再生
+            //SoundMan.Instance.PlaySE("startdrumroll");
             obj.fillAmount = Mathf.Clamp(obj.fillAmount + GaugeSpeed, GaugeMin, (float)value / GaugeMax);
+
 
             if (obj.fillAmount >= (float)value / GaugeMax)
             {
@@ -44,6 +47,6 @@ public class SatisfactionGauge : BaseCompornent
             }
         }
 
-
+        SoundMan.Instance.Update();
     }
 }
