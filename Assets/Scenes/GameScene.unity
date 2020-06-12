@@ -1399,6 +1399,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneFadeOutSteamManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6184037042299869210, guid: 330da239bfad5554b905651d33b50e2e,
+        type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 5277220684457124899, guid: 652907145f042f0419fb9ce0b0f8cfa1,
+        type: 3}
     - target: {fileID: 6184037042299869211, guid: 330da239bfad5554b905651d33b50e2e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2265,6 +2271,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7335501857342113325, guid: 5c2bc14e0aea8114ba340fa98f3f758f,
+        type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 5277220684457124899, guid: 652907145f042f0419fb9ce0b0f8cfa1,
+        type: 3}
     - target: {fileID: 7335501857342113330, guid: 5c2bc14e0aea8114ba340fa98f3f758f,
         type: 3}
       propertyPath: m_Name
