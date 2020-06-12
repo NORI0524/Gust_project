@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using Scene = SatisfactionGauge;
 using SoundMan = Singleton<SoundManager>;
+using Delete = ReturnButton;
 using System;
+
 
 public class NumCtrl_test : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class NumCtrl_test : MonoBehaviour
 
     private byte animecnt = 0;
     private Scene scene;
+    private Delete delete;
 
     private bool seflg;
     private bool delayFlg;
@@ -26,6 +29,11 @@ public class NumCtrl_test : MonoBehaviour
         SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         spriteRenderer.color = new Color32(0, 0, 0, 0);
         seflg = true;
+
+        GameObject StartButton = GameObject.Find("StartButton");
+        delete = StartButton.GetComponent<ReturnButton>();
+
+
 
     }
     public void ChangeSprite(int no)
@@ -55,6 +63,12 @@ public class NumCtrl_test : MonoBehaviour
             {
                 animeFlg = true;
             }
+        }
+
+        if(delete.deleteFlg)
+        {
+            SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            spriteRenderer.color = new Color32(0, 0, 0, 0);
         }
 
         SoundMan.Instance.Update();

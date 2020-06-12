@@ -589,12 +589,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneFadeOutSteamManager
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 6184037042299869210, guid: 330da239bfad5554b905651d33b50e2e,
         type: 3}
       propertyPath: prefab
       value: 
       objectReference: {fileID: 5277220684457124899, guid: 652907145f042f0419fb9ce0b0f8cfa1,
         type: 3}
+=======
+    - target: {fileID: 6184037042299869189, guid: 330da239bfad5554b905651d33b50e2e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+>>>>>>> b4c93de6d1bdd64b04e850fab98ccfae2ed2dcdc
     - target: {fileID: 6184037042299869211, guid: 330da239bfad5554b905651d33b50e2e,
         type: 3}
       propertyPath: m_LocalPosition.x
